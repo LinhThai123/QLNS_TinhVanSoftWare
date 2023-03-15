@@ -1,0 +1,9 @@
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe.config
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Properties.Resources.resources
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
+C:\Users\ASUS\source\repos\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
