@@ -17,7 +17,7 @@ namespace QLNS_TinhVanSoftWare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Luong());
+            Application.Run(new taikhoan());
         }
     }
 }

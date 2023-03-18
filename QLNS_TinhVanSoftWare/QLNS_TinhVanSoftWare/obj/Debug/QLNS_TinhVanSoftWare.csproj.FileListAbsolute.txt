@@ -43,3 +43,4 @@ C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSo
 C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
 C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
 C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.taikhoan.resources
