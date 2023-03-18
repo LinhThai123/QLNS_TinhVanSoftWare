@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +67,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmBaoCaoTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmBaoCaoTaiChinh.Designer.cs">
+      <DependentUpon>frmBaoCaoTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmChamCong.Designer.cs">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmHopDong.Designer.cs">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmKhenThuongKyLuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,8 +97,26 @@
     <Compile Include="PresentationLayer\frmBoNhiem.Designer.cs">
       <DependentUpon>frmBoNhiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\rpBaoCaoTaiChinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\rpBaoCaoTaiChinh1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpBaoCaoTaiChinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\frmBaoCaoTaiChinh.resx">
+      <DependentUpon>frmBaoCaoTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmChamCong.resx">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmHopDong.resx">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmKhenThuongKyLuat.resx">
       <DependentUpon>frmKhenThuongKyLuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +164,10 @@
     <EmbeddedResource Include="PresentationLayer\PhongBan.resx">
       <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\rpBaoCaoTaiChinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpBaoCaoTaiChinh1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\taikhoan.resx">
       <DependentUpon>taikhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,7 +197,6 @@
   <ItemGroup>
     <Folder Include="BusinessLogicLayer\" />
     <Folder Include="DataAccessLayer\" />
-    <Folder Include="PresentationLayer\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\z4186256687064_db327e1e095c4ed83530ed14352613ec.jpg" />
@@ -176,6 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
