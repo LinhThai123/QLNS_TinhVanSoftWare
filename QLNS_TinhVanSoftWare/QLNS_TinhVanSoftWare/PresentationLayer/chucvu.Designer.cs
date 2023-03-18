@@ -30,6 +30,9 @@
         {
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.macv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tencv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hsl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,9 +45,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lbTieude = new System.Windows.Forms.Label();
-            this.macv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tencv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hsl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +74,24 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(416, 91);
             this.dataGridView1.TabIndex = 77;
+            // 
+            // macv
+            // 
+            this.macv.HeaderText = "Mã CV";
+            this.macv.Name = "macv";
+            this.macv.Width = 120;
+            // 
+            // tencv
+            // 
+            this.tencv.HeaderText = "Tên CV";
+            this.tencv.Name = "tencv";
+            this.tencv.Width = 120;
+            // 
+            // hsl
+            // 
+            this.hsl.HeaderText = "Hệ số lương";
+            this.hsl.Name = "hsl";
+            this.hsl.Width = 120;
             // 
             // textBox6
             // 
@@ -126,12 +144,12 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox2.Location = new System.Drawing.Point(449, 107);
+            this.textBox2.Location = new System.Drawing.Point(449, 103);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.MaxLength = 50;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 19);
+            this.textBox2.Size = new System.Drawing.Size(131, 23);
             this.textBox2.TabIndex = 70;
             // 
             // label2
@@ -230,24 +248,6 @@
             this.lbTieude.Size = new System.Drawing.Size(259, 33);
             this.lbTieude.TabIndex = 62;
             this.lbTieude.Text = "Quản Lý Chức Vụ";
-            // 
-            // macv
-            // 
-            this.macv.HeaderText = "Mã CV";
-            this.macv.Name = "macv";
-            this.macv.Width = 120;
-            // 
-            // tencv
-            // 
-            this.tencv.HeaderText = "Tên CV";
-            this.tencv.Name = "tencv";
-            this.tencv.Width = 120;
-            // 
-            // hsl
-            // 
-            this.hsl.HeaderText = "Hệ số lương";
-            this.hsl.Name = "hsl";
-            this.hsl.Width = 120;
             // 
             // chucvu
             // 
