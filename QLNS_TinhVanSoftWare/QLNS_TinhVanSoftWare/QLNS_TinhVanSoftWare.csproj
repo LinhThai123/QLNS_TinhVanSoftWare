@@ -49,30 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmTrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTrangChu.Designer.cs">
-      <DependentUpon>frmTrangChu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\chucvu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\chucvu.Designer.cs">
-      <DependentUpon>chucvu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\Doimatkhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Doimatkhau.Designer.cs">
-      <DependentUpon>Doimatkhau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\frmBaoCaoTaiChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +66,24 @@
     </Compile>
     <Compile Include="PresentationLayer\frmChamCong.Designer.cs">
       <DependentUpon>frmChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmChucVu.Designer.cs">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\frmGiaHanHopDong.cs">
       <SubType>Form</SubType>
@@ -121,6 +115,12 @@
     <Compile Include="PresentationLayer\frmKyHopDong.Designer.cs">
       <DependentUpon>frmKyHopDong.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmLuong.Designer.cs">
+      <DependentUpon>frmLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmNghiPhepThoiViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +132,18 @@
     </Compile>
     <Compile Include="PresentationLayer\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmPhongBan.Designer.cs">
+      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\frmTrangChu.cs">
       <SubType>Form</SubType>
@@ -156,6 +168,15 @@
     <EmbeddedResource Include="PresentationLayer\frmChamCong.resx">
       <DependentUpon>frmChamCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmChucVu.resx">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmGiaHanHopDong.resx">
       <DependentUpon>frmGiaHanHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,40 +189,12 @@
     <EmbeddedResource Include="PresentationLayer\frmBoNhiem.resx">
       <DependentUpon>frmBoNhiem.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="PresentationLayer\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\Luong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Luong.Designer.cs">
-      <DependentUpon>Luong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\PhongBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\PhongBan.Designer.cs">
-      <DependentUpon>PhongBan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\taikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\taikhoan.Designer.cs">
-      <DependentUpon>taikhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationLayer\chucvu.resx">
-      <DependentUpon>chucvu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Doimatkhau.resx">
-      <DependentUpon>Doimatkhau.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmKyHopDong.resx">
       <DependentUpon>frmKyHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmLuong.resx">
+      <DependentUpon>frmLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmNghiPhepThoiViec.resx">
       <DependentUpon>frmNghiPhepThoiViec.cs</DependentUpon>
@@ -209,24 +202,18 @@
     <EmbeddedResource Include="PresentationLayer\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmPhongBan.resx">
+      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Luong.resx">
-      <DependentUpon>Luong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\PhongBan.resx">
-      <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\rpBaoCaoTaiChinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpBaoCaoTaiChinh1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\taikhoan.resx">
-      <DependentUpon>taikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
