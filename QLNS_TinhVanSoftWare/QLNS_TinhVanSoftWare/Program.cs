@@ -17,7 +17,11 @@ namespace QLNS_TinhVanSoftWare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmBoNhiem());
+=======
+            Application.Run(new frmBienBanDanhGia() );
+>>>>>>> origin/dtmai
         }
     }
 }

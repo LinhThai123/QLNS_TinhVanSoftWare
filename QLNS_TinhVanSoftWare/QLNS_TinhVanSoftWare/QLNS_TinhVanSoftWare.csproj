@@ -73,6 +73,12 @@
     <Compile Include="PresentationLayer\frmBaoCaoTaiChinh.Designer.cs">
       <DependentUpon>frmBaoCaoTaiChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmBienBanDanhGia.Designer.cs">
+      <DependentUpon>frmBienBanDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,18 @@
     <Compile Include="PresentationLayer\frmBoNhiem.Designer.cs">
       <DependentUpon>frmBoNhiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmNghiPhepThoiViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNghiPhepThoiViec.Designer.cs">
+      <DependentUpon>frmNghiPhepThoiViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\rpBaoCaoTaiChinh.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -110,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\frmBaoCaoTaiChinh.resx">
       <DependentUpon>frmBaoCaoTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmBienBanDanhGia.resx">
+      <DependentUpon>frmBienBanDanhGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmChamCong.resx">
       <DependentUpon>frmChamCong.cs</DependentUpon>
@@ -154,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Doimatkhau.resx">
       <DependentUpon>Doimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmNghiPhepThoiViec.resx">
+      <DependentUpon>frmNghiPhepThoiViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
