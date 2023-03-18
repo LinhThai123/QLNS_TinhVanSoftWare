@@ -16,3 +16,31 @@ D:\QuanLyNhanSu\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\o
 D:\QuanLyNhanSu\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
 D:\QuanLyNhanSu\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
 D:\QuanLyNhanSu\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe.config
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.pdb
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.AssemblyReference.cache
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Doimatkhau.resources
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Login.resources
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Properties.Resources.resources
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.GenerateResource.cache
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.PhongBan.resources
+D:\C#\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.Luong.resources
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe.config
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.AssemblyReference.cache
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.SuggestedBindingRedirects.cache
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Doimatkhau.resources
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Login.resources
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.Luong.resources
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.PhongBan.resources
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Properties.Resources.resources
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.GenerateResource.cache
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\HUNG HA PC\Source\Repos\LinhThai123\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.taikhoan.resources

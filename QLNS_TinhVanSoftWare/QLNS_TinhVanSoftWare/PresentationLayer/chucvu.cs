@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class FormTest : Form
+    public partial class chucvu : Form
     {
-        public FormTest()
+        public chucvu()
         {
             InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
