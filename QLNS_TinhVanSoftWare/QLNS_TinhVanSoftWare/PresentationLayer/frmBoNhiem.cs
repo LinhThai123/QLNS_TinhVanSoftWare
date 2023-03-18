@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class frmKyHopDong : Form
+    public partial class frmBoNhiem : Form
     {
-        public frmKyHopDong()
+        public frmBoNhiem()
         {
             InitializeComponent();
         }
