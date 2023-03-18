@@ -31,33 +31,30 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sMaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTenphongban = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sMota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,14 +69,16 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel1.Size = new System.Drawing.Size(1222, 500);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // pictureBox3
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 500);
-            this.panel2.TabIndex = 0;
+            this.pictureBox3.Image = global::QLNS_TinhVanSoftWare.Properties.Resources.Close_24_1px;
+            this.pictureBox3.Location = new System.Drawing.Point(1145, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(77, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // label4
             // 
@@ -92,24 +91,14 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.label4.TabIndex = 3;
             this.label4.Text = "Danh sách phòng ban";
             // 
-            // dataGridView1
+            // panel2
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sMaPB,
-            this.sTenphongban,
-            this.sMota});
-            this.dataGridView1.Location = new System.Drawing.Point(739, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 458);
-            this.dataGridView1.TabIndex = 1;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(693, 500);
+            this.panel2.TabIndex = 0;
             // 
             // panel3
             // 
@@ -120,16 +109,35 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(741, 500);
+            this.panel3.Size = new System.Drawing.Size(690, 500);
             this.panel3.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.textBox3.Location = new System.Drawing.Point(47, 232);
+            this.textBox3.MaxLength = 50;
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(479, 90);
+            this.textBox3.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(43, 207);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Tên phòng ban";
             // 
             // button5
             // 
@@ -138,7 +146,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(561, 362);
+            this.button5.Location = new System.Drawing.Point(553, 353);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 32);
             this.button5.TabIndex = 12;
@@ -152,7 +160,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(299, 362);
+            this.button4.Location = new System.Drawing.Point(291, 353);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 33);
             this.button4.TabIndex = 11;
@@ -166,7 +174,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(438, 362);
+            this.button3.Location = new System.Drawing.Point(430, 353);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 33);
             this.button3.TabIndex = 10;
@@ -180,7 +188,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(178, 362);
+            this.button2.Location = new System.Drawing.Point(170, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 33);
             this.button2.TabIndex = 9;
@@ -194,34 +202,12 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(55, 362);
+            this.button1.Location = new System.Drawing.Point(47, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 33);
             this.button1.TabIndex = 8;
             this.button1.Text = "Thêm mới";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox2.Location = new System.Drawing.Point(415, 136);
-            this.textBox2.MaxLength = 50;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(287, 139);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(411, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Mô tả phòng ban";
             // 
             // textBox1
             // 
@@ -231,7 +217,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.textBox1.MaxLength = 50;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 47);
+            this.textBox1.Size = new System.Drawing.Size(241, 47);
             this.textBox1.TabIndex = 2;
             // 
             // label1
@@ -250,7 +236,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(741, 49);
+            this.panel4.Size = new System.Drawing.Size(690, 49);
             this.panel4.TabIndex = 0;
             // 
             // label3
@@ -264,37 +250,23 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.label3.TabIndex = 2;
             this.label3.Text = "Quản lý phòng ban";
             // 
-            // pictureBox3
+            // dataGridView1
             // 
-            this.pictureBox3.Image = global::QLNS_TinhVanSoftWare.Properties.Resources.Close_24_1px;
-            this.pictureBox3.Location = new System.Drawing.Point(1145, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 49);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox3.Location = new System.Drawing.Point(43, 228);
-            this.textBox3.MaxLength = 50;
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(257, 47);
-            this.textBox3.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 203);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 22);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Tên phòng ban";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sMaPB,
+            this.sTenphongban});
+            this.dataGridView1.Location = new System.Drawing.Point(686, 44);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(536, 800);
+            this.dataGridView1.TabIndex = 1;
             // 
             // sMaPB
             // 
@@ -306,16 +278,9 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             // sTenphongban
             // 
             this.sTenphongban.HeaderText = "Tên phòng ban";
-            this.sTenphongban.MinimumWidth = 120;
+            this.sTenphongban.MinimumWidth = 400;
             this.sTenphongban.Name = "sTenphongban";
-            this.sTenphongban.Width = 120;
-            // 
-            // sMota
-            // 
-            this.sMota.HeaderText = "Mô tả phòng ban";
-            this.sMota.MinimumWidth = 180;
-            this.sMota.Name = "sMota";
-            this.sMota.Width = 180;
+            this.sTenphongban.Width = 400;
             // 
             // PhongBan
             // 
@@ -335,13 +300,13 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.Load += new System.EventHandler(this.PhongBan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,8 +324,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
@@ -369,6 +332,5 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaPB;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTenphongban;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sMota;
     }
 }
