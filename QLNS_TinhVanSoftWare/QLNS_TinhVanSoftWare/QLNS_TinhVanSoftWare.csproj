@@ -52,8 +52,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmBienBanDanhGia.Designer.cs">
+      <DependentUpon>frmBienBanDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNghiPhepThoiViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNghiPhepThoiViec.Designer.cs">
+      <DependentUpon>frmNghiPhepThoiViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\frmBienBanDanhGia.resx">
+      <DependentUpon>frmBienBanDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmNghiPhepThoiViec.resx">
+      <DependentUpon>frmNghiPhepThoiViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
