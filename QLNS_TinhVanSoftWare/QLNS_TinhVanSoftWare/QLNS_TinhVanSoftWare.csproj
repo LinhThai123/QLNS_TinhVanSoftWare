@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PresentationLayer\chucvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\chucvu.Designer.cs">
+      <DependentUpon>chucvu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Doimatkhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\chucvu.resx">
+      <DependentUpon>chucvu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Doimatkhau.resx">
       <DependentUpon>Doimatkhau.cs</DependentUpon>
     </EmbeddedResource>
