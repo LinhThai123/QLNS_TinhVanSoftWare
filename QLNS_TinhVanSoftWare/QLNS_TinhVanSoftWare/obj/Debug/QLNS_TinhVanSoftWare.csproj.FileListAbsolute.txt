@@ -29,3 +29,14 @@ D:\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS
 D:\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
 D:\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
 D:\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe.config
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.exe
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.Properties.Resources.resources
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.frmBoNhiem.resources
+C:\Users\Admin\Documents\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.frmKhenThuongKyLuat.resources
