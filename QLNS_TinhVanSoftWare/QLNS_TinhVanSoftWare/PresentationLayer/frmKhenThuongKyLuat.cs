@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class FormTest : Form
+    public partial class frmKhenThuongKyLuat : Form
     {
-        public FormTest()
+        public frmKhenThuongKyLuat()
         {
             InitializeComponent();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

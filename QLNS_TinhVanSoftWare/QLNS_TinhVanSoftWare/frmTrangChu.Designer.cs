@@ -1,7 +1,6 @@
-﻿
-namespace QLNS_TinhVanSoftWare.PresentationLayer
+﻿namespace QLNS_TinhVanSoftWare
 {
-    partial class FormTest
+    partial class frmTrangChu
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +31,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormTest";
+            this.Text = "frmTrangChu";
         }
 
         #endregion
