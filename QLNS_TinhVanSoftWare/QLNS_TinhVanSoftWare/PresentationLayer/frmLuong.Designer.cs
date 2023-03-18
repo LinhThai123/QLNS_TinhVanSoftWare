@@ -1,7 +1,7 @@
 ﻿
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    partial class Luong
+    partial class frmLuong
     {
         /// <summary>
         /// Required designer variable.

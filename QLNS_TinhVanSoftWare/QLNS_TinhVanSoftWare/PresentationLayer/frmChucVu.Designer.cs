@@ -1,6 +1,6 @@
 ﻿namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    partial class chucvu
+    partial class frmChucVu
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    partial class taikhoan
+    partial class frmTaiKhoan
     {
         /// <summary>
         /// Required designer variable.

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class Luong : Form
+    public partial class frmLuong : Form
     {
-        public Luong()
+        public frmLuong()
         {
             InitializeComponent();
         }

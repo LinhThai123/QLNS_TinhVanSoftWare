@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class PhongBan : Form
+    public partial class frmPhongBan : Form
     {
-        public PhongBan()
+        public frmPhongBan()
         {
             InitializeComponent();
         }

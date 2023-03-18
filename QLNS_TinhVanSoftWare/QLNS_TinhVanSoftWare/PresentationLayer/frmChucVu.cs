@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNS_TinhVanSoftWare
+namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class frmTrangChu : Form
+    public partial class frmChucVu : Form
     {
-        public frmTrangChu()
+        public frmChucVu()
         {
             InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

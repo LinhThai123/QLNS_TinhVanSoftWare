@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    public partial class chucvu : Form
+    public partial class frmTaiKhoan : Form
     {
-        public chucvu()
+        public frmTaiKhoan()
         {
             InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

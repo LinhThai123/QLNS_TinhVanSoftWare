@@ -1,7 +1,7 @@
 ﻿
 namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
-    partial class PhongBan
+    partial class frmPhongBan
     {
         /// <summary>
         /// Required designer variable.
