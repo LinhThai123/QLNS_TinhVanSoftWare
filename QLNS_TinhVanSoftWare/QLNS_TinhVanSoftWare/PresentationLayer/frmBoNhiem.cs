@@ -47,6 +47,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         }
 
+        
 
 
         //Mã nhân viên, Tên nhân viên, Ngày sinh, Giới tính, Số CCCD, Địa chỉ, SĐT, Email, Ngày vào làm, Mã chức vụ, Tên chức vụ, Mã phòng ban, Tên phòng ban, Lương, Tình trạng)
