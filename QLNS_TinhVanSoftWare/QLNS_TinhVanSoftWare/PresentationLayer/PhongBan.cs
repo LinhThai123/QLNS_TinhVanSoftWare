@@ -45,5 +45,10 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
             panel1.Height, 30, 30));
         }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
