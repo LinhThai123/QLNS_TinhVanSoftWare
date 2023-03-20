@@ -17,7 +17,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnThemTK_Click(object sender, EventArgs e)
         {
 
         }
