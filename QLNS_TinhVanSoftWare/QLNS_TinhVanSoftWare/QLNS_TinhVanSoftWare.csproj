@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\HopDongBLL.cs" />
     <Compile Include="BusinessLogicLayer\TaiKhoanBLL.cs" />
+    <Compile Include="DataAccessLayer\HopDong.DAL.cs" />
     <Compile Include="DataAccessLayer\TaiKhoanDAL.cs" />
     <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
