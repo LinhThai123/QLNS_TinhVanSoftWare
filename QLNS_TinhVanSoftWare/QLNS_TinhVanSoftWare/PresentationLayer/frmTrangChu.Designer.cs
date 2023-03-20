@@ -30,27 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangChu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnSystem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnLogin = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnAccMg = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnChangePass = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnHethong = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnPhongBan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnChucVu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnCategory = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnEmployee = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnPrivateIn4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnMode = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnJobApply = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBDanhGia = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnQDBoNhiem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnHDLaoDong = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnNghiPhepThoiViec = new System.Windows.Forms.ToolStripMenuItem();
             this.mnFunction = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnLuongNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
             this.childmnEmploy = new System.Windows.Forms.ToolStripMenuItem();
             this.childmnSalary = new System.Windows.Forms.ToolStripMenuItem();
             this.mnSupport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnKhenThuongKyLuat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnDepart = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnPart = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đơnNghỉPhépThôiViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.NghiPhepThoiViec = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnSystem,
+            this.mnHethong,
             this.mnCategory,
             this.mnFunction,
             this.mnManager});
@@ -68,116 +68,132 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mnSystem
+            // mnHethong
             // 
-            this.mnSystem.BackColor = System.Drawing.Color.DarkOrange;
-            this.mnSystem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mnSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnLogin,
-            this.mnAccMg,
-            this.mnChangePass,
-            this.quảnLýTàiKhoảnToolStripMenuItem});
-            this.mnSystem.ForeColor = System.Drawing.Color.Black;
-            this.mnSystem.Image = ((System.Drawing.Image)(resources.GetObject("mnSystem.Image")));
-            this.mnSystem.Name = "mnSystem";
-            this.mnSystem.Size = new System.Drawing.Size(105, 24);
-            this.mnSystem.Text = "Hệ thống";
+            this.mnHethong.BackColor = System.Drawing.Color.DarkOrange;
+            this.mnHethong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mnHethong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnPhongBan,
+            this.mnChucVu,
+            this.mnNhanVien,
+            this.mnTaiKhoan});
+            this.mnHethong.ForeColor = System.Drawing.Color.Black;
+            this.mnHethong.Image = ((System.Drawing.Image)(resources.GetObject("mnHethong.Image")));
+            this.mnHethong.Name = "mnHethong";
+            this.mnHethong.Size = new System.Drawing.Size(105, 24);
+            this.mnHethong.Text = "Hệ thống";
             // 
-            // mnLogin
+            // mnPhongBan
             // 
-            this.mnLogin.Name = "mnLogin";
-            this.mnLogin.Size = new System.Drawing.Size(224, 26);
-            this.mnLogin.Text = "Quản Lý Phòng Ban";
+            this.mnPhongBan.Name = "mnPhongBan";
+            this.mnPhongBan.Size = new System.Drawing.Size(219, 26);
+            this.mnPhongBan.Text = "Quản Lý Phòng Ban";
+            this.mnPhongBan.Click += new System.EventHandler(this.mnPhongBan_Click);
             // 
-            // mnAccMg
+            // mnChucVu
             // 
-            this.mnAccMg.Name = "mnAccMg";
-            this.mnAccMg.Size = new System.Drawing.Size(224, 26);
-            this.mnAccMg.Text = "Quản lý Chức Vụ";
+            this.mnChucVu.Name = "mnChucVu";
+            this.mnChucVu.Size = new System.Drawing.Size(219, 26);
+            this.mnChucVu.Text = "Quản lý Chức Vụ";
+            this.mnChucVu.Click += new System.EventHandler(this.mnChucVu_Click);
             // 
-            // mnChangePass
+            // mnNhanVien
             // 
-            this.mnChangePass.Name = "mnChangePass";
-            this.mnChangePass.Size = new System.Drawing.Size(224, 26);
-            this.mnChangePass.Text = "Quản Lý Nhân Viên";
+            this.mnNhanVien.Name = "mnNhanVien";
+            this.mnNhanVien.Size = new System.Drawing.Size(219, 26);
+            this.mnNhanVien.Text = "Quản Lý Nhân Viên";
+            this.mnNhanVien.Click += new System.EventHandler(this.mnNhanVien_Click);
+            // 
+            // mnTaiKhoan
+            // 
+            this.mnTaiKhoan.Name = "mnTaiKhoan";
+            this.mnTaiKhoan.Size = new System.Drawing.Size(219, 26);
+            this.mnTaiKhoan.Text = "Quản Lý Tài Khoản";
+            this.mnTaiKhoan.Click += new System.EventHandler(this.mnTaiKhoan_Click);
             // 
             // mnCategory
             // 
             this.mnCategory.BackColor = System.Drawing.Color.DarkOrange;
             this.mnCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnCategory.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnEmployee,
-            this.mnPrivateIn4,
-            this.mnMode,
-            this.mnJobApply});
+            this.mnBBDanhGia,
+            this.mnQDBoNhiem,
+            this.mnHDLaoDong,
+            this.mnNghiPhepThoiViec});
             this.mnCategory.Image = ((System.Drawing.Image)(resources.GetObject("mnCategory.Image")));
             this.mnCategory.Name = "mnCategory";
             this.mnCategory.Size = new System.Drawing.Size(155, 24);
             this.mnCategory.Text = "Quản Lý Nhân Sự";
             // 
-            // mnEmployee
+            // mnBBDanhGia
             // 
-            this.mnEmployee.Name = "mnEmployee";
-            this.mnEmployee.Size = new System.Drawing.Size(292, 26);
-            this.mnEmployee.Text = "Quản Lý Biên Bản Đánh Giá";
+            this.mnBBDanhGia.Name = "mnBBDanhGia";
+            this.mnBBDanhGia.Size = new System.Drawing.Size(292, 26);
+            this.mnBBDanhGia.Text = "Quản Lý Biên Bản Đánh Giá";
+            this.mnBBDanhGia.Click += new System.EventHandler(this.mnBBDanhGia_Click);
             // 
-            // mnPrivateIn4
+            // mnQDBoNhiem
             // 
-            this.mnPrivateIn4.Name = "mnPrivateIn4";
-            this.mnPrivateIn4.Size = new System.Drawing.Size(292, 26);
-            this.mnPrivateIn4.Text = "Quản Lý Quyết Định Bổ Nhiệm";
+            this.mnQDBoNhiem.Name = "mnQDBoNhiem";
+            this.mnQDBoNhiem.Size = new System.Drawing.Size(292, 26);
+            this.mnQDBoNhiem.Text = "Quản Lý Quyết Định Bổ Nhiệm";
+            this.mnQDBoNhiem.Click += new System.EventHandler(this.mnQDBoNhiem_Click);
             // 
-            // mnMode
+            // mnHDLaoDong
             // 
-            this.mnMode.Name = "mnMode";
-            this.mnMode.Size = new System.Drawing.Size(292, 26);
-            this.mnMode.Text = "Quản Lý Hợp Đồng Lao Động";
+            this.mnHDLaoDong.Name = "mnHDLaoDong";
+            this.mnHDLaoDong.Size = new System.Drawing.Size(292, 26);
+            this.mnHDLaoDong.Text = "Quản Lý Hợp Đồng Lao Động";
+            this.mnHDLaoDong.Click += new System.EventHandler(this.mnHDLaoDong_Click);
             // 
-            // mnJobApply
+            // mnNghiPhepThoiViec
             // 
-            this.mnJobApply.Name = "mnJobApply";
-            this.mnJobApply.Size = new System.Drawing.Size(292, 26);
-            this.mnJobApply.Text = "Quản Lý Nghỉ Phép,Thôi Việc";
+            this.mnNghiPhepThoiViec.Name = "mnNghiPhepThoiViec";
+            this.mnNghiPhepThoiViec.Size = new System.Drawing.Size(292, 26);
+            this.mnNghiPhepThoiViec.Text = "Quản Lý Nghỉ Phép,Thôi Việc";
+            this.mnNghiPhepThoiViec.Click += new System.EventHandler(this.mnNghiPhepThoiViec_Click);
             // 
             // mnFunction
             // 
             this.mnFunction.BackColor = System.Drawing.Color.DarkOrange;
             this.mnFunction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnSearch,
-            this.mnReport,
+            this.mnLuongNhanVien,
+            this.mnBangChamCong,
             this.mnSupport,
-            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem});
+            this.mnKhenThuongKyLuat});
             this.mnFunction.Image = ((System.Drawing.Image)(resources.GetObject("mnFunction.Image")));
             this.mnFunction.Name = "mnFunction";
             this.mnFunction.Size = new System.Drawing.Size(152, 24);
             this.mnFunction.Text = "Quản Lý Kế Toán";
             // 
-            // mnSearch
+            // mnLuongNhanVien
             // 
-            this.mnSearch.Name = "mnSearch";
-            this.mnSearch.Size = new System.Drawing.Size(300, 26);
-            this.mnSearch.Text = "Quản Lý Bảng Lương Nhân Viên";
+            this.mnLuongNhanVien.Name = "mnLuongNhanVien";
+            this.mnLuongNhanVien.Size = new System.Drawing.Size(300, 26);
+            this.mnLuongNhanVien.Text = "Quản Lý Bảng Lương Nhân Viên";
+            this.mnLuongNhanVien.Click += new System.EventHandler(this.mnLuongNhanVien_Click);
             // 
-            // mnReport
+            // mnBangChamCong
             // 
-            this.mnReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnBangChamCong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.childmnEmploy,
             this.childmnSalary});
-            this.mnReport.Name = "mnReport";
-            this.mnReport.Size = new System.Drawing.Size(300, 26);
-            this.mnReport.Text = "Quản Lý Bảng Chấm Công";
+            this.mnBangChamCong.Name = "mnBangChamCong";
+            this.mnBangChamCong.Size = new System.Drawing.Size(300, 26);
+            this.mnBangChamCong.Text = "Quản Lý Bảng Chấm Công";
+            this.mnBangChamCong.Click += new System.EventHandler(this.mnBangChamCong_Click);
             // 
             // childmnEmploy
             // 
             this.childmnEmploy.Name = "childmnEmploy";
-            this.childmnEmploy.Size = new System.Drawing.Size(224, 26);
+            this.childmnEmploy.Size = new System.Drawing.Size(158, 26);
             this.childmnEmploy.Text = "Nhân viên";
             // 
             // childmnSalary
             // 
             this.childmnSalary.Name = "childmnSalary";
-            this.childmnSalary.Size = new System.Drawing.Size(224, 26);
+            this.childmnSalary.Size = new System.Drawing.Size(158, 26);
             this.childmnSalary.Text = "Lương";
             // 
             // mnSupport
@@ -186,48 +202,46 @@
             this.mnSupport.Size = new System.Drawing.Size(300, 26);
             this.mnSupport.Text = "Quản Lý Báo Cáo Tài Chính";
             // 
+            // mnKhenThuongKyLuat
+            // 
+            this.mnKhenThuongKyLuat.Name = "mnKhenThuongKyLuat";
+            this.mnKhenThuongKyLuat.Size = new System.Drawing.Size(300, 26);
+            this.mnKhenThuongKyLuat.Text = "Quản Lý Khen Thưởng, Kỷ Luật";
+            this.mnKhenThuongKyLuat.Click += new System.EventHandler(this.mnKhenThuongKyLuat_Click);
+            // 
             // mnManager
             // 
             this.mnManager.BackColor = System.Drawing.Color.DarkOrange;
             this.mnManager.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnDepart,
-            this.mnPart,
-            this.đơnNghỉPhépThôiViệcToolStripMenuItem});
+            this.mnDangXuat,
+            this.DoiMatKhau,
+            this.NghiPhepThoiViec});
             this.mnManager.Image = ((System.Drawing.Image)(resources.GetObject("mnManager.Image")));
             this.mnManager.Name = "mnManager";
             this.mnManager.Size = new System.Drawing.Size(107, 24);
             this.mnManager.Text = "Tài Khoản";
             // 
-            // mnDepart
+            // mnDangXuat
             // 
-            this.mnDepart.Name = "mnDepart";
-            this.mnDepart.Size = new System.Drawing.Size(257, 26);
-            this.mnDepart.Text = "Đăng Xuất";
+            this.mnDangXuat.Name = "mnDangXuat";
+            this.mnDangXuat.Size = new System.Drawing.Size(257, 26);
+            this.mnDangXuat.Text = "Đăng Xuất";
+            this.mnDangXuat.Click += new System.EventHandler(this.mnDangXuat_Click);
             // 
-            // mnPart
+            // DoiMatKhau
             // 
-            this.mnPart.Name = "mnPart";
-            this.mnPart.Size = new System.Drawing.Size(257, 26);
-            this.mnPart.Text = "Đổi Mật Khẩu";
+            this.DoiMatKhau.Name = "DoiMatKhau";
+            this.DoiMatKhau.Size = new System.Drawing.Size(257, 26);
+            this.DoiMatKhau.Text = "Đổi Mật Khẩu";
+            this.DoiMatKhau.Click += new System.EventHandler(this.DoiMatKhau_Click);
             // 
-            // quảnLýKhenThưởngKỷLuậtToolStripMenuItem
+            // NghiPhepThoiViec
             // 
-            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem.Name = "quảnLýKhenThưởngKỷLuậtToolStripMenuItem";
-            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem.Size = new System.Drawing.Size(300, 26);
-            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem.Text = "Quản Lý Khen Thưởng, Kỷ Luật";
-            // 
-            // đơnNghỉPhépThôiViệcToolStripMenuItem
-            // 
-            this.đơnNghỉPhépThôiViệcToolStripMenuItem.Name = "đơnNghỉPhépThôiViệcToolStripMenuItem";
-            this.đơnNghỉPhépThôiViệcToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.đơnNghỉPhépThôiViệcToolStripMenuItem.Text = "Đơn Nghỉ Phép,Thôi Việc";
-            // 
-            // quảnLýTàiKhoảnToolStripMenuItem
-            // 
-            this.quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
-            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản Lý Tài Khoản";
+            this.NghiPhepThoiViec.Name = "NghiPhepThoiViec";
+            this.NghiPhepThoiViec.Size = new System.Drawing.Size(257, 26);
+            this.NghiPhepThoiViec.Text = "Đơn Nghỉ Phép,Thôi Việc";
+            this.NghiPhepThoiViec.Click += new System.EventHandler(this.NghiPhepThoiViec_Click);
             // 
             // frmTrangChu
             // 
@@ -240,6 +254,7 @@
             this.DoubleBuffered = true;
             this.Name = "frmTrangChu";
             this.Text = "frmTrangChu";
+            this.Load += new System.EventHandler(this.frmTrangChu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -250,26 +265,26 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnSystem;
-        private System.Windows.Forms.ToolStripMenuItem mnLogin;
-        private System.Windows.Forms.ToolStripMenuItem mnAccMg;
-        private System.Windows.Forms.ToolStripMenuItem mnChangePass;
+        private System.Windows.Forms.ToolStripMenuItem mnHethong;
+        private System.Windows.Forms.ToolStripMenuItem mnPhongBan;
+        private System.Windows.Forms.ToolStripMenuItem mnChucVu;
+        private System.Windows.Forms.ToolStripMenuItem mnNhanVien;
         private System.Windows.Forms.ToolStripMenuItem mnCategory;
-        private System.Windows.Forms.ToolStripMenuItem mnEmployee;
-        private System.Windows.Forms.ToolStripMenuItem mnPrivateIn4;
-        private System.Windows.Forms.ToolStripMenuItem mnMode;
-        private System.Windows.Forms.ToolStripMenuItem mnJobApply;
+        private System.Windows.Forms.ToolStripMenuItem mnBBDanhGia;
+        private System.Windows.Forms.ToolStripMenuItem mnQDBoNhiem;
+        private System.Windows.Forms.ToolStripMenuItem mnHDLaoDong;
+        private System.Windows.Forms.ToolStripMenuItem mnNghiPhepThoiViec;
         private System.Windows.Forms.ToolStripMenuItem mnFunction;
-        private System.Windows.Forms.ToolStripMenuItem mnSearch;
-        private System.Windows.Forms.ToolStripMenuItem mnReport;
+        private System.Windows.Forms.ToolStripMenuItem mnLuongNhanVien;
+        private System.Windows.Forms.ToolStripMenuItem mnBangChamCong;
         private System.Windows.Forms.ToolStripMenuItem childmnEmploy;
         private System.Windows.Forms.ToolStripMenuItem childmnSalary;
         private System.Windows.Forms.ToolStripMenuItem mnSupport;
         private System.Windows.Forms.ToolStripMenuItem mnManager;
-        private System.Windows.Forms.ToolStripMenuItem mnDepart;
-        private System.Windows.Forms.ToolStripMenuItem mnPart;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýKhenThưởngKỷLuậtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đơnNghỉPhépThôiViệcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnDangXuat;
+        private System.Windows.Forms.ToolStripMenuItem DoiMatKhau;
+        private System.Windows.Forms.ToolStripMenuItem mnKhenThuongKyLuat;
+        private System.Windows.Forms.ToolStripMenuItem NghiPhepThoiViec;
+        private System.Windows.Forms.ToolStripMenuItem mnTaiKhoan;
     }
 }
