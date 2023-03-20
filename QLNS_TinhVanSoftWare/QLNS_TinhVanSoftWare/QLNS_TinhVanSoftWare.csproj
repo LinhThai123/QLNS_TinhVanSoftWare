@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\TaiKhoanBLL.cs" />
-    <Compile Include="DataAccessLayer\PhongBanDAL.cs" />
     <Compile Include="DataAccessLayer\TaiKhoanDAL.cs" />
     <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
       <SubType>Form</SubType>

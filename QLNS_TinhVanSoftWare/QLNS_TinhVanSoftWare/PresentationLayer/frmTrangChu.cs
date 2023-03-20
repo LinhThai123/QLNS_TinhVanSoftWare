@@ -30,10 +30,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         }
 
         private void mnDangXuat_Click(object sender, EventArgs e)
-        {
-            Program.maTK = "";
-            Program.maQuyen = "";
-            Program.tenTK = "";
+        {        
             frmDangNhap frmDangNhap = new frmDangNhap();
             frmDangNhap.Show(); 
             this.Hide();

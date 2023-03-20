@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
+
 using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,7 +11,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
 {
     public class TaiKhoanDAL
     {
-        private String constr = "Data Source=DESKTOP-F0LS1J1;Initial Catalog=QuanLyNhanVien;Integrated Security=True";
+        private string constr = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         public bool insert(string maTK, string tenTK, string matKhau, string tinhTrang, string maQuyen , string maNV)
         {
@@ -35,6 +35,26 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 }
             }
         }
-
+        public bool Check_MaTaiKhoan(string constr, string MaTaiKhoan)
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand command = new SqlCommand("select * from tbl_Taikhoan", cnn))
+                {
+                    cnn.Open();
+                    using (SqlDataReader rd = command.ExecuteReader())
+                    {
+                        while (rd.Read())
+                        {
+                            if (rd["PK_sMaTK"].Equals(MaTaiKhoan))
+                                return false;
+                        }
+                        rd.Close();
+                    }
+                    cnn.Close();
+                }
+            }
+            return true;
+        }
     }
 }

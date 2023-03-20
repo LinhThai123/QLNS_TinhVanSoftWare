@@ -14,6 +14,10 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         {
             return TaiKhoanDAL.insert(maTK, tenTK, matKhau, tinhTrang, maNV, maQuyen); 
         }
+        public bool Check_MaTaiKhoan(string constr, string MaTaiKhoan)
+        {
+            return TaiKhoanDAL.Check_MaTaiKhoan(constr, MaTaiKhoan); 
+        }
 
     }
 }

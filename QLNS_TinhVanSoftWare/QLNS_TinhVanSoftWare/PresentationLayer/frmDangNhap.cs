@@ -12,39 +12,60 @@ using System.Windows.Forms;
 namespace QLNS_TinhVanSoftWare
 {
     public partial class frmDangNhap : Form
+
     {
+
+        BusinessLogicLayer.TaiKhoanBLL taiKhoanBLL = new BusinessLogicLayer.TaiKhoanBLL(); 
         public frmDangNhap()
         {
             InitializeComponent();
         }
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
-
-
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void btnDanhNhap_Click(object sender, EventArgs e)
         {
-            panel1.Location = new Point(
-                this.ClientSize.Width / 2 - panel1.Size.Width / 2,
-                this.ClientSize.Height / 2 - panel1.Size.Height / 2);
-            panel1.Anchor = AnchorStyles.None;
+            string tenTK = txtTenTaiKhoan.Text;
+            string matKhau = txtMatKhau.Text;
 
-            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
-            panel1.Height, 30, 30));
+            if (tenTK.Equals(""))
+            {
+                errorProviderLogin.SetError(txtTenTaiKhoan, "Vui lòng nhập tên tài khoản");
+            }
+            else
+            {
+                errorProviderLogin.SetError(txtTenTaiKhoan, "");
+
+                if (taiKhoanBLL.login(tenTK, matKhau) == 0)
+                    errorProviderLogin.SetError(txtTenTaiKhoan, "Sai tên tên tài khoản");
+                else
+                    errorProviderLogin.SetError(txtTenTaiKhoan, "");
+            }
+
+            if (matKhau.Equals(""))
+            {
+                errorProviderLogin.SetError(txtMatKhau, "Vui lòng nhập mật khẩu");
+            }
+            else
+            {
+                errorProviderLogin.SetError(txtMatKhau, "");
+
+                if (taiKhoanBLL.login(tenTK, matKhau) == 2)
+                {
+                    errorProviderLogin.SetError(txtMatKhau, "Sai mật khẩu");
+                    txtMatKhau.Text = "";
+                }
+                else
+                    errorProviderLogin.SetError(txtMatKhau, "");
+            }
+
+            if (taiKhoanBLL.login(tenTK, matKhau) == 1)
+            {
+                new TrangChu().Show();
+                this.Hide();
+            }
         }
-    }
+
 }
