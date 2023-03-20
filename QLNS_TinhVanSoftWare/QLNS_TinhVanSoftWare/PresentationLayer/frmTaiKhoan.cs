@@ -13,7 +13,9 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
     public partial class frmTaiKhoan : Form
     {
        
-        BusinessLogicLayer.TaiKhoanBLL taiKhoanBLL = new BusinessLogicLayer.TaiKhoanBLL(); 
+        BusinessLogicLayer.TaiKhoanBLL taiKhoanBLL = new BusinessLogicLayer.TaiKhoanBLL();
+
+        BusinessLogicLayer.QuyenBLL quyenBLL = new BusinessLogicLayer.QuyenBLL(); 
 
         public frmTaiKhoan()
         {
@@ -39,6 +41,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
                 {
                     taiKhoanBLL.insert(cbMaNV.Text, txtMaTK.Text, txtTenTK.Text, txtTinhTrang.Text, cbMaQuyen.Text, txtMK.Text);
                     MessageBox.Show("Thêm tài khoản thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmTaiKhoan_Load(sender, e); 
                 }
                 else
                 {
@@ -51,9 +54,21 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             }
         }
 
+        public void hienTenQuyen()
+        {
+            DataTable t = quyenBLL.layDSQuyen();
+            DataView view = new DataView(t);
+            view.Sort = "PK_sMaquyen";
+            cbMaQuyen.DataSource = view;
+            cbMaQuyen.DisplayMember = "sTenquyen";
+            cbMaQuyen.ValueMember = "sTenquyen";
+
+        }
+
         private void frmTaiKhoan_Load(object sender, EventArgs e)
         {
-            findAll(); 
+            findAll();
+            hienTenQuyen();
         }
     }
 }
