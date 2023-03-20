@@ -12,9 +12,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmTaiKhoan : Form
     {
-
-        string constr = "Data Source=DESKTOP-F0LS1J1;Initial Catalog=QuanLyNhanVien;Integrated Security=True";
-
+       
         BusinessLogicLayer.TaiKhoanBLL taiKhoanBLL = new BusinessLogicLayer.TaiKhoanBLL(); 
 
         public frmTaiKhoan()
@@ -22,14 +20,24 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             InitializeComponent();
         }
 
+        private void findAll()
+        {
+            DataTable t = taiKhoanBLL.findAll();
+            t.Columns.Add("STT");
+            for (int i = 0; i < t.Rows.Count; i++)
+                t.Rows[i]["STT"] = i + 1;
+            dgvTaiKhoan.DataSource = t;
+            dgvTaiKhoan.Columns["STT"].DisplayIndex = 0;
+        }
+
         private void btnThemTK_Click(object sender, EventArgs e)
         {
             if (cbMaNV.Text != "" && txtMaTK.Text != "" && txtTenTK.Text != "" 
                 && txtTinhTrang.Text != "" && cbMaQuyen.Text != "" && txtMK.Text != "")
             {
-                if (taiKhoanBLL.Check_MaTaiKhoan(constr, txtMaTK.Text))
+                if (taiKhoanBLL.Check_MaTaiKhoan( txtMaTK.Text))
                 {
-                    taiKhoanBLL.insert(constr, cbMaNV.Text, txtMaTK.Text, txtTenTK.Text, txtTinhTrang.Text, cbMaQuyen.Text, txtMK.Text);
+                    taiKhoanBLL.insert(cbMaNV.Text, txtMaTK.Text, txtTenTK.Text, txtTinhTrang.Text, cbMaQuyen.Text, txtMK.Text);
                     MessageBox.Show("Thêm tài khoản thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -41,6 +49,11 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             {
                 MessageBox.Show("Vui lòng điền đầy đủ các thông tin ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void frmTaiKhoan_Load(object sender, EventArgs e)
+        {
+            findAll(); 
         }
     }
 }

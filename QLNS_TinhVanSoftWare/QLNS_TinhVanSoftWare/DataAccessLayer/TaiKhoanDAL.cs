@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace QLNS_TinhVanSoftWare.DataAccessLayer
 {
@@ -13,6 +14,24 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
     {
         private string constr = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
+        public DataTable findAll()
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("Select * from vv_TaiKhoan", cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable("vv_TaiKhoan"))
+                        {
+                            ad.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+        }
         public bool insert(string maTK, string tenTK, string matKhau, string tinhTrang, string maQuyen , string maNV)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
@@ -26,7 +45,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                     cmd.Parameters.AddWithValue("@MatKhau", matKhau);
                     cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
                     cmd.Parameters.AddWithValue("@MaNV", maNV);
-                    cmd.Parameters.AddWithValue("@FMaQuyen", maQuyen);
+                    cmd.Parameters.AddWithValue("@MaQuyen", maQuyen);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();
@@ -35,7 +54,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 }
             }
         }
-        public bool Check_MaTaiKhoan(string constr, string MaTaiKhoan)
+        public bool Check_MaTaiKhoan(string MaTaiKhoan)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
