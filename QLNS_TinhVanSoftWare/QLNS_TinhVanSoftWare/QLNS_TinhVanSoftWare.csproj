@@ -73,12 +73,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\frmBaoCaoTaiChinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\frmBaoCaoTaiChinh.Designer.cs">
-      <DependentUpon>frmBaoCaoTaiChinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,17 +133,8 @@
     <Compile Include="PresentationLayer\frmTrangChu.Designer.cs">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\rpBaoCaoTaiChinh1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rpBaoCaoTaiChinh.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationLayer\frmBaoCaoTaiChinh.resx">
-      <DependentUpon>frmBaoCaoTaiChinh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmBienBanDanhGia.resx">
       <DependentUpon>frmBienBanDanhGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,7 +177,6 @@
     <Compile Include="PresentationLayer\taikhoan.Designer.cs">
       <DependentUpon>taikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\chucvu.resx">
       <DependentUpon>chucvu.cs</DependentUpon>
@@ -220,10 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\PhongBan.resx">
       <DependentUpon>PhongBan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\rpBaoCaoTaiChinh.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rpBaoCaoTaiChinh1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\taikhoan.resx">
       <DependentUpon>taikhoan.cs</DependentUpon>
