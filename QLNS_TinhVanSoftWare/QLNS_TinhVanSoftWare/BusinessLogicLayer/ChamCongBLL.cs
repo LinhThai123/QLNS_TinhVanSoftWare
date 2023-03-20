@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
 {
-    class NhanVienBBL
+    class ChamCongBLL
     {
-        private NhanVienDAL nhanVienDAL = new NhanVienDAL();
+        private ChamCongDAL chamCongDAL = new ChamCongDAL();
         public DataTable LayDanhSachMaNhanVien()
         {
-            return nhanVienDAL.LayDanhSachMaNhanVien();
+            return chamCongDAL.LayDanhSachMaNhanVien();
         }
     }
 }

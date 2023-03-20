@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNghiPhepThoiViec));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rtbReason = new System.Windows.Forms.RichTextBox();
+            this.dtpEndday = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbIDName = new System.Windows.Forms.ComboBox();
             this.dgvNghilamthoiviec = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -42,29 +48,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dtpStartday = new System.Windows.Forms.DateTimePicker();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbIDName = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dtpEndday = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rtbReason = new System.Windows.Forms.RichTextBox();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.clNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clIDType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clStartdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clEnddate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNghilamthoiviec)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNghilamthoiviec)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -100,21 +90,76 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "NGHỈ PHÉP - THÔI VIỆC";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.Green;
+            this.btnCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.MintCream;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.Location = new System.Drawing.Point(639, 308);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(128, 48);
+            this.btnCreate.TabIndex = 51;
+            this.btnCreate.Text = "Thêm mới";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rtbReason);
+            this.groupBox1.Location = new System.Drawing.Point(1034, 55);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(396, 212);
+            this.groupBox1.TabIndex = 50;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lý do";
+            // 
+            // rtbReason
+            // 
+            this.rtbReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbReason.Location = new System.Drawing.Point(8, 39);
+            this.rtbReason.Margin = new System.Windows.Forms.Padding(4);
+            this.rtbReason.Name = "rtbReason";
+            this.rtbReason.Size = new System.Drawing.Size(370, 149);
+            this.rtbReason.TabIndex = 0;
+            this.rtbReason.Text = "";
+            // 
+            // dtpEndday
+            // 
+            this.dtpEndday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndday.Location = new System.Drawing.Point(688, 123);
+            this.dtpEndday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpEndday.Name = "dtpEndday";
+            this.dtpEndday.Size = new System.Drawing.Size(318, 29);
+            this.dtpEndday.TabIndex = 49;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(551, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 24);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Ngày kết thúc :";
+            // 
+            // cmbIDName
+            // 
+            this.cmbIDName.FormattingEnabled = true;
+            this.cmbIDName.Location = new System.Drawing.Point(201, 126);
+            this.cmbIDName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbIDName.Name = "cmbIDName";
+            this.cmbIDName.Size = new System.Drawing.Size(298, 32);
+            this.cmbIDName.TabIndex = 47;
             // 
             // dgvNghilamthoiviec
             // 
             this.dgvNghilamthoiviec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNghilamthoiviec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clNo,
-            this.clDate,
-            this.clIDType,
-            this.clName,
-            this.clType,
-            this.clDepartment,
-            this.clPosition,
-            this.clStartdate,
-            this.clEnddate,
-            this.clStatus});
             this.dgvNghilamthoiviec.Location = new System.Drawing.Point(23, 416);
             this.dgvNghilamthoiviec.Name = "dgvNghilamthoiviec";
             this.dgvNghilamthoiviec.RowHeadersWidth = 51;
@@ -248,6 +293,16 @@
             this.cmbPosition.Size = new System.Drawing.Size(298, 32);
             this.cmbPosition.TabIndex = 31;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(551, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(132, 24);
+            this.label17.TabIndex = 30;
+            this.label17.Text = "Ngày bắt đầu :";
+            // 
             // cmbType
             // 
             this.cmbType.FormattingEnabled = true;
@@ -277,151 +332,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã/Tên nhân viên :";
             // 
-            // cmbIDName
-            // 
-            this.cmbIDName.FormattingEnabled = true;
-            this.cmbIDName.Location = new System.Drawing.Point(201, 126);
-            this.cmbIDName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbIDName.Name = "cmbIDName";
-            this.cmbIDName.Size = new System.Drawing.Size(298, 32);
-            this.cmbIDName.TabIndex = 47;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(551, 70);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(132, 24);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "Ngày bắt đầu :";
-            // 
-            // dtpEndday
-            // 
-            this.dtpEndday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEndday.Location = new System.Drawing.Point(688, 123);
-            this.dtpEndday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpEndday.Name = "dtpEndday";
-            this.dtpEndday.Size = new System.Drawing.Size(318, 29);
-            this.dtpEndday.TabIndex = 49;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(551, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 24);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Ngày kết thúc :";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rtbReason);
-            this.groupBox1.Location = new System.Drawing.Point(1034, 55);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(396, 212);
-            this.groupBox1.TabIndex = 50;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lý do";
-            // 
-            // rtbReason
-            // 
-            this.rtbReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbReason.Location = new System.Drawing.Point(8, 39);
-            this.rtbReason.Margin = new System.Windows.Forms.Padding(4);
-            this.rtbReason.Name = "rtbReason";
-            this.rtbReason.Size = new System.Drawing.Size(370, 149);
-            this.rtbReason.TabIndex = 0;
-            this.rtbReason.Text = "";
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.Green;
-            this.btnCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.MintCream;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.Location = new System.Drawing.Point(639, 308);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(128, 48);
-            this.btnCreate.TabIndex = 51;
-            this.btnCreate.Text = "Thêm mới";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // clNo
-            // 
-            this.clNo.HeaderText = "STT";
-            this.clNo.MinimumWidth = 6;
-            this.clNo.Name = "clNo";
-            this.clNo.Width = 60;
-            // 
-            // clDate
-            // 
-            this.clDate.HeaderText = "Ngày lập";
-            this.clDate.MinimumWidth = 6;
-            this.clDate.Name = "clDate";
-            this.clDate.Width = 130;
-            // 
-            // clIDType
-            // 
-            this.clIDType.HeaderText = "Mã đơn nghỉ";
-            this.clIDType.MinimumWidth = 6;
-            this.clIDType.Name = "clIDType";
-            this.clIDType.Width = 125;
-            // 
-            // clName
-            // 
-            this.clName.HeaderText = "Họ và tên";
-            this.clName.MinimumWidth = 6;
-            this.clName.Name = "clName";
-            this.clName.Width = 140;
-            // 
-            // clType
-            // 
-            this.clType.HeaderText = "Loại đơn nghỉ";
-            this.clType.MinimumWidth = 6;
-            this.clType.Name = "clType";
-            this.clType.Width = 138;
-            // 
-            // clDepartment
-            // 
-            this.clDepartment.HeaderText = "Phòng ban";
-            this.clDepartment.MinimumWidth = 6;
-            this.clDepartment.Name = "clDepartment";
-            this.clDepartment.Width = 115;
-            // 
-            // clPosition
-            // 
-            this.clPosition.HeaderText = "Chức vụ";
-            this.clPosition.MinimumWidth = 6;
-            this.clPosition.Name = "clPosition";
-            this.clPosition.Width = 115;
-            // 
-            // clStartdate
-            // 
-            this.clStartdate.HeaderText = "Ngày bắt đầu";
-            this.clStartdate.MinimumWidth = 6;
-            this.clStartdate.Name = "clStartdate";
-            this.clStartdate.Width = 140;
-            // 
-            // clEnddate
-            // 
-            this.clEnddate.HeaderText = "Ngày kết thúc";
-            this.clEnddate.MinimumWidth = 6;
-            this.clEnddate.Name = "clEnddate";
-            this.clEnddate.Width = 140;
-            // 
-            // clStatus
-            // 
-            this.clStatus.HeaderText = "Trạng thái";
-            this.clStatus.MinimumWidth = 6;
-            this.clStatus.Name = "clStatus";
-            this.clStatus.Width = 115;
-            // 
             // frmNghiPhepThoiViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -432,10 +342,11 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "frmNghiPhepThoiViec";
             this.Text = "frmNghiPhepThoiViec";
+            this.Load += new System.EventHandler(this.frmNghiPhepThoiViec_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNghilamthoiviec)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNghilamthoiviec)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,15 +376,5 @@
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clIDType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDepartment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clPosition;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clStartdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clEnddate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clStatus;
     }
 }

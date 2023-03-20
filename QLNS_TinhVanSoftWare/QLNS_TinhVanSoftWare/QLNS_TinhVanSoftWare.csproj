@@ -68,8 +68,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\NhanVienBBL.cs" />
-    <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="BusinessLogicLayer\ChamCongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NghiPhepThoiViecBLL.cs" />
+    <Compile Include="DataAccessLayer\ChamCongDAL.cs" />
+    <Compile Include="DataAccessLayer\NghiPhepThoiViecDAL.cs" />
     <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace QLNS_TinhVanSoftWare.DataAccessLayer
 {
-    class NhanVienDAL
+    class ChamCongDAL
     {
         private SqlConnection connection;
 
-        public NhanVienDAL()
+        public ChamCongDAL()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
             connection = new SqlConnection(connectionString);

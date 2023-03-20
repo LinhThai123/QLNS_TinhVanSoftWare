@@ -20,17 +20,13 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         }
         public void HienThiMaNhanVien()
         {
-            NhanVienBBL nhanVienBBL = new NhanVienBBL();
+            ChamCongBLL nhanVienBBL = new ChamCongBLL();
             DataTable dt = nhanVienBBL.LayDanhSachMaNhanVien();
             cmbMaNv.DataSource = dt;
             cmbMaNv.DisplayMember = "PK_sMaNV";
             cmbMaNv.ValueMember = "PK_sMaNV";
 
-            /*cmbMaNv.DisplayMember = "PK_sMaNV"; // hiển thị giá trị của cột "idNhanVien"
-            cmbMaNv.ValueMember = "PK_sMaNV"; // giá trị của mỗi item trong combobox cũng là giá trị của cột "idNhanVien"
-            cmbMaNv.FormatString = "{0} - {1}"; // định dạng hiển thị của mỗi item là "idNhanVien - tenNhanVien"
-            cmbMaNv.DataSource = dt; // myDataTable là bảng dữ liệu chứa thông tin nhân viên
-*/
+            
 
         }
 
