@@ -16,5 +16,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             InitializeComponent();
         }
+
+   
     }
 }

@@ -48,11 +48,9 @@
             this.mnManager = new System.Windows.Forms.ToolStripMenuItem();
             this.mnDepart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnPart = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnEmployeeSalary = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnSalary = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnConstract = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnSignContract = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnExtraContract = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đơnNghỉPhépThôiViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +75,8 @@
             this.mnSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnLogin,
             this.mnAccMg,
-            this.mnChangePass});
+            this.mnChangePass,
+            this.quảnLýTàiKhoảnToolStripMenuItem});
             this.mnSystem.ForeColor = System.Drawing.Color.Black;
             this.mnSystem.Image = ((System.Drawing.Image)(resources.GetObject("mnSystem.Image")));
             this.mnSystem.Name = "mnSystem";
@@ -88,19 +87,19 @@
             // 
             this.mnLogin.Name = "mnLogin";
             this.mnLogin.Size = new System.Drawing.Size(224, 26);
-            this.mnLogin.Text = "Đăng nhập";
+            this.mnLogin.Text = "Quản Lý Phòng Ban";
             // 
             // mnAccMg
             // 
             this.mnAccMg.Name = "mnAccMg";
             this.mnAccMg.Size = new System.Drawing.Size(224, 26);
-            this.mnAccMg.Text = "Quản lý tài khoản";
+            this.mnAccMg.Text = "Quản lý Chức Vụ";
             // 
             // mnChangePass
             // 
             this.mnChangePass.Name = "mnChangePass";
             this.mnChangePass.Size = new System.Drawing.Size(224, 26);
-            this.mnChangePass.Text = "Đổi mật khẩu";
+            this.mnChangePass.Text = "Quản Lý Nhân Viên";
             // 
             // mnCategory
             // 
@@ -113,32 +112,32 @@
             this.mnJobApply});
             this.mnCategory.Image = ((System.Drawing.Image)(resources.GetObject("mnCategory.Image")));
             this.mnCategory.Name = "mnCategory";
-            this.mnCategory.Size = new System.Drawing.Size(110, 24);
-            this.mnCategory.Text = "Danh mục";
+            this.mnCategory.Size = new System.Drawing.Size(155, 24);
+            this.mnCategory.Text = "Quản Lý Nhân Sự";
             // 
             // mnEmployee
             // 
             this.mnEmployee.Name = "mnEmployee";
-            this.mnEmployee.Size = new System.Drawing.Size(224, 26);
-            this.mnEmployee.Text = "Nhân sự";
+            this.mnEmployee.Size = new System.Drawing.Size(292, 26);
+            this.mnEmployee.Text = "Quản Lý Biên Bản Đánh Giá";
             // 
             // mnPrivateIn4
             // 
             this.mnPrivateIn4.Name = "mnPrivateIn4";
-            this.mnPrivateIn4.Size = new System.Drawing.Size(224, 26);
-            this.mnPrivateIn4.Text = "Thông tin cá nhân";
+            this.mnPrivateIn4.Size = new System.Drawing.Size(292, 26);
+            this.mnPrivateIn4.Text = "Quản Lý Quyết Định Bổ Nhiệm";
             // 
             // mnMode
             // 
             this.mnMode.Name = "mnMode";
-            this.mnMode.Size = new System.Drawing.Size(224, 26);
-            this.mnMode.Text = "Chế độ";
+            this.mnMode.Size = new System.Drawing.Size(292, 26);
+            this.mnMode.Text = "Quản Lý Hợp Đồng Lao Động";
             // 
             // mnJobApply
             // 
             this.mnJobApply.Name = "mnJobApply";
-            this.mnJobApply.Size = new System.Drawing.Size(224, 26);
-            this.mnJobApply.Text = "Hồ sơ thử việc";
+            this.mnJobApply.Size = new System.Drawing.Size(292, 26);
+            this.mnJobApply.Text = "Quản Lý Nghỉ Phép,Thôi Việc";
             // 
             // mnFunction
             // 
@@ -147,17 +146,18 @@
             this.mnFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnSearch,
             this.mnReport,
-            this.mnSupport});
+            this.mnSupport,
+            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem});
             this.mnFunction.Image = ((System.Drawing.Image)(resources.GetObject("mnFunction.Image")));
             this.mnFunction.Name = "mnFunction";
-            this.mnFunction.Size = new System.Drawing.Size(113, 24);
-            this.mnFunction.Text = "Chức năng";
+            this.mnFunction.Size = new System.Drawing.Size(152, 24);
+            this.mnFunction.Text = "Quản Lý Kế Toán";
             // 
             // mnSearch
             // 
             this.mnSearch.Name = "mnSearch";
-            this.mnSearch.Size = new System.Drawing.Size(224, 26);
-            this.mnSearch.Text = "Tra cứu";
+            this.mnSearch.Size = new System.Drawing.Size(300, 26);
+            this.mnSearch.Text = "Quản Lý Bảng Lương Nhân Viên";
             // 
             // mnReport
             // 
@@ -165,26 +165,26 @@
             this.childmnEmploy,
             this.childmnSalary});
             this.mnReport.Name = "mnReport";
-            this.mnReport.Size = new System.Drawing.Size(224, 26);
-            this.mnReport.Text = "Báo cáo";
+            this.mnReport.Size = new System.Drawing.Size(300, 26);
+            this.mnReport.Text = "Quản Lý Bảng Chấm Công";
             // 
             // childmnEmploy
             // 
             this.childmnEmploy.Name = "childmnEmploy";
-            this.childmnEmploy.Size = new System.Drawing.Size(158, 26);
+            this.childmnEmploy.Size = new System.Drawing.Size(224, 26);
             this.childmnEmploy.Text = "Nhân viên";
             // 
             // childmnSalary
             // 
             this.childmnSalary.Name = "childmnSalary";
-            this.childmnSalary.Size = new System.Drawing.Size(158, 26);
+            this.childmnSalary.Size = new System.Drawing.Size(224, 26);
             this.childmnSalary.Text = "Lương";
             // 
             // mnSupport
             // 
             this.mnSupport.Name = "mnSupport";
-            this.mnSupport.Size = new System.Drawing.Size(224, 26);
-            this.mnSupport.Text = "Trợ giúp";
+            this.mnSupport.Size = new System.Drawing.Size(300, 26);
+            this.mnSupport.Text = "Quản Lý Báo Cáo Tài Chính";
             // 
             // mnManager
             // 
@@ -193,58 +193,41 @@
             this.mnManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnDepart,
             this.mnPart,
-            this.mnEmployeeSalary,
-            this.mnSalary,
-            this.mnConstract});
+            this.đơnNghỉPhépThôiViệcToolStripMenuItem});
             this.mnManager.Image = ((System.Drawing.Image)(resources.GetObject("mnManager.Image")));
             this.mnManager.Name = "mnManager";
-            this.mnManager.Size = new System.Drawing.Size(93, 24);
-            this.mnManager.Text = "Quản lý";
+            this.mnManager.Size = new System.Drawing.Size(107, 24);
+            this.mnManager.Text = "Tài Khoản";
             // 
             // mnDepart
             // 
             this.mnDepart.Name = "mnDepart";
-            this.mnDepart.Size = new System.Drawing.Size(224, 26);
-            this.mnDepart.Text = "Phòng ban";
+            this.mnDepart.Size = new System.Drawing.Size(257, 26);
+            this.mnDepart.Text = "Đăng Xuất";
             // 
             // mnPart
             // 
             this.mnPart.Name = "mnPart";
-            this.mnPart.Size = new System.Drawing.Size(224, 26);
-            this.mnPart.Text = "Bộ phận";
+            this.mnPart.Size = new System.Drawing.Size(257, 26);
+            this.mnPart.Text = "Đổi Mật Khẩu";
             // 
-            // mnEmployeeSalary
+            // quảnLýKhenThưởngKỷLuậtToolStripMenuItem
             // 
-            this.mnEmployeeSalary.Name = "mnEmployeeSalary";
-            this.mnEmployeeSalary.Size = new System.Drawing.Size(224, 26);
-            this.mnEmployeeSalary.Text = "Lương nhân viên";
+            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem.Name = "quảnLýKhenThưởngKỷLuậtToolStripMenuItem";
+            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem.Size = new System.Drawing.Size(300, 26);
+            this.quảnLýKhenThưởngKỷLuậtToolStripMenuItem.Text = "Quản Lý Khen Thưởng, Kỷ Luật";
             // 
-            // mnSalary
+            // đơnNghỉPhépThôiViệcToolStripMenuItem
             // 
-            this.mnSalary.Name = "mnSalary";
-            this.mnSalary.Size = new System.Drawing.Size(224, 26);
-            this.mnSalary.Text = "Bảng lương";
+            this.đơnNghỉPhépThôiViệcToolStripMenuItem.Name = "đơnNghỉPhépThôiViệcToolStripMenuItem";
+            this.đơnNghỉPhépThôiViệcToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.đơnNghỉPhépThôiViệcToolStripMenuItem.Text = "Đơn Nghỉ Phép,Thôi Việc";
             // 
-            // mnConstract
+            // quảnLýTàiKhoảnToolStripMenuItem
             // 
-            this.mnConstract.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnSignContract,
-            this.mnExtraContract});
-            this.mnConstract.Name = "mnConstract";
-            this.mnConstract.Size = new System.Drawing.Size(224, 26);
-            this.mnConstract.Text = "Hợp đồng";
-            // 
-            // mnSignContract
-            // 
-            this.mnSignContract.Name = "mnSignContract";
-            this.mnSignContract.Size = new System.Drawing.Size(211, 26);
-            this.mnSignContract.Text = "Ký hợp đồng";
-            // 
-            // mnExtraContract
-            // 
-            this.mnExtraContract.Name = "mnExtraContract";
-            this.mnExtraContract.Size = new System.Drawing.Size(211, 26);
-            this.mnExtraContract.Text = "Gia hạn hợp đồng";
+            this.quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
+            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản Lý Tài Khoản";
             // 
             // frmTrangChu
             // 
@@ -285,10 +268,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnManager;
         private System.Windows.Forms.ToolStripMenuItem mnDepart;
         private System.Windows.Forms.ToolStripMenuItem mnPart;
-        private System.Windows.Forms.ToolStripMenuItem mnEmployeeSalary;
-        private System.Windows.Forms.ToolStripMenuItem mnSalary;
-        private System.Windows.Forms.ToolStripMenuItem mnConstract;
-        private System.Windows.Forms.ToolStripMenuItem mnSignContract;
-        private System.Windows.Forms.ToolStripMenuItem mnExtraContract;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýKhenThưởngKỷLuậtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đơnNghỉPhépThôiViệcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;
     }
 }
