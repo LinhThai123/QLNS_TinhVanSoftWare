@@ -1,5 +1,5 @@
 ﻿using QLNS_TinhVanSoftWare.BusinessLogicLayer;
-using QLNS_TinhVanSoftWare.Entity;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +20,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         public frmNghiPhepThoiViec()
         {
             InitializeComponent();
+            this.dgvNghilamthoiviec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNghilamthoiviec_CellClick);
+
         }
 
         // Đổ dữ liệu vào combobox Loại Đơn
@@ -27,7 +29,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         public void HienThiLoaiDon()
         {
 
-            NghiPhepThoiViecBLL phepThoiViecBLL = new NghiPhepThoiViecBLL();
+            NghiPhepBBL phepThoiViecBLL = new NghiPhepBBL();
             DataTable dt = phepThoiViecBLL.LayDanhSachLoaiDon();
             cmbType.DataSource = dt;
             cmbType.DisplayMember = "sLoaiDon";
@@ -38,7 +40,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         public void HienThiMaNV()
         {
 
-            NghiPhepThoiViecBLL phepThoiViecBLL = new NghiPhepThoiViecBLL();
+            NghiPhepBBL phepThoiViecBLL = new NghiPhepBBL();
             DataTable dt = phepThoiViecBLL.LayDanhSachMaNV();
             cmbIDName.DataSource = dt;
             cmbIDName.DisplayMember = "sTenNV";
@@ -48,7 +50,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         public void HienThiPhongBan()
         {
 
-            NghiPhepThoiViecBLL phepThoiViecBLL = new NghiPhepThoiViecBLL();
+            NghiPhepBBL phepThoiViecBLL = new NghiPhepBBL();
             DataTable dt = phepThoiViecBLL.LayDanhSachPhongBan();
             cmbDepartment.DataSource = dt;
             cmbDepartment.DisplayMember = "sTenPB";
@@ -58,7 +60,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         public void HienThiChucVu()
         {
 
-            NghiPhepThoiViecBLL phepThoiViecBLL = new NghiPhepThoiViecBLL();
+            NghiPhepBBL phepThoiViecBLL = new NghiPhepBBL();
             DataTable dt = phepThoiViecBLL.LayDanhSachChucVu();
             cmbPosition.DataSource = dt;
             cmbPosition.DisplayMember = "sTenCV";
@@ -96,20 +98,10 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         // Thêm 1 đơn nghỉ
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            DonXinNghi donXinNghi = new DonXinNghi
-            {
-                PK_sMaDon = "DON00077", 
-                dNgayLap = dtpNgayLap.Value,
-                sLoaiDon = cmbType.SelectedItem.ToString(),
-                dNgayBatDau = dtpStartday.Value,
-                dNgayKetThuc = dtpEndday.Value,
-                FK_sMaNV = cmbIDName.SelectedValue.ToString(),
-                FK_sMaCV = cmbPosition.SelectedValue.ToString(),
-                FK_sMaPB = cmbDepartment.SelectedValue.ToString(),
-                sLyDo = rtbReason.Text
-            };
+            DateTimeOffset now = DateTimeOffset.UtcNow;
+            string PK_DNP = "DNP" + now.Millisecond.ToString();
 
-            if (nghiPhepBBL.ThemDonXinNghi(donXinNghi))
+            if (nghiPhepBBL.ThemDonXinNghi(PK_DNP, dtpNgayLap.Value, cmbType.SelectedValue.ToString(), dtpStartday.Value, dtpEndday.Value, cmbIDName.SelectedValue.ToString(), cmbPosition.SelectedValue.ToString(), cmbDepartment.SelectedValue.ToString(), rtbReason.Text ))
             {
                 MessageBox.Show("Thêm đơn xin nghỉ thành công!");
                 LoadDanhSachDonXinNghi();
@@ -123,10 +115,23 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private void dgvNghilamthoiviec_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-          
-           
 
-     
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvNghilamthoiviec.Rows[e.RowIndex];
+
+
+                dtpNgayLap.Value = DateTime.Parse(row.Cells["dNgayLap"].Value.ToString());
+                cmbType.Text = row.Cells["sLoaiDon"].Value.ToString();
+                dtpStartday.Value = DateTime.Parse(row.Cells["dNgayBatDau"].Value.ToString());
+                dtpEndday.Value = DateTime.Parse(row.Cells["dNgayKetThuc"].Value.ToString());
+                cmbIDName.Text = row.Cells["FK_sMaNV"].Value.ToString();
+                cmbPosition.Text = row.Cells["FK_sMaCV"].Value.ToString();
+                cmbDepartment.Text = row.Cells["FK_sMaPB"].Value.ToString();
+                rtbReason.Text = row.Cells["sLyDo"].Value.ToString();
+            }
+
+
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -141,6 +146,16 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
 
             dgvNghilamthoiviec.DataSource = nghiPhepBBL.TimKiemDonXinNghi( loaiDon, maNV, maCV, maPB, lyDo);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvNghilamthoiviec_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
    

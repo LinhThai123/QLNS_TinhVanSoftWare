@@ -205,6 +205,8 @@
             this.dgvNghilamthoiviec.RowTemplate.Height = 24;
             this.dgvNghilamthoiviec.Size = new System.Drawing.Size(1407, 233);
             this.dgvNghilamthoiviec.TabIndex = 46;
+            this.dgvNghilamthoiviec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNghilamthoiviec_CellContentClick);
+            this.dgvNghilamthoiviec.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNghilamthoiviec_CellContentClick);
             // 
             // btnReset
             // 
@@ -220,6 +222,7 @@
             this.btnReset.TabIndex = 44;
             this.btnReset.Text = "Làm mới";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnFind
             // 

@@ -69,13 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\ChamCongBLL.cs" />
-    <Compile Include="BusinessLogicLayer\DonXinNghiDAL.cs" />
     <Compile Include="BusinessLogicLayer\NghiPhepBBL.cs" />
-    <Compile Include="BusinessLogicLayer\NghiPhepThoiViecBLL.cs" />
     <Compile Include="DataAccessLayer\ChamCongDAL.cs" />
     <Compile Include="DataAccessLayer\NghiPhepDAL.cs" />
-    <Compile Include="DataAccessLayer\NghiPhepThoiViecDAL.cs" />
-    <Compile Include="Entity\DonXinNghi.cs" />
     <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +245,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CrystalDecisions\" />
+    <Folder Include="Entity\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\z4186256687064_db327e1e095c4ed83530ed14352613ec.jpg" />
