@@ -104,7 +104,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                String sql = "SELECT * FROM vv_Khenthuong_Kyluat WHERE [Mã SP] LIKE '" + maQD + "' ";
+                String sql = "SELECT * FROM vv_Khenthuong_Kyluat WHERE [Mã khen thưởng - kỷ luật] LIKE '" + maQD + "' ";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.CommandType = CommandType.Text;
@@ -118,6 +118,6 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                     }
                 }
             }
-
         }
+    }
 }

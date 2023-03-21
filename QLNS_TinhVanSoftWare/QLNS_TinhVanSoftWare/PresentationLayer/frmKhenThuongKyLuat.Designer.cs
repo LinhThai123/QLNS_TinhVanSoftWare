@@ -418,7 +418,6 @@
             this.label12.Size = new System.Drawing.Size(110, 18);
             this.label12.TabIndex = 40;
             this.label12.Text = "Loại quyết định:";
-            
             // 
             // label8
             // 
@@ -431,7 +430,6 @@
             this.label8.Size = new System.Drawing.Size(243, 24);
             this.label8.TabIndex = 15;
             this.label8.Text = "KHEN THƯỞNG - KỶ LUẬT";
-           
             // 
             // errorProviderKhenThuongKyLuat
             // 
