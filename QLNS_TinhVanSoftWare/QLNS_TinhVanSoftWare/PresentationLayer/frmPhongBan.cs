@@ -40,7 +40,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private void btnThem_Click(object sender, EventArgs e)
         {
             
-            if (cmbTenPB.Text.Length == 0 && cmbMota.Text != "" )
+            if (cmbTenPB.Text !="" && cmbMota.Text != "" )
             {
                 phongBanBLL.insert( cmbTenPB.Text.ToString(), cmbMota.Text.ToString());
                 frmPhongBan_Load(sender, e);

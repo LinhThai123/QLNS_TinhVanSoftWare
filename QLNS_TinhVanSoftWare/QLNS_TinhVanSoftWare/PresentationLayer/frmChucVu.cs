@@ -43,7 +43,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtMaCV.Text.Length == 0 && txtTenCV.Text != "")
+            if (txtMaCV.Text !="" && txtTenCV.Text != "" && txtHSL.Text !="")
             {
                 chucVuBLL.insert(txtMaCV.Text.ToString(), txtTenCV.Text.ToString(), txtHSL.Text.ToString());
                 frmChucVu_Load(sender, e);
