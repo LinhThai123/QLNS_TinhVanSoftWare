@@ -59,7 +59,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             if (txtMaCV.Text.Length == 0 && txtTenCV.Text != "")
             {
-                chucVuBLL.update(txtMaCV.Text.ToString(), txtTenCV.Text.ToString());
+                chucVuBLL.update(txtMaCV.Text.ToString(), txtTenCV.Text.ToString(), txtHSL.Text.ToString());
 
                 frmChucVu_Load(sender, e);
                 MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,7 +76,18 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void dgvChucvu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            txtMaCV.Text = dgvChucvu.CurrentRow.Cells[3].Value.ToString() + " - " + dgvChucvu.CurrentRow.Cells[4].Value.ToString();
+            txtTenCV.Text = dgvChucvu.CurrentRow.Cells[5].Value.ToString();
+            txtHSL.Text = dgvChucvu.CurrentRow.Cells[5].Value.ToString();
+        }
+        private void loadData(DataTable dsTimkiem)
+        {
+            dgvChucvu.DataSource = dsTimkiem;
+        }
+        
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            loadData(chucVuBLL.searchById(txtMaCV.Text));
         }
     }
 }
