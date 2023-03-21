@@ -90,8 +90,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private void CustomizeColumnHeaders()
         {
 
-
-
             dgvNghilamthoiviec.Columns[0].HeaderText = "Mã Đơn";
             dgvNghilamthoiviec.Columns[1].HeaderText = "Ngày lập";
             dgvNghilamthoiviec.Columns[2].HeaderText = "Loại đơn";
@@ -174,20 +172,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             string ngayLap = dtpNgayLap.Value.ToString("yyyy-MM-dd");
             string lyDo = rtbReason.Text.Trim();
 
-            cmbType.Enabled = true;
-            cmbIDName.Enabled = true;
-            dtpNgayLap.Enabled = true;
-            cmbDepartment.Enabled = false;
-            cmbPosition.Enabled = false;
-            dtpEndday.Enabled = false;
-            dtpStartday.Enabled = false;
-            btnUpdate.Enabled = true;
-            btnFind.Enabled = true;
-            btnDelete.Enabled = true;
-            btnReset.Enabled = true;
-            btnCreate.Enabled = true;
-            cmbStatus.Enabled = false;
-            rtbReason.Enabled = false;
 
 
             string connectionString = @"Data Source=DESKTOP-96D4EUK\ADMIN;Initial Catalog=QuanLyNhanVien;Integrated Security=True";
@@ -213,6 +197,19 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
                 dgvNghilamthoiviec.DataSource = dataTable;
 
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cmbType.Text="";
+            cmbIDName.Text="";
+            cmbDepartment.Text= "";
+            cmbPosition.Text="";
+            dtpEndday.Text="";
+            dtpStartday.Text="";
+            cmbStatus.Text="";
+            cmbStatus.Text="";
+
         }
     }
 }
