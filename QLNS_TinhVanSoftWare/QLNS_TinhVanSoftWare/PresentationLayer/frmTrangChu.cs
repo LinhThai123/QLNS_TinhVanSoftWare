@@ -28,5 +28,11 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             frmNhanVien f = new frmNhanVien();
             f.ShowDialog();
         }
+
+        private void mnPart_Click(object sender, EventArgs e)
+        {
+            frmChucVu f = new frmChucVu();
+            f.ShowDialog();
+        }
     }
 }
