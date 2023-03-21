@@ -128,5 +128,46 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             cbMaQuyen.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[4].Value.ToString();
             txtTenTK.Text = dgvTaiKhoan.CurrentRow.Cells[2].Value.ToString(); 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string maNV = cbMaNV.SelectedValue.ToString();
+            string tenTk = txtTenTK.Text;
+            string maTk = txtMaTK.Text;
+            string tinhTrang = txtTinhTrang.Text;
+            string MK = txtMK.Text;
+            string maQuyen = cbMaQuyen.SelectedValue.ToString(); 
+            if (maNV !="" && tenTk != "" && maTk != "" && tinhTrang != "" && MK != "" && maQuyen != "")
+            {
+                if (!taiKhoanBLL.Check_MaTaiKhoan(maTk))
+                {
+                   if(MK.Length >= 6 )
+                    {
+                        if(taiKhoanBLL.Check_MaTaiKhoan(maTk))
+                            MessageBox.Show("Không được sửa mã tài khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                        {
+                            taiKhoanBLL.updateTaiKhoan(maTk, tenTk, MK, tinhTrang, maNV, maQuyen);
+                            MessageBox.Show("Cập nhật Sinh Viên Thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            button5_Click(sender, e);
+                        }
+                    }
+                   else
+                    {
+                        MessageBox.Show("Mật khẩu phải nhiều hơn 6 ký tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thể sửa Mã tài khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không thể bỏ trống dữ liệu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
