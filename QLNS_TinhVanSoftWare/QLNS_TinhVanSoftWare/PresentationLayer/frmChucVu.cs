@@ -19,7 +19,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             InitializeComponent();
         }
        
-        
         private void findAll()
         {
             DataTable t = chucVuBLL.findAll();
