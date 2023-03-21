@@ -14,7 +14,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
     {
         private string constr = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-///////load toàn bảng 
+        //load toàn bảng 
         public DataTable findAll()
         {
             using (SqlConnection cnn = new SqlConnection(constr))
@@ -100,6 +100,24 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 }
             }
         }
+        public DataTable timKhenThuong(String maQD)
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                String sql = "SELECT * FROM vv_Khenthuong_Kyluat WHERE [Mã SP] LIKE '" + maQD + "' ";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable("vv_Khenthuong_Kyluat"))
+                        {
+                            ad.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
 
-    }
+        }
 }

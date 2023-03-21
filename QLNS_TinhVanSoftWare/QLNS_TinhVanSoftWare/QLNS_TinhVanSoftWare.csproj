@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BienBanDanhGiaBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhenThuongKyLuatBLL.cs" />
+    <Compile Include="DataAccessLayer\BienBanDanhGiaDAL.cs" />
     <Compile Include="frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,10 +234,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessLogicLayer\" />
-    <Folder Include="DataAccessLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\z4186256687064_db327e1e095c4ed83530ed14352613ec.jpg" />
   </ItemGroup>
