@@ -66,7 +66,8 @@
             this.mnManager});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(895, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(671, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,25 +82,25 @@
             this.mnSystem.ForeColor = System.Drawing.Color.Black;
             this.mnSystem.Image = ((System.Drawing.Image)(resources.GetObject("mnSystem.Image")));
             this.mnSystem.Name = "mnSystem";
-            this.mnSystem.Size = new System.Drawing.Size(105, 24);
+            this.mnSystem.Size = new System.Drawing.Size(89, 24);
             this.mnSystem.Text = "Hệ thống";
             // 
             // mnLogin
             // 
             this.mnLogin.Name = "mnLogin";
-            this.mnLogin.Size = new System.Drawing.Size(224, 26);
+            this.mnLogin.Size = new System.Drawing.Size(180, 22);
             this.mnLogin.Text = "Đăng nhập";
             // 
             // mnAccMg
             // 
             this.mnAccMg.Name = "mnAccMg";
-            this.mnAccMg.Size = new System.Drawing.Size(224, 26);
+            this.mnAccMg.Size = new System.Drawing.Size(180, 22);
             this.mnAccMg.Text = "Quản lý tài khoản";
             // 
             // mnChangePass
             // 
             this.mnChangePass.Name = "mnChangePass";
-            this.mnChangePass.Size = new System.Drawing.Size(224, 26);
+            this.mnChangePass.Size = new System.Drawing.Size(180, 22);
             this.mnChangePass.Text = "Đổi mật khẩu";
             // 
             // mnCategory
@@ -113,31 +114,32 @@
             this.mnJobApply});
             this.mnCategory.Image = ((System.Drawing.Image)(resources.GetObject("mnCategory.Image")));
             this.mnCategory.Name = "mnCategory";
-            this.mnCategory.Size = new System.Drawing.Size(110, 24);
+            this.mnCategory.Size = new System.Drawing.Size(94, 24);
             this.mnCategory.Text = "Danh mục";
             // 
             // mnEmployee
             // 
             this.mnEmployee.Name = "mnEmployee";
-            this.mnEmployee.Size = new System.Drawing.Size(224, 26);
+            this.mnEmployee.Size = new System.Drawing.Size(180, 22);
             this.mnEmployee.Text = "Nhân sự";
+            this.mnEmployee.Click += new System.EventHandler(this.mnEmployee_Click);
             // 
             // mnPrivateIn4
             // 
             this.mnPrivateIn4.Name = "mnPrivateIn4";
-            this.mnPrivateIn4.Size = new System.Drawing.Size(224, 26);
+            this.mnPrivateIn4.Size = new System.Drawing.Size(180, 22);
             this.mnPrivateIn4.Text = "Thông tin cá nhân";
             // 
             // mnMode
             // 
             this.mnMode.Name = "mnMode";
-            this.mnMode.Size = new System.Drawing.Size(224, 26);
+            this.mnMode.Size = new System.Drawing.Size(180, 22);
             this.mnMode.Text = "Chế độ";
             // 
             // mnJobApply
             // 
             this.mnJobApply.Name = "mnJobApply";
-            this.mnJobApply.Size = new System.Drawing.Size(224, 26);
+            this.mnJobApply.Size = new System.Drawing.Size(180, 22);
             this.mnJobApply.Text = "Hồ sơ thử việc";
             // 
             // mnFunction
@@ -150,13 +152,13 @@
             this.mnSupport});
             this.mnFunction.Image = ((System.Drawing.Image)(resources.GetObject("mnFunction.Image")));
             this.mnFunction.Name = "mnFunction";
-            this.mnFunction.Size = new System.Drawing.Size(113, 24);
+            this.mnFunction.Size = new System.Drawing.Size(97, 24);
             this.mnFunction.Text = "Chức năng";
             // 
             // mnSearch
             // 
             this.mnSearch.Name = "mnSearch";
-            this.mnSearch.Size = new System.Drawing.Size(224, 26);
+            this.mnSearch.Size = new System.Drawing.Size(180, 22);
             this.mnSearch.Text = "Tra cứu";
             // 
             // mnReport
@@ -165,25 +167,25 @@
             this.childmnEmploy,
             this.childmnSalary});
             this.mnReport.Name = "mnReport";
-            this.mnReport.Size = new System.Drawing.Size(224, 26);
+            this.mnReport.Size = new System.Drawing.Size(180, 22);
             this.mnReport.Text = "Báo cáo";
             // 
             // childmnEmploy
             // 
             this.childmnEmploy.Name = "childmnEmploy";
-            this.childmnEmploy.Size = new System.Drawing.Size(158, 26);
+            this.childmnEmploy.Size = new System.Drawing.Size(128, 22);
             this.childmnEmploy.Text = "Nhân viên";
             // 
             // childmnSalary
             // 
             this.childmnSalary.Name = "childmnSalary";
-            this.childmnSalary.Size = new System.Drawing.Size(158, 26);
+            this.childmnSalary.Size = new System.Drawing.Size(128, 22);
             this.childmnSalary.Text = "Lương";
             // 
             // mnSupport
             // 
             this.mnSupport.Name = "mnSupport";
-            this.mnSupport.Size = new System.Drawing.Size(224, 26);
+            this.mnSupport.Size = new System.Drawing.Size(180, 22);
             this.mnSupport.Text = "Trợ giúp";
             // 
             // mnManager
@@ -198,31 +200,32 @@
             this.mnConstract});
             this.mnManager.Image = ((System.Drawing.Image)(resources.GetObject("mnManager.Image")));
             this.mnManager.Name = "mnManager";
-            this.mnManager.Size = new System.Drawing.Size(93, 24);
+            this.mnManager.Size = new System.Drawing.Size(80, 24);
             this.mnManager.Text = "Quản lý";
             // 
             // mnDepart
             // 
             this.mnDepart.Name = "mnDepart";
-            this.mnDepart.Size = new System.Drawing.Size(224, 26);
+            this.mnDepart.Size = new System.Drawing.Size(180, 22);
             this.mnDepart.Text = "Phòng ban";
+            this.mnDepart.Click += new System.EventHandler(this.mnDepart_Click);
             // 
             // mnPart
             // 
             this.mnPart.Name = "mnPart";
-            this.mnPart.Size = new System.Drawing.Size(224, 26);
+            this.mnPart.Size = new System.Drawing.Size(180, 22);
             this.mnPart.Text = "Bộ phận";
             // 
             // mnEmployeeSalary
             // 
             this.mnEmployeeSalary.Name = "mnEmployeeSalary";
-            this.mnEmployeeSalary.Size = new System.Drawing.Size(224, 26);
+            this.mnEmployeeSalary.Size = new System.Drawing.Size(180, 22);
             this.mnEmployeeSalary.Text = "Lương nhân viên";
             // 
             // mnSalary
             // 
             this.mnSalary.Name = "mnSalary";
-            this.mnSalary.Size = new System.Drawing.Size(224, 26);
+            this.mnSalary.Size = new System.Drawing.Size(180, 22);
             this.mnSalary.Text = "Bảng lương";
             // 
             // mnConstract
@@ -231,30 +234,31 @@
             this.mnSignContract,
             this.mnExtraContract});
             this.mnConstract.Name = "mnConstract";
-            this.mnConstract.Size = new System.Drawing.Size(224, 26);
+            this.mnConstract.Size = new System.Drawing.Size(180, 22);
             this.mnConstract.Text = "Hợp đồng";
             // 
             // mnSignContract
             // 
             this.mnSignContract.Name = "mnSignContract";
-            this.mnSignContract.Size = new System.Drawing.Size(211, 26);
+            this.mnSignContract.Size = new System.Drawing.Size(169, 22);
             this.mnSignContract.Text = "Ký hợp đồng";
             // 
             // mnExtraContract
             // 
             this.mnExtraContract.Name = "mnExtraContract";
-            this.mnExtraContract.Size = new System.Drawing.Size(211, 26);
+            this.mnExtraContract.Size = new System.Drawing.Size(169, 22);
             this.mnExtraContract.Text = "Gia hạn hợp đồng";
             // 
             // frmTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(895, 538);
+            this.ClientSize = new System.Drawing.Size(671, 437);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTrangChu";
             this.Text = "frmTrangChu";
             this.menuStrip1.ResumeLayout(false);

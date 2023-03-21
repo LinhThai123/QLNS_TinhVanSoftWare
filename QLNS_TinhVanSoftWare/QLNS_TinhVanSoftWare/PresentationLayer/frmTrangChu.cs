@@ -16,5 +16,17 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void mnDepart_Click(object sender, EventArgs e)
+        {
+            frmPhongBan f = new frmPhongBan();
+            f.ShowDialog();
+        }
+
+        private void mnEmployee_Click(object sender, EventArgs e)
+        {
+            frmNhanVien f = new frmNhanVien();
+            f.ShowDialog();
+        }
     }
 }
