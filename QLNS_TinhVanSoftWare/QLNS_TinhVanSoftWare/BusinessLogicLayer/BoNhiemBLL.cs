@@ -43,15 +43,15 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
             return boNhiemDAL.update(PK_sMabonhiem, dNgaylap, dNgayhethan, FK_sMaNV, FK_sMaCV, FK_sMaPB, fLuongmoi, sNoiDung);
         }
 
-        public bool deleteById(string PK_sMaKH)
+        public bool deleteById(string PK_sMabonhiem)
         {
-            return boNhiemDAL.deleteById(PK_sMaKH);
+            return boNhiemDAL.deleteById(PK_sMabonhiem);
         }
 
 
-        public DataTable searchById(String PK_sMaKH)
+        public DataTable searchById(String PK_sMabonhiem)
         {
-            return boNhiemDAL.searchById(PK_sMaKH);
+            return boNhiemDAL.searchById(PK_sMabonhiem);
         }
     }
 }

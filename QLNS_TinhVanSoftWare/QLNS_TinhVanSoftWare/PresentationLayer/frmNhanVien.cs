@@ -16,5 +16,44 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void findAll()
+        {
+            DataTable t = boNhiemBLL.findAll();
+            t.Columns.Add("STT");
+            for (int i = 0; i < t.Rows.Count; i++)
+                t.Rows[i]["STT"] = i + 1;
+            dgvBoNhiem.DataSource = t;
+            dgvBoNhiem.Columns["STT"].DisplayIndex = 0;
+        }
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmNhanVien_Load(sender, e);
+        }
     }
 }

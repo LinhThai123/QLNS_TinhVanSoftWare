@@ -70,6 +70,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             cmbPhongban.Text = "";
             nmrThoiHan.Value = 1;
             nmrLuongCB.Value = 10000;
+            txtMaHD.Text = "";
 
         }
 
@@ -118,11 +119,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            cmbNhanVien.Text = "";
-            cmbChucvu.Text = "";
-            cmbPhongban.Text = "";
-            nmrThoiHan.Value = 1;
-            nmrLuongCB.Value = 10000;
             frmHopDong_Load(sender,e);
         }
 

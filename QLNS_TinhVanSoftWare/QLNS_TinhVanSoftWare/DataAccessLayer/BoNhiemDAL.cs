@@ -79,15 +79,15 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
-        public bool deleteById(string PK_sMaHD)
+        public bool deleteById(string PK_sMabonhiem)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_XoaHopDong";
-                    cmd.Parameters.AddWithValue("@PK_sMaHD", PK_sMaHD);
+                    cmd.CommandText = "sp_XoaBoNhiem";
+                    cmd.Parameters.AddWithValue("@PK_sMabonhiem", PK_sMabonhiem);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();
@@ -97,19 +97,19 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
-        public DataTable searchById(string PK_sMaHD)
+        public DataTable searchById(string PK_sMabonhiem)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                String sql = "SELECT * FROM vv_HopDong " +
-                    "WHERE [Mã hợp đồng] LIKE N'%" + PK_sMaHD + "%' ";
+                String sql = "SELECT * FROM vv_BoNhiem " +
+                    "WHERE [Mã bổ nhiệm] LIKE N'%" + PK_sMabonhiem + "%' ";
 
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.CommandType = CommandType.Text;
                     using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
                     {
-                        using (DataTable dt = new DataTable("vv_HopDong"))
+                        using (DataTable dt = new DataTable("vv_BoNhiem"))
                         {
                             ad.Fill(dt);
                             return dt;

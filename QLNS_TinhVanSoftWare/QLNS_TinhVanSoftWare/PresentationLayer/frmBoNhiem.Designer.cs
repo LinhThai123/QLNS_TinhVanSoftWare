@@ -339,7 +339,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBoNhiem";
-            this.Text = "frmBoNhiem";
+            this.Text = "Quản lý bổ nhiệm";
             this.Load += new System.EventHandler(this.frmBoNhiem_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

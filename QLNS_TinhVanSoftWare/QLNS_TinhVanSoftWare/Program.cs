@@ -17,7 +17,7 @@ namespace QLNS_TinhVanSoftWare
             /// </summary>
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentationLayer.frmBoNhiem());
+            Application.Run(new PresentationLayer.frmNhanVien());
         }
     }
 }

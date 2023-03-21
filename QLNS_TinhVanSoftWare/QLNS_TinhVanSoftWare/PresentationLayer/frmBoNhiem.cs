@@ -99,14 +99,31 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
                 MessageBox.Show("Vui lòng nhập tất cả các trường dữ liệu ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        private void loadData(DataTable dsTimkiem)
+        {
+            dgvBoNhiem.DataSource = dsTimkiem;
+        }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-
+            loadData(boNhiemBLL.searchById(txtMabonhiem.Text));
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            string b = txtMabonhiem.Text;
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (boNhiemBLL.deleteById(b))
+                {
+                    btnLamMoi_Click(sender, e);
+                    frmBoNhiem_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -124,6 +141,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             cmbChucVu.Text = "";
             cmbPhongBan.Text = "";
             nmrLuongMoi.Value = 10000;
+            txtMabonhiem.Text = "";
         }
 
         private void label1_Click(object sender, EventArgs e)
