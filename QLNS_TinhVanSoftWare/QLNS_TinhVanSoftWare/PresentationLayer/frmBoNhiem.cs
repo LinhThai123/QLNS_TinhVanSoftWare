@@ -12,48 +12,93 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmBoNhiem : Form
     {
+        BusinessLogicLayer.HopDongBLL hopDongBLL = new BusinessLogicLayer.HopDongBLL();
+        BusinessLogicLayer.BoNhiemBLL boNhiemBLL = new BusinessLogicLayer.BoNhiemBLL();
         public frmBoNhiem()
         {
             InitializeComponent();
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
+        private void findAll()
+        {
+            DataTable t = hopDongBLL.findAll();
+            t.Columns.Add("STT");
+            for (int i = 0; i < t.Rows.Count; i++)
+                t.Rows[i]["STT"] = i + 1;
+            dgvBoNhiem.DataSource = t;
+            dgvBoNhiem.Columns["STT"].DisplayIndex = 0;
+        }
+
+        private void getNhanVien()
+        {
+            DataTable t = hopDongBLL.getNhanVien();
+            DataView view = new DataView(t);
+            view.Sort = "PK_sMaNV";
+            cmbNhanVien.DataSource = view;
+            cmbNhanVien.DisplayMember = "nhanVien";
+            cmbNhanVien.ValueMember = "PK_sMaNV";
+        }
+
+        private void getPhongBan()
+        {
+            DataTable t = hopDongBLL.getPhongBan();
+            DataView view = new DataView(t);
+            view.Sort = "PK_sMaPB";
+            cmbPhongBan.DataSource = view;
+            cmbPhongBan.DisplayMember = "sTenPB";
+            cmbPhongBan.ValueMember = "PK_sMaPB";
+        }
+
+        private void getChucVu()
+        {
+            DataTable t = hopDongBLL.getChucVu();
+            DataView view = new DataView(t);
+            view.Sort = "PK_sMaCV";
+            cmbChucVu.DataSource = view;
+            cmbChucVu.DisplayMember = "sTenCV";
+            cmbChucVu.ValueMember = "PK_sMaCV";
+        }
+
+        private void dgvBoNhiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnLamMoi_Click(object sender, EventArgs e)
         {
 
         }
 
-
-        
-
-
-        //Mã nhân viên, Tên nhân viên, Ngày sinh, Giới tính, Số CCCD, Địa chỉ, SĐT, Email, Ngày vào làm, Mã chức vụ, Tên chức vụ, Mã phòng ban, Tên phòng ban, Lương, Tình trạng)
-
-
-        //Mã hợp đồng, Ngày ký, Thời hạn, Mã nhân viên, Tên nhân viên, Mã chức vụ, Tên chức vụ, Mã phòng ban, Tên phòng ban, Lương
+        private void frmBoNhiem_Load(object sender, EventArgs e)
+        {
+            findAll();
+            getNhanVien();
+            getPhongBan();
+            getChucVu();
+            cmbNhanVien.Text = "";
+            cmbChucVu.Text = "";
+            cmbPhongBan.Text = "";
+            nmrLuongMoi.Value = 10000;
+        }
     }
 }
