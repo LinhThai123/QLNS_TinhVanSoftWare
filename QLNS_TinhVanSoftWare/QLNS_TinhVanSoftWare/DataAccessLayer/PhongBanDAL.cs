@@ -59,7 +59,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_SuaHopDong";
+                    cmd.CommandText = "sp_SuaPhongBan";
                     cmd.Parameters.AddWithValue("@PK_sMaPB", PK_sMaPB);
                     cmd.Parameters.AddWithValue("@sTenPB", sTenPB);
                     cmd.Parameters.AddWithValue("@sMota", sMota);
