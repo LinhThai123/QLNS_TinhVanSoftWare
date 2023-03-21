@@ -61,7 +61,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "sp_XoaTaiKhoan";
-                    cmd.Parameters.AddWithValue("@MaTK", MaTK);
+                    cmd.Parameters.AddWithValue("@PK_sMaTK", MaTK);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();
