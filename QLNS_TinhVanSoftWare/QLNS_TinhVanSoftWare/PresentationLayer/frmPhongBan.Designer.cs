@@ -32,6 +32,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbMota = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.sTenphongban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sMota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPhongBan = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -74,7 +74,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtPhongBan);
+            this.panel3.Controls.Add(this.cmbMota);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.btnTimKiem);
             this.panel3.Controls.Add(this.btnDelete);
@@ -90,6 +90,18 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 410);
             this.panel3.TabIndex = 1;
+            // 
+            // cmbMota
+            // 
+            this.cmbMota.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.cmbMota.Location = new System.Drawing.Point(30, 170);
+            this.cmbMota.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbMota.MaxLength = 50;
+            this.cmbMota.Multiline = true;
+            this.cmbMota.Name = "cmbMota";
+            this.cmbMota.Size = new System.Drawing.Size(321, 135);
+            this.cmbMota.TabIndex = 13;
             // 
             // button5
             // 
@@ -314,18 +326,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txtPhongBan
-            // 
-            this.txtPhongBan.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.txtPhongBan.Location = new System.Drawing.Point(30, 170);
-            this.txtPhongBan.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhongBan.MaxLength = 50;
-            this.txtPhongBan.Multiline = true;
-            this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Size = new System.Drawing.Size(321, 135);
-            this.txtPhongBan.TabIndex = 13;
-            // 
             // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +380,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn sMota;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPhongBan;
+        private System.Windows.Forms.TextBox cmbMota;
     }
 }

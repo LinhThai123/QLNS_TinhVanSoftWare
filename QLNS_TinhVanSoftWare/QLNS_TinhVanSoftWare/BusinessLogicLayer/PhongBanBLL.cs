@@ -38,5 +38,9 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
             return phongBanDAL.searchById(PK_sMaPB);
         }
 
+        internal void insert(string v1, string v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
