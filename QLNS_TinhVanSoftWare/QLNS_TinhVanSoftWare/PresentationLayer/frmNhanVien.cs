@@ -57,5 +57,19 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             frmNhanVien_Load(sender, e);
         }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+            txtEmployee.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString();
+            cmbSex.Text = dgvNhanVien.CurrentRow.Cells[2].Value.ToString();
+            dtpBirthDay.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
+            txtIdentify.Text = dgvNhanVien.CurrentRow.Cells[4].Value.ToString();
+            txtAddress.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
+            txtPhone.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
+            txtEmail.Text = dgvNhanVien.CurrentRow.Cells[7].Value.ToString();
+            dtpWorkingDay.Text = dgvNhanVien.CurrentRow.Cells[8].Value.ToString();
+            cmbStatus.Text = dgvNhanVien.CurrentRow.Cells[9].Value.ToString();
+        }
     }
 }
