@@ -69,5 +69,27 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             return dt;
 
         }
+        public DataTable LayDanhSachChucVu()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM tbl_Chucvu";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+            dataAdapter.Fill(dt);
+            CloseConnection();
+            return dt;
+
+        }
+        public DataTable LayDanhSachDonXinNghi()
+        {
+            OpenConnection();
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM tbl_DonXinNghi";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+            dataAdapter.Fill(dt);
+            CloseConnection();
+            return dt;
+
+        }
     }
 }

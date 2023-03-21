@@ -52,6 +52,9 @@
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNghilamthoiviec)).BeginInit();
@@ -60,6 +63,9 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Controls.Add(this.dtpNgayLap);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.btnCreate);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.dtpEndday);
@@ -106,6 +112,7 @@
             this.btnCreate.TabIndex = 51;
             this.btnCreate.Text = "Thêm mới";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox1
             // 
@@ -132,6 +139,7 @@
             // dtpEndday
             // 
             this.dtpEndday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEndday.Location = new System.Drawing.Point(688, 123);
             this.dtpEndday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndday.Name = "dtpEndday";
@@ -226,6 +234,7 @@
             this.btnFind.TabIndex = 42;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cmbStatus
             // 
@@ -278,6 +287,7 @@
             // dtpStartday
             // 
             this.dtpStartday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStartday.Location = new System.Drawing.Point(688, 67);
             this.dtpStartday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStartday.Name = "dtpStartday";
@@ -332,6 +342,42 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã/Tên nhân viên :";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.MintCream;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(472, 308);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(128, 48);
+            this.btnAdd.TabIndex = 52;
+            this.btnAdd.Text = "Nhập";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(551, 238);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 24);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Ngày lập:";
+            // 
+            // dtpNgayLap
+            // 
+            this.dtpNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayLap.Location = new System.Drawing.Point(688, 235);
+            this.dtpNgayLap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpNgayLap.Name = "dtpNgayLap";
+            this.dtpNgayLap.Size = new System.Drawing.Size(318, 29);
+            this.dtpNgayLap.TabIndex = 54;
+            // 
             // frmNghiPhepThoiViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,5 +422,8 @@
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DateTimePicker dtpNgayLap;
+        private System.Windows.Forms.Label label3;
     }
 }

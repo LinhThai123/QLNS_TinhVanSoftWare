@@ -23,5 +23,14 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         {
             return NghiPhepThoiViecDAL.LayDanhSachPhongBan();
         }
+        public DataTable LayDanhSachChucVu()
+        {
+            return NghiPhepThoiViecDAL.LayDanhSachChucVu();
+        }
+        public DataTable LayDanhSachDonXinNghi()
+        {
+            return NghiPhepThoiViecDAL.LayDanhSachDonXinNghi();
+        }
     }
+
 }
