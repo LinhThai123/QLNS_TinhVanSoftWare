@@ -30,7 +30,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChamCong));
-            this.grbHopDong = new System.Windows.Forms.GroupBox();
+            this.grbChamCong = new System.Windows.Forms.GroupBox();
             this.dgvChamCong = new System.Windows.Forms.DataGridView();
             this.clMaChamCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMaNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +38,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.clNgayChamCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGioVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGioRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMaNV = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -46,41 +46,41 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.cmbMaNv = new System.Windows.Forms.ComboBox();
             this.lblTenNv = new System.Windows.Forms.Label();
             this.txtTenNv = new System.Windows.Forms.TextBox();
-            this.lblNgayKy = new System.Windows.Forms.Label();
+            this.lblNgayCC = new System.Windows.Forms.Label();
             this.dtpNgayChamCong = new System.Windows.Forms.DateTimePicker();
             this.lblMaHd = new System.Windows.Forms.Label();
             this.cmbMaChamCong = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.grbHopDong.SuspendLayout();
+            this.grbChamCong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).BeginInit();
             this.SuspendLayout();
             // 
-            // grbHopDong
+            // grbChamCong
             // 
-            this.grbHopDong.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.grbHopDong.Controls.Add(this.dgvChamCong);
-            this.grbHopDong.Controls.Add(this.label1);
-            this.grbHopDong.Controls.Add(this.btnSua);
-            this.grbHopDong.Controls.Add(this.btnLamMoi);
-            this.grbHopDong.Controls.Add(this.btnXoa);
-            this.grbHopDong.Controls.Add(this.btnTimKiem);
-            this.grbHopDong.Controls.Add(this.cmbMaNv);
-            this.grbHopDong.Controls.Add(this.lblTenNv);
-            this.grbHopDong.Controls.Add(this.txtTenNv);
-            this.grbHopDong.Controls.Add(this.lblNgayKy);
-            this.grbHopDong.Controls.Add(this.dtpNgayChamCong);
-            this.grbHopDong.Controls.Add(this.lblMaHd);
-            this.grbHopDong.Controls.Add(this.cmbMaChamCong);
-            this.grbHopDong.Controls.Add(this.label13);
-            this.grbHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbHopDong.Location = new System.Drawing.Point(12, 22);
-            this.grbHopDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbHopDong.Name = "grbHopDong";
-            this.grbHopDong.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbHopDong.Size = new System.Drawing.Size(1018, 510);
-            this.grbHopDong.TabIndex = 28;
-            this.grbHopDong.TabStop = false;
-            this.grbHopDong.Text = "CHẤM CÔNG";
+            this.grbChamCong.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.grbChamCong.Controls.Add(this.dgvChamCong);
+            this.grbChamCong.Controls.Add(this.lblMaNV);
+            this.grbChamCong.Controls.Add(this.btnSua);
+            this.grbChamCong.Controls.Add(this.btnLamMoi);
+            this.grbChamCong.Controls.Add(this.btnXoa);
+            this.grbChamCong.Controls.Add(this.btnTimKiem);
+            this.grbChamCong.Controls.Add(this.cmbMaNv);
+            this.grbChamCong.Controls.Add(this.lblTenNv);
+            this.grbChamCong.Controls.Add(this.txtTenNv);
+            this.grbChamCong.Controls.Add(this.lblNgayCC);
+            this.grbChamCong.Controls.Add(this.dtpNgayChamCong);
+            this.grbChamCong.Controls.Add(this.lblMaHd);
+            this.grbChamCong.Controls.Add(this.cmbMaChamCong);
+            this.grbChamCong.Controls.Add(this.label13);
+            this.grbChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbChamCong.Location = new System.Drawing.Point(12, 22);
+            this.grbChamCong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbChamCong.Name = "grbChamCong";
+            this.grbChamCong.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbChamCong.Size = new System.Drawing.Size(1018, 510);
+            this.grbChamCong.TabIndex = 28;
+            this.grbChamCong.TabStop = false;
+            this.grbChamCong.Text = "CHẤM CÔNG";
             // 
             // dgvChamCong
             // 
@@ -141,15 +141,15 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.clGioRa.Name = "clGioRa";
             this.clGioRa.Width = 125;
             // 
-            // label1
+            // lblMaNV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(548, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 24);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Mã nhân viên :";
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.Location = new System.Drawing.Point(548, 65);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(134, 24);
+            this.lblMaNV.TabIndex = 55;
+            this.lblMaNV.Text = "Mã nhân viên :";
             // 
             // btnSua
             // 
@@ -239,15 +239,15 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.txtTenNv.Size = new System.Drawing.Size(237, 27);
             this.txtTenNv.TabIndex = 46;
             // 
-            // lblNgayKy
+            // lblNgayCC
             // 
-            this.lblNgayKy.AutoSize = true;
-            this.lblNgayKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayKy.Location = new System.Drawing.Point(6, 127);
-            this.lblNgayKy.Name = "lblNgayKy";
-            this.lblNgayKy.Size = new System.Drawing.Size(164, 24);
-            this.lblNgayKy.TabIndex = 43;
-            this.lblNgayKy.Text = "Ngày chấm công :";
+            this.lblNgayCC.AutoSize = true;
+            this.lblNgayCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayCC.Location = new System.Drawing.Point(6, 127);
+            this.lblNgayCC.Name = "lblNgayCC";
+            this.lblNgayCC.Size = new System.Drawing.Size(164, 24);
+            this.lblNgayCC.TabIndex = 43;
+            this.lblNgayCC.Text = "Ngày chấm công :";
             // 
             // dtpNgayChamCong
             // 
@@ -264,9 +264,9 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.lblMaHd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaHd.Location = new System.Drawing.Point(6, 65);
             this.lblMaHd.Name = "lblMaHd";
-            this.lblMaHd.Size = new System.Drawing.Size(136, 24);
+            this.lblMaHd.Size = new System.Drawing.Size(146, 24);
             this.lblMaHd.TabIndex = 41;
-            this.lblMaHd.Text = "Mã chấm công";
+            this.lblMaHd.Text = "Mã chấm công :";
             // 
             // cmbMaChamCong
             // 
@@ -293,11 +293,11 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1048, 543);
-            this.Controls.Add(this.grbHopDong);
+            this.Controls.Add(this.grbChamCong);
             this.Name = "frmChamCong";
             this.Text = "frmChamCong";
-            this.grbHopDong.ResumeLayout(false);
-            this.grbHopDong.PerformLayout();
+            this.grbChamCong.ResumeLayout(false);
+            this.grbChamCong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).EndInit();
             this.ResumeLayout(false);
 
@@ -305,7 +305,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbHopDong;
+        private System.Windows.Forms.GroupBox grbChamCong;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnXoa;
@@ -313,7 +313,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.ComboBox cmbMaNv;
         private System.Windows.Forms.Label lblTenNv;
         private System.Windows.Forms.TextBox txtTenNv;
-        private System.Windows.Forms.Label lblNgayKy;
+        private System.Windows.Forms.Label lblNgayCC;
         private System.Windows.Forms.DateTimePicker dtpNgayChamCong;
         private System.Windows.Forms.Label lblMaHd;
         private System.Windows.Forms.ComboBox cmbMaChamCong;
@@ -325,6 +325,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn clNgayChamCong;
         private System.Windows.Forms.DataGridViewTextBoxColumn clGioVao;
         private System.Windows.Forms.DataGridViewTextBoxColumn clGioRa;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMaNV;
     }
 }
