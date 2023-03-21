@@ -31,6 +31,33 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sMaluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sChucdanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLcb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPCChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sNgaynhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLCBMoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPCChucvumoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sNgaysua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLydo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sGhichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -49,39 +76,12 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sMaluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sChucdanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLcb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPCChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sNgaynhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLCBMoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPCChucvumoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sNgaysua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLydo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sGhichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -132,6 +132,254 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel3.Size = new System.Drawing.Size(1230, 685);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 335);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1230, 350);
+            this.panel2.TabIndex = 42;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sMaluong,
+            this.sChucvu,
+            this.sChucdanh,
+            this.sLcb,
+            this.sPCChucvu,
+            this.sNgaynhap,
+            this.sLCBMoi,
+            this.sPCChucvumoi,
+            this.sNgaysua,
+            this.sLydo,
+            this.sGhichu});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1230, 350);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // sMaluong
+            // 
+            this.sMaluong.HeaderText = "MaLuong";
+            this.sMaluong.MinimumWidth = 6;
+            this.sMaluong.Name = "sMaluong";
+            this.sMaluong.Width = 125;
+            // 
+            // sChucvu
+            // 
+            this.sChucvu.HeaderText = "ChucVu";
+            this.sChucvu.MinimumWidth = 6;
+            this.sChucvu.Name = "sChucvu";
+            this.sChucvu.Width = 125;
+            // 
+            // sChucdanh
+            // 
+            this.sChucdanh.HeaderText = "ChucDanh";
+            this.sChucdanh.MinimumWidth = 6;
+            this.sChucdanh.Name = "sChucdanh";
+            this.sChucdanh.Width = 125;
+            // 
+            // sLcb
+            // 
+            this.sLcb.HeaderText = "LCB";
+            this.sLcb.MinimumWidth = 6;
+            this.sLcb.Name = "sLcb";
+            this.sLcb.Width = 125;
+            // 
+            // sPCChucvu
+            // 
+            this.sPCChucvu.HeaderText = "PCChucVu";
+            this.sPCChucvu.MinimumWidth = 6;
+            this.sPCChucvu.Name = "sPCChucvu";
+            this.sPCChucvu.Width = 125;
+            // 
+            // sNgaynhap
+            // 
+            this.sNgaynhap.HeaderText = "NgayNhap";
+            this.sNgaynhap.MinimumWidth = 6;
+            this.sNgaynhap.Name = "sNgaynhap";
+            this.sNgaynhap.Width = 125;
+            // 
+            // sLCBMoi
+            // 
+            this.sLCBMoi.HeaderText = "LCB mới";
+            this.sLCBMoi.MinimumWidth = 6;
+            this.sLCBMoi.Name = "sLCBMoi";
+            this.sLCBMoi.Width = 125;
+            // 
+            // sPCChucvumoi
+            // 
+            this.sPCChucvumoi.HeaderText = "PC CVu mới";
+            this.sPCChucvumoi.MinimumWidth = 6;
+            this.sPCChucvumoi.Name = "sPCChucvumoi";
+            this.sPCChucvumoi.Width = 125;
+            // 
+            // sNgaysua
+            // 
+            this.sNgaysua.HeaderText = "NgaySua";
+            this.sNgaysua.MinimumWidth = 6;
+            this.sNgaysua.Name = "sNgaysua";
+            this.sNgaysua.Width = 125;
+            // 
+            // sLydo
+            // 
+            this.sLydo.HeaderText = "LyDo";
+            this.sLydo.MinimumWidth = 6;
+            this.sLydo.Name = "sLydo";
+            this.sLydo.Width = 125;
+            // 
+            // sGhichu
+            // 
+            this.sGhichu.HeaderText = "GhiChu";
+            this.sGhichu.MinimumWidth = 6;
+            this.sGhichu.Name = "sGhichu";
+            this.sGhichu.Width = 125;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.textBox7.Location = new System.Drawing.Point(1067, 199);
+            this.textBox7.MaxLength = 50;
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(140, 43);
+            this.textBox7.TabIndex = 41;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(982, 202);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 20);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Ghi chú";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.textBox8.Location = new System.Drawing.Point(1067, 128);
+            this.textBox8.MaxLength = 50;
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(140, 43);
+            this.textBox8.TabIndex = 39;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1002, 133);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Lý do";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.textBox9.Location = new System.Drawing.Point(1067, 62);
+            this.textBox9.MaxLength = 50;
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(140, 43);
+            this.textBox9.TabIndex = 37;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(932, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 20);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Lương cb mới";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.textBox5.Location = new System.Drawing.Point(744, 197);
+            this.textBox5.MaxLength = 50;
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(165, 43);
+            this.textBox5.TabIndex = 35;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker4.Location = new System.Drawing.Point(746, 133);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(163, 22);
+            this.dateTimePicker4.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(610, 204);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 20);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Lương cơ bản";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(640, 133);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 20);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Ngày nhập";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.textBox4.Location = new System.Drawing.Point(744, 62);
+            this.textBox4.MaxLength = 50;
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(165, 43);
+            this.textBox4.TabIndex = 30;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(640, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 20);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "PC cv mới";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(432, 199);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(163, 22);
+            this.dateTimePicker2.TabIndex = 28;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(434, 133);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(163, 22);
+            this.dateTimePicker1.TabIndex = 27;
             // 
             // label4
             // 
@@ -339,255 +587,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(434, 133);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(163, 22);
-            this.dateTimePicker1.TabIndex = 27;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(432, 199);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(163, 22);
-            this.dateTimePicker2.TabIndex = 28;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(746, 133);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(163, 22);
-            this.dateTimePicker4.TabIndex = 33;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(610, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 20);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Lương cơ bản";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(640, 133);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 20);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "Ngày nhập";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox4.Location = new System.Drawing.Point(744, 62);
-            this.textBox4.MaxLength = 50;
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 43);
-            this.textBox4.TabIndex = 30;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(640, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 20);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "PC cv mới";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox5.Location = new System.Drawing.Point(744, 197);
-            this.textBox5.MaxLength = 50;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 43);
-            this.textBox5.TabIndex = 35;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox7.Location = new System.Drawing.Point(1067, 199);
-            this.textBox7.MaxLength = 50;
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 43);
-            this.textBox7.TabIndex = 41;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(982, 202);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 20);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "Ghi chú";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox8.Location = new System.Drawing.Point(1067, 128);
-            this.textBox8.MaxLength = 50;
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(140, 43);
-            this.textBox8.TabIndex = 39;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1002, 133);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 20);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Lý do";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.textBox9.Location = new System.Drawing.Point(1067, 62);
-            this.textBox9.MaxLength = 50;
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(140, 43);
-            this.textBox9.TabIndex = 37;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(932, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(129, 20);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Lương cb mới";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 335);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1230, 350);
-            this.panel2.TabIndex = 42;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sMaluong,
-            this.sChucvu,
-            this.sChucdanh,
-            this.sLcb,
-            this.sPCChucvu,
-            this.sNgaynhap,
-            this.sLCBMoi,
-            this.sPCChucvumoi,
-            this.sNgaysua,
-            this.sLydo,
-            this.sGhichu});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1230, 350);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // sMaluong
-            // 
-            this.sMaluong.HeaderText = "MaLuong";
-            this.sMaluong.MinimumWidth = 6;
-            this.sMaluong.Name = "sMaluong";
-            this.sMaluong.Width = 125;
-            // 
-            // sChucvu
-            // 
-            this.sChucvu.HeaderText = "ChucVu";
-            this.sChucvu.MinimumWidth = 6;
-            this.sChucvu.Name = "sChucvu";
-            this.sChucvu.Width = 125;
-            // 
-            // sChucdanh
-            // 
-            this.sChucdanh.HeaderText = "ChucDanh";
-            this.sChucdanh.MinimumWidth = 6;
-            this.sChucdanh.Name = "sChucdanh";
-            this.sChucdanh.Width = 125;
-            // 
-            // sLcb
-            // 
-            this.sLcb.HeaderText = "LCB";
-            this.sLcb.MinimumWidth = 6;
-            this.sLcb.Name = "sLcb";
-            this.sLcb.Width = 125;
-            // 
-            // sPCChucvu
-            // 
-            this.sPCChucvu.HeaderText = "PCChucVu";
-            this.sPCChucvu.MinimumWidth = 6;
-            this.sPCChucvu.Name = "sPCChucvu";
-            this.sPCChucvu.Width = 125;
-            // 
-            // sNgaynhap
-            // 
-            this.sNgaynhap.HeaderText = "NgayNhap";
-            this.sNgaynhap.MinimumWidth = 6;
-            this.sNgaynhap.Name = "sNgaynhap";
-            this.sNgaynhap.Width = 125;
-            // 
-            // sLCBMoi
-            // 
-            this.sLCBMoi.HeaderText = "LCB mới";
-            this.sLCBMoi.MinimumWidth = 6;
-            this.sLCBMoi.Name = "sLCBMoi";
-            this.sLCBMoi.Width = 125;
-            // 
-            // sPCChucvumoi
-            // 
-            this.sPCChucvumoi.HeaderText = "PC CVu mới";
-            this.sPCChucvumoi.MinimumWidth = 6;
-            this.sPCChucvumoi.Name = "sPCChucvumoi";
-            this.sPCChucvumoi.Width = 125;
-            // 
-            // sNgaysua
-            // 
-            this.sNgaysua.HeaderText = "NgaySua";
-            this.sNgaysua.MinimumWidth = 6;
-            this.sNgaysua.Name = "sNgaysua";
-            this.sNgaysua.Width = 125;
-            // 
-            // sLydo
-            // 
-            this.sLydo.HeaderText = "LyDo";
-            this.sLydo.MinimumWidth = 6;
-            this.sLydo.Name = "sLydo";
-            this.sLydo.Width = 125;
-            // 
-            // sGhichu
-            // 
-            this.sGhichu.HeaderText = "GhiChu";
-            this.sGhichu.MinimumWidth = 6;
-            this.sGhichu.Name = "sGhichu";
-            this.sGhichu.Width = 125;
-            // 
-            // Luong
+            // frmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -595,21 +595,22 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1315, 780);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Luong";
-            this.Text = "Luong";
+            this.Name = "frmLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý lương";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Luong_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

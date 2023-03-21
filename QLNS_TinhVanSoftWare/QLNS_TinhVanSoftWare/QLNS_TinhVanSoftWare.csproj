@@ -50,14 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BienBanDanhGiaBLL.cs" />
     <Compile Include="BusinessLogicLayer\BoNhiemBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChamCongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChucVuBLL.cs" />
     <Compile Include="BusinessLogicLayer\HopDongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhenThuongKyLuatBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NghiPhepThoiViecBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
+    <Compile Include="BusinessLogicLayer\PhongBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\QuyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\TaiKhoanBLL.cs" />
+    <Compile Include="DataAccessLayer\BienBanDanhGiaDAL.cs" />
     <Compile Include="DataAccessLayer\BoNhiemDAL.cs" />
+    <Compile Include="DataAccessLayer\ChamCongDAL.cs" />
+    <Compile Include="DataAccessLayer\ChucVuDAL.cs" />
     <Compile Include="DataAccessLayer\HopDong.DAL.cs" />
+    <Compile Include="DataAccessLayer\KhenThuongKyLuatDAL.cs" />
+    <Compile Include="DataAccessLayer\NghiPhepThoiViecDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
+    <Compile Include="DataAccessLayer\PhongBanDAL.cs" />
+    <Compile Include="DataAccessLayer\QuyenDAL.cs" />
     <Compile Include="DataAccessLayer\TaiKhoanDAL.cs" />
+    <Compile Include="Entity\DonXinNghi.cs" />
     <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +97,6 @@
     <Compile Include="PresentationLayer\frmChamCong.Designer.cs">
       <DependentUpon>frmChamCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\frmGiaHanHopDong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\frmGiaHanHopDong.Designer.cs">
-      <DependentUpon>frmGiaHanHopDong.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\frmHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,12 +114,6 @@
     </Compile>
     <Compile Include="PresentationLayer\frmBoNhiem.Designer.cs">
       <DependentUpon>frmBoNhiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\frmKyHopDong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\frmKyHopDong.Designer.cs">
-      <DependentUpon>frmKyHopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\frmNghiPhepThoiViec.cs">
       <SubType>Form</SubType>
@@ -168,9 +171,6 @@
     <EmbeddedResource Include="PresentationLayer\frmChamCong.resx">
       <DependentUpon>frmChamCong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\frmGiaHanHopDong.resx">
-      <DependentUpon>frmGiaHanHopDong.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,9 +181,6 @@
       <DependentUpon>frmBoNhiem.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationLayer\frmKyHopDong.resx">
-      <DependentUpon>frmKyHopDong.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmNghiPhepThoiViec.resx">
       <DependentUpon>frmNghiPhepThoiViec.cs</DependentUpon>
     </EmbeddedResource>

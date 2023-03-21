@@ -77,6 +77,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             {
                 DateTimeOffset now = DateTimeOffset.UtcNow;
                 string PK_sMabonhiem = "QDBN" + now.ToUnixTimeMilliseconds().ToString();
+
+
                 boNhiemBLL.insert(PK_sMabonhiem, DateTime.Parse(DateTime.Now.ToShortDateString()), DateTime.Parse(dtpNgayHieuLuc.Value.ToShortDateString()), cmbNhanVien.SelectedValue.ToString(), cmbChucVu.SelectedValue.ToString(),
                 cmbPhongBan.SelectedValue.ToString(), float.Parse(nmrLuongMoi.Value.ToString()),txtNoiDung.Text);
                 hopDongBLL.chucVu_PhongBan(cmbNhanVien.SelectedValue.ToString(), cmbChucVu.SelectedValue.ToString(), cmbPhongBan.SelectedValue.ToString(), Double.Parse(nmrLuongMoi.Value.ToString()));

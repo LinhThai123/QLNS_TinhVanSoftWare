@@ -37,7 +37,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            loadData(nhanVienBLL.searchByIdỎName(txtID.Text, txtEmployee.Text));
+            loadData(nhanVienBLL.searchByIdOrName(txtID.Text, txtEmployee.Text));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

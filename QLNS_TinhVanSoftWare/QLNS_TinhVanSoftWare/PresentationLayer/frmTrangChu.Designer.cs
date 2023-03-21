@@ -43,8 +43,6 @@
             this.mnFunction = new System.Windows.Forms.ToolStripMenuItem();
             this.mnLuongNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
-            this.childmnEmploy = new System.Windows.Forms.ToolStripMenuItem();
-            this.childmnSalary = new System.Windows.Forms.ToolStripMenuItem();
             this.mnSupport = new System.Windows.Forms.ToolStripMenuItem();
             this.mnKhenThuongKyLuat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnManager = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,28 +84,28 @@
             // mnPhongBan
             // 
             this.mnPhongBan.Name = "mnPhongBan";
-            this.mnPhongBan.Size = new System.Drawing.Size(219, 26);
+            this.mnPhongBan.Size = new System.Drawing.Size(224, 26);
             this.mnPhongBan.Text = "Quản Lý Phòng Ban";
             this.mnPhongBan.Click += new System.EventHandler(this.mnPhongBan_Click);
             // 
             // mnChucVu
             // 
             this.mnChucVu.Name = "mnChucVu";
-            this.mnChucVu.Size = new System.Drawing.Size(219, 26);
+            this.mnChucVu.Size = new System.Drawing.Size(224, 26);
             this.mnChucVu.Text = "Quản lý Chức Vụ";
             this.mnChucVu.Click += new System.EventHandler(this.mnChucVu_Click);
             // 
             // mnNhanVien
             // 
             this.mnNhanVien.Name = "mnNhanVien";
-            this.mnNhanVien.Size = new System.Drawing.Size(219, 26);
+            this.mnNhanVien.Size = new System.Drawing.Size(224, 26);
             this.mnNhanVien.Text = "Quản Lý Nhân Viên";
             this.mnNhanVien.Click += new System.EventHandler(this.mnNhanVien_Click);
             // 
             // mnTaiKhoan
             // 
             this.mnTaiKhoan.Name = "mnTaiKhoan";
-            this.mnTaiKhoan.Size = new System.Drawing.Size(219, 26);
+            this.mnTaiKhoan.Size = new System.Drawing.Size(224, 26);
             this.mnTaiKhoan.Text = "Quản Lý Tài Khoản";
             this.mnTaiKhoan.Click += new System.EventHandler(this.mnTaiKhoan_Click);
             // 
@@ -122,7 +120,7 @@
             this.mnNghiPhepThoiViec});
             this.mnCategory.Image = ((System.Drawing.Image)(resources.GetObject("mnCategory.Image")));
             this.mnCategory.Name = "mnCategory";
-            this.mnCategory.Size = new System.Drawing.Size(155, 24);
+            this.mnCategory.Size = new System.Drawing.Size(155, 26);
             this.mnCategory.Text = "Quản Lý Nhân Sự";
             // 
             // mnBBDanhGia
@@ -176,25 +174,10 @@
             // 
             // mnBangChamCong
             // 
-            this.mnBangChamCong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.childmnEmploy,
-            this.childmnSalary});
             this.mnBangChamCong.Name = "mnBangChamCong";
             this.mnBangChamCong.Size = new System.Drawing.Size(300, 26);
             this.mnBangChamCong.Text = "Quản Lý Bảng Chấm Công";
             this.mnBangChamCong.Click += new System.EventHandler(this.mnBangChamCong_Click);
-            // 
-            // childmnEmploy
-            // 
-            this.childmnEmploy.Name = "childmnEmploy";
-            this.childmnEmploy.Size = new System.Drawing.Size(158, 26);
-            this.childmnEmploy.Text = "Nhân viên";
-            // 
-            // childmnSalary
-            // 
-            this.childmnSalary.Name = "childmnSalary";
-            this.childmnSalary.Size = new System.Drawing.Size(158, 26);
-            this.childmnSalary.Text = "Lương";
             // 
             // mnSupport
             // 
@@ -239,22 +222,24 @@
             // NghiPhepThoiViec
             // 
             this.NghiPhepThoiViec.Name = "NghiPhepThoiViec";
-            this.NghiPhepThoiViec.Size = new System.Drawing.Size(257, 26);
-            this.NghiPhepThoiViec.Text = "Đơn Nghỉ Phép,Thôi Việc";
+            this.NghiPhepThoiViec.Size = new System.Drawing.Size(268, 26);
+            this.NghiPhepThoiViec.Text = "Đơn Nghỉ Phép - Thôi Việc";
             this.NghiPhepThoiViec.Click += new System.EventHandler(this.NghiPhepThoiViec_Click);
             // 
             // frmTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 538);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.IsMdiContainer = true;
             this.Name = "frmTrangChu";
-            this.Text = "frmTrangChu";
-            this.Load += new System.EventHandler(this.frmTrangChu_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Phần mềm Quản lý nhân sự công ty Tinh Vân Software";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTrangChu_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -277,8 +262,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnFunction;
         private System.Windows.Forms.ToolStripMenuItem mnLuongNhanVien;
         private System.Windows.Forms.ToolStripMenuItem mnBangChamCong;
-        private System.Windows.Forms.ToolStripMenuItem childmnEmploy;
-        private System.Windows.Forms.ToolStripMenuItem childmnSalary;
         private System.Windows.Forms.ToolStripMenuItem mnSupport;
         private System.Windows.Forms.ToolStripMenuItem mnManager;
         private System.Windows.Forms.ToolStripMenuItem mnDangXuat;

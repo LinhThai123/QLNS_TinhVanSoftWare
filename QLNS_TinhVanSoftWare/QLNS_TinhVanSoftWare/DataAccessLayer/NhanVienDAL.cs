@@ -124,7 +124,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
-        public DataTable searchByIdỎName(string PK_sMaNV, string sTenNV)
+        public DataTable searchByIdOrName(string PK_sMaNV, string sTenNV)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
@@ -151,6 +151,23 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 return false;
             string sMailPattern = @"^((01(\d){8})|(03(\d){8})|(07(\d){8})|(08(\d){8})|(09(\d){8}))$";
             return Regex.IsMatch(phoneNum.Trim(), sMailPattern);
+        }
+
+        public DataTable layDSNhanVien()
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("Select * from tbl_NhanVien", cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tb = new DataTable("tbl_NhanVien");
+                        ad.Fill(tb);
+                        return tb;
+                    }
+                }
+            }
         }
     }
 }

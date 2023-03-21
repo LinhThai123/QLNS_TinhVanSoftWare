@@ -4,12 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
-using QLNS_TinhVanSoftWare.PresentationLayer;
 
 namespace QLNS_TinhVanSoftWare
 {
+
     static class Program
     {
+        public static string maQuyenAdmin = "Q00001";
+        public static string maQuyenNhanSu = "Q00002";
+        public static string maQuyenNhanVien = "Q00003";
+        public static string maQuyenKeToan = "Q00004";
+
+        public static string tenNV, maTK, maQuyen, tenTK;
+
         [STAThread]
         static void Main()
         {
@@ -18,7 +25,7 @@ namespace QLNS_TinhVanSoftWare
             /// </summary>
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNhanVien());
+            Application.Run(new frmDangNhap());
         }
     }
 }

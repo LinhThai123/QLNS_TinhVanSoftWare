@@ -45,7 +45,6 @@
             this.cbMaNV = new System.Windows.Forms.ComboBox();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.cbMaQuyen = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaTK = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
@@ -153,6 +152,7 @@
             this.button5.TabIndex = 48;
             this.button5.Text = "Làm mới";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -183,6 +183,7 @@
             this.button3.TabIndex = 46;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -198,6 +199,7 @@
             this.button2.TabIndex = 45;
             this.button2.Text = "Cập nhật";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnThemTK
             // 
@@ -236,13 +238,17 @@
             // 
             // dgvTaiKhoan
             // 
+            this.dgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTaiKhoan.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaiKhoan.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(36, 201);
             this.dgvTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.RowHeadersWidth = 51;
             this.dgvTaiKhoan.Size = new System.Drawing.Size(916, 274);
             this.dgvTaiKhoan.TabIndex = 59;
+            this.dgvTaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellContentClick);
             // 
             // cbMaQuyen
             // 
@@ -252,21 +258,6 @@
             this.cbMaQuyen.Name = "cbMaQuyen";
             this.cbMaQuyen.Size = new System.Drawing.Size(160, 24);
             this.cbMaQuyen.TabIndex = 60;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(1015, 416);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 32);
-            this.button6.TabIndex = 61;
-            this.button6.Text = "Back";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -295,10 +286,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QLNS_TinhVanSoftWare.Properties.Resources.bg1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1181, 538);
             this.Controls.Add(this.txtMaTK);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.cbMaQuyen);
             this.Controls.Add(this.dgvTaiKhoan);
             this.Controls.Add(this.cbMaNV);
@@ -318,7 +309,8 @@
             this.Controls.Add(this.lbTieude);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTaiKhoan";
-            this.Text = "taikhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý tài khoản";
             this.Load += new System.EventHandler(this.frmTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             this.ResumeLayout(false);
@@ -345,7 +337,6 @@
         private System.Windows.Forms.ComboBox cbMaNV;
         private System.Windows.Forms.DataGridView dgvTaiKhoan;
         private System.Windows.Forms.ComboBox cbMaQuyen;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaTK;
     }

@@ -190,6 +190,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(734, 145);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(318, 27);
             this.txtPhone.TabIndex = 8;
@@ -251,6 +252,7 @@
             this.txtIdentify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentify.Location = new System.Drawing.Point(735, 89);
             this.txtIdentify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdentify.MaxLength = 12;
             this.txtIdentify.Name = "txtIdentify";
             this.txtIdentify.Size = new System.Drawing.Size(318, 27);
             this.txtIdentify.TabIndex = 7;
@@ -352,6 +354,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(163, 31);
+            this.txtID.MaxLength = 10;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(319, 29);
             this.txtID.TabIndex = 1;

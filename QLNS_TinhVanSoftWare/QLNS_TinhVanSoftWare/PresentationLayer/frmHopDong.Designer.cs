@@ -88,7 +88,6 @@
             this.grbHopDong.Size = new System.Drawing.Size(1326, 720);
             this.grbHopDong.TabIndex = 27;
             this.grbHopDong.TabStop = false;
-            this.grbHopDong.Text = "HỢP ĐỒNG";
             // 
             // txtMaHD
             // 
@@ -205,7 +204,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.MintCream;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(924, 151);
+            this.btnXoa.Location = new System.Drawing.Point(924, 166);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 35);
@@ -221,7 +220,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.MintCream;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(1076, 151);
+            this.btnTimKiem.Location = new System.Drawing.Point(1076, 166);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(112, 35);
@@ -347,6 +346,7 @@
             this.ClientSize = new System.Drawing.Size(1348, 756);
             this.Controls.Add(this.grbHopDong);
             this.Name = "frmHopDong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hợp đồng";
             this.Load += new System.EventHandler(this.frmHopDong_Load);
             this.grbHopDong.ResumeLayout(false);
