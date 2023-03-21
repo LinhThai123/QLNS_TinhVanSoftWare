@@ -124,12 +124,12 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
-        public DataTable searchById(string PK_sMaNV)
+        public DataTable searchByIdỎName(string PK_sMaNV, string sTenNV)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
                 String sql = "SELECT * FROM vv_NhanVien " +
-                    "WHERE [Mã nhân viên] LIKE N'%" + PK_sMaNV + "%' ";
+                    "WHERE [Họ tên] LIKE N'%" + sTenNV + "%' and [Mã nhân viên] LIKE N'%" + PK_sMaNV + "%' ";
 
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {

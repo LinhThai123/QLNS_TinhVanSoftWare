@@ -42,9 +42,9 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         }
 
 
-        public DataTable searchById(String PK_sMaNV)
+        public DataTable searchByIdỎName(string PK_sMaNV, string sTenNV)
         {
-            return nhanVienDAL.searchById(PK_sMaNV);
+            return nhanVienDAL.searchByIdỎName(PK_sMaNV, sTenNV);
         }
     }
 }

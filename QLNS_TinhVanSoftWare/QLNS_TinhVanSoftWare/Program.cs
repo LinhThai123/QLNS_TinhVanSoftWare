@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using QLNS_TinhVanSoftWare.PresentationLayer;
 
 namespace QLNS_TinhVanSoftWare
 {
@@ -17,7 +18,7 @@ namespace QLNS_TinhVanSoftWare
             /// </summary>
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentationLayer.frmNhanVien());
+            Application.Run(new frmNhanVien());
         }
     }
 }

@@ -166,5 +166,26 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 }
             }
         }
+
+        public bool chucVu_PhongBan(string PK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = cnn.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "sp_ChucVuPhongBan";
+                    cmd.Parameters.AddWithValue("@PK_sMaNV", PK_sMaNV);
+                    cmd.Parameters.AddWithValue("@FK_sMaCV", FK_sMaCV);
+                    cmd.Parameters.AddWithValue("@FK_sMaPB", FK_sMaPB);
+                    cmd.Parameters.AddWithValue("@fLuongcb", fLuongcb);
+                    cnn.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    return i > 0;
+                }
+            }
+        }
+
     }
 }

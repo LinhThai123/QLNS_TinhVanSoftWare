@@ -41,6 +41,11 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
             return hopDongDAL.update( PK_sMaHD,  dNgaykyhd,  dNgayhethan,  FK_sMaNV,  FK_sMaCV,  FK_sMaPB,  fLuongcb);
         }
 
+        public bool chucVu_PhongBan(string PK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
+        {
+            return hopDongDAL.chucVu_PhongBan(PK_sMaNV, FK_sMaCV, FK_sMaPB, fLuongcb);
+        }
+
         public bool deleteById(string PK_sMaKH)
         {
             return hopDongDAL.deleteById(PK_sMaKH);

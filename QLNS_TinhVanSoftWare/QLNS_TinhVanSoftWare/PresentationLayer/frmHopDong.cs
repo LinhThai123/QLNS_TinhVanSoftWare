@@ -79,7 +79,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             if (cmbNhanVien.Text != "" && cmbChucvu.Text != "" && cmbPhongban.Text != "")
             {
                 hopDongBLL.insert(DateTime.Parse(DateTime.Now.ToShortDateString()), DateTime.Parse(DateTime.Now.AddYears(int.Parse(nmrThoiHan.Value.ToString())).ToShortDateString()), cmbNhanVien.SelectedValue.ToString(), cmbChucvu.SelectedValue.ToString(),
-                cmbPhongban.SelectedValue.ToString(), float.Parse(nmrLuongCB.Value.ToString()));
+                cmbPhongban.SelectedValue.ToString(), Double.Parse(nmrLuongCB.Value.ToString()));
+                hopDongBLL.chucVu_PhongBan(cmbNhanVien.SelectedValue.ToString(), cmbChucvu.SelectedValue.ToString(),cmbPhongban.SelectedValue.ToString(), Double.Parse(nmrLuongCB.Value.ToString()));
                 frmHopDong_Load(sender, e);
                 MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -164,6 +165,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             {
                 hopDongBLL.update(txtMaHD.Text,DateTime.Parse(DateTime.Now.ToShortDateString()), DateTime.Parse(DateTime.Now.AddYears(int.Parse(nmrThoiHan.Value.ToString())).ToShortDateString()), cmbNhanVien.SelectedValue.ToString(), cmbChucvu.SelectedValue.ToString(),
                 cmbPhongban.SelectedValue.ToString(), float.Parse(nmrLuongCB.Value.ToString()));
+                hopDongBLL.chucVu_PhongBan(cmbNhanVien.SelectedValue.ToString(), cmbChucvu.SelectedValue.ToString(), cmbPhongban.SelectedValue.ToString(), Double.Parse(nmrLuongCB.Value.ToString()));
                 frmHopDong_Load(sender, e);
                 MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
