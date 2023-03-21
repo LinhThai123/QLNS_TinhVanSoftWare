@@ -68,7 +68,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\ChucVuBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhongBanBLL.cs" />
+    <Compile Include="DataAccessLayer\ChucVuDAL.cs" />
     <Compile Include="DataAccessLayer\PhongBanDAL.cs" />
     <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
       <SubType>Form</SubType>

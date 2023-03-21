@@ -29,12 +29,12 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSeach = new System.Windows.Forms.Button();
             this.cmbMota = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -74,9 +74,9 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnSeach);
             this.panel3.Controls.Add(this.cmbMota);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.btnTimKiem);
+            this.panel3.Controls.Add(this.btnLamMoi);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.btnThem);
@@ -91,6 +91,22 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.panel3.Size = new System.Drawing.Size(380, 410);
             this.panel3.TabIndex = 1;
             // 
+            // btnSeach
+            // 
+            this.btnSeach.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSeach.FlatAppearance.BorderSize = 0;
+            this.btnSeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeach.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeach.ForeColor = System.Drawing.Color.White;
+            this.btnSeach.Location = new System.Drawing.Point(199, 364);
+            this.btnSeach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSeach.Name = "btnSeach";
+            this.btnSeach.Size = new System.Drawing.Size(76, 27);
+            this.btnSeach.TabIndex = 14;
+            this.btnSeach.Text = "Tìm Kiếm";
+            this.btnSeach.UseVisualStyleBackColor = false;
+            this.btnSeach.Click += new System.EventHandler(this.btnSeach_Click);
+            // 
             // cmbMota
             // 
             this.cmbMota.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,36 +119,21 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.cmbMota.Size = new System.Drawing.Size(321, 135);
             this.cmbMota.TabIndex = 13;
             // 
-            // button5
+            // btnLamMoi
             // 
-            this.button5.BackColor = System.Drawing.Color.Gray;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(279, 326);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(72, 26);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Làm mới";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(188, 364);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(86, 27);
-            this.btnTimKiem.TabIndex = 11;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem);
+            this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(279, 326);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(72, 26);
+            this.btnLamMoi.TabIndex = 12;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnDelete
             // 
@@ -287,8 +288,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             // 
             // dgvPhongban
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPhongban.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPhongban.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPhongban.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPhongban.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvPhongban.ColumnHeadersHeight = 29;
@@ -374,7 +375,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
@@ -385,5 +386,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox cmbMota;
+        private System.Windows.Forms.Button btnSeach;
     }
 }

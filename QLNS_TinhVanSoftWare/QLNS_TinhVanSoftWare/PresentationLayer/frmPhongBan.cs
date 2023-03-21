@@ -97,8 +97,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             dgvPhongban.DataSource = dsTimkiem;
         }
-
-        private void btnTimKiem(object sender, EventArgs e)
+        private void btnSeach_Click(object sender, EventArgs e)
         {
             loadData(phongBanBLL.searchById(cmbTenPB.Text));
         }
@@ -137,7 +136,5 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
             panel1.Height, 30, 30));
         }
-
-       
     }
 }
