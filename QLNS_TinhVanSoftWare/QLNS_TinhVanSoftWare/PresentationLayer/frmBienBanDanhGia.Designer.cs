@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBienBanDanhGia));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dNgaylap = new System.Windows.Forms.DateTimePicker();
+            this.txtMabienban = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rtbNoiDungDG = new System.Windows.Forms.RichTextBox();
@@ -54,10 +58,6 @@
             this.cmbMaCV = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProviderBienBanDanhGia = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMabienban = new System.Windows.Forms.TextBox();
-            this.dNgaylap = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienBanDanhGia)).BeginInit();
@@ -94,6 +94,42 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "BIÊN BẢN ĐÁNH GIÁ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.Location = new System.Drawing.Point(18, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 18);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Ngày lập:";
+            // 
+            // dNgaylap
+            // 
+            this.dNgaylap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dNgaylap.Location = new System.Drawing.Point(136, 109);
+            this.dNgaylap.Name = "dNgaylap";
+            this.dNgaylap.Size = new System.Drawing.Size(161, 24);
+            this.dNgaylap.TabIndex = 54;
+            // 
+            // txtMabienban
+            // 
+            this.txtMabienban.Location = new System.Drawing.Point(136, 58);
+            this.txtMabienban.Name = "txtMabienban";
+            this.txtMabienban.Size = new System.Drawing.Size(161, 24);
+            this.txtMabienban.TabIndex = 53;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.Location = new System.Drawing.Point(18, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 18);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Mã biên bản:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCreate
             // 
@@ -221,6 +257,7 @@
             this.btnSuaDanhGia.TabIndex = 45;
             this.btnSuaDanhGia.Text = "Cập nhật";
             this.btnSuaDanhGia.UseVisualStyleBackColor = false;
+            this.btnSuaDanhGia.Click += new System.EventHandler(this.btnSuaDanhGia_Click);
             // 
             // btnDelete
             // 
@@ -236,6 +273,7 @@
             this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnFind
             // 
@@ -251,6 +289,7 @@
             this.btnFind.TabIndex = 42;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cmbTrangThai
             // 
@@ -326,42 +365,6 @@
             // errorProviderBienBanDanhGia
             // 
             this.errorProviderBienBanDanhGia.ContainerControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(18, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 18);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Mã biên bản:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtMabienban
-            // 
-            this.txtMabienban.Location = new System.Drawing.Point(136, 58);
-            this.txtMabienban.Name = "txtMabienban";
-            this.txtMabienban.Size = new System.Drawing.Size(161, 24);
-            this.txtMabienban.TabIndex = 53;
-            // 
-            // dNgaylap
-            // 
-            this.dNgaylap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dNgaylap.Location = new System.Drawing.Point(136, 109);
-            this.dNgaylap.Name = "dNgaylap";
-            this.dNgaylap.Size = new System.Drawing.Size(161, 24);
-            this.dNgaylap.TabIndex = 54;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(18, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "Ngày lập:";
             // 
             // frmBienBanDanhGia
             // 
