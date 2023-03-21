@@ -16,15 +16,24 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         {
             return nhanVienDAL.findAll();
         }
+        public bool check_ID(string PK_sMaNV)
+        {
+            return nhanVienDAL.check_ID(PK_sMaNV);
+        }
+
+        public bool IsValidVietNamPhoneNumber(string sSDT)
+        {
+            return nhanVienDAL.IsValidVietNamPhoneNumber(sSDT);
+        }
 
         public bool insert(string PK_sMaNV, string sTenNV, DateTime dNgaysinh, string sGioitinh, string sCCCD, string sDiachi, string sSDT, string sEmail, DateTime dNgayvaolam)
         {
             return nhanVienDAL.insert(PK_sMaNV, sTenNV, dNgaysinh, sGioitinh, sCCCD, sDiachi, sSDT, sEmail, dNgayvaolam);
         }
 
-        public bool update(string PK_sMaHD, DateTime dNgaykyhd, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
+        public bool update(string PK_sMaNV, string sTenNV, DateTime dNgaysinh, string sGioitinh, string sCCCD, string sDiachi, string sSDT, string sEmail, DateTime dNgayvaolam)
         {
-            return nhanVienDAL.update(PK_sMaHD, dNgaykyhd, dNgayhethan, FK_sMaNV, FK_sMaCV, FK_sMaPB, fLuongcb);
+            return nhanVienDAL.update(PK_sMaNV, sTenNV, dNgaysinh, sGioitinh, sCCCD, sDiachi, sSDT, sEmail, dNgayvaolam);
         }
 
         public bool deleteById(string PK_sMaNV)

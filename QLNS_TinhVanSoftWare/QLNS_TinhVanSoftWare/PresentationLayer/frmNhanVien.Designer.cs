@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
@@ -54,8 +55,10 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -190,6 +193,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(318, 27);
             this.txtPhone.TabIndex = 8;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
             // txtEmail
@@ -250,6 +254,7 @@
             this.txtIdentify.Name = "txtIdentify";
             this.txtIdentify.Size = new System.Drawing.Size(318, 27);
             this.txtIdentify.TabIndex = 7;
+            this.txtIdentify.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentify_KeyPress);
             this.txtIdentify.Validating += new System.ComponentModel.CancelEventHandler(this.txtIdentify_Validating);
             // 
             // cmbSex
@@ -295,6 +300,7 @@
             this.dtpBirthDay.Name = "dtpBirthDay";
             this.dtpBirthDay.Size = new System.Drawing.Size(319, 29);
             this.dtpBirthDay.TabIndex = 4;
+            this.dtpBirthDay.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -371,6 +377,10 @@
             this.txtAddress.TabIndex = 5;
             this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -388,6 +398,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +430,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
