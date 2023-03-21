@@ -233,6 +233,7 @@
             // 
             // cmbNhanVien
             // 
+            this.cmbNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNhanVien.FormattingEnabled = true;
             this.cmbNhanVien.Location = new System.Drawing.Point(208, 67);
             this.cmbNhanVien.Name = "cmbNhanVien";
@@ -241,6 +242,7 @@
             // 
             // cmbChucVu
             // 
+            this.cmbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChucVu.FormattingEnabled = true;
             this.cmbChucVu.Location = new System.Drawing.Point(208, 120);
             this.cmbChucVu.Name = "cmbChucVu";
@@ -249,6 +251,7 @@
             // 
             // cmbPhongBan
             // 
+            this.cmbPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPhongBan.FormattingEnabled = true;
             this.cmbPhongBan.Location = new System.Drawing.Point(208, 172);
             this.cmbPhongBan.Name = "cmbPhongBan";
@@ -284,9 +287,24 @@
             // nmrLuongMoi
             // 
             this.nmrLuongMoi.Location = new System.Drawing.Point(208, 223);
+            this.nmrLuongMoi.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nmrLuongMoi.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nmrLuongMoi.Name = "nmrLuongMoi";
             this.nmrLuongMoi.Size = new System.Drawing.Size(296, 29);
             this.nmrLuongMoi.TabIndex = 54;
+            this.nmrLuongMoi.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             // 
             // frmBoNhiem
             // 

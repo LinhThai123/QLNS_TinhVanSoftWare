@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS_TinhVanSoftWare.DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
 {
     public class BoNhiemBLL
     {
-        DataAccessLayer.BoNhiemDAL boNhiemDAL = new DataAccessLayer.BoNhiemDAL();
+        BoNhiemDAL boNhiemDAL = new BoNhiemDAL();
+        HopDongDAL hopDongDAL = new HopDongDAL();
 
         public DataTable findAll()
         {
@@ -18,22 +20,22 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
 
         public DataTable getNhanVien()
         {
-            return boNhiemDAL.getNhanVien();
+            return hopDongDAL.getNhanVien();
         }
 
         public DataTable getPhongBan()
         {
-            return boNhiemDAL.getPhongBan();
+            return hopDongDAL.getPhongBan();
         }
 
         public DataTable getChucVu()
         {
-            return boNhiemDAL.getChucVu();
+            return hopDongDAL.getChucVu();
         }
 
-        public bool insert(DateTime dNgaykyhd, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
+        public bool insert(string PK_sMabonhiem, DateTime dNgaylap, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongmoi, string sNoiDung)
         {
-            return boNhiemDAL.insert(dNgaykyhd, dNgayhethan, FK_sMaNV, FK_sMaCV, FK_sMaPB, fLuongcb);
+            return boNhiemDAL.insert(PK_sMabonhiem,dNgaylap, dNgayhethan, FK_sMaNV, FK_sMaCV, FK_sMaPB, fLuongmoi, sNoiDung);
         }
 
         public bool update(string PK_sMaHD, DateTime dNgaykyhd, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)

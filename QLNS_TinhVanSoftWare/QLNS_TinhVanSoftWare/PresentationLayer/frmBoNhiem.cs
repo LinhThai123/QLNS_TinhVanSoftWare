@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS_TinhVanSoftWare.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmBoNhiem : Form
     {
-        BusinessLogicLayer.HopDongBLL hopDongBLL = new BusinessLogicLayer.HopDongBLL();
-        BusinessLogicLayer.BoNhiemBLL boNhiemBLL = new BusinessLogicLayer.BoNhiemBLL();
+        HopDongBLL hopDongBLL = new HopDongBLL();
+        BoNhiemBLL boNhiemBLL = new BoNhiemBLL();
         public frmBoNhiem()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void findAll()
         {
-            DataTable t = hopDongBLL.findAll();
+            DataTable t = boNhiemBLL.findAll();
             t.Columns.Add("STT");
             for (int i = 0; i < t.Rows.Count; i++)
                 t.Rows[i]["STT"] = i + 1;
@@ -66,7 +67,17 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            if (cmbNhanVien.Text != "" && cmbChucVu.Text != "" && cmbPhongBan.Text != "" && txtNoiDung.Text != "")
+            {
+                DateTimeOffset now = DateTimeOffset.UtcNow;
+                string PK_sMabonhiem = "QDBN" + now.ToUnixTimeMilliseconds().ToString();
+                boNhiemBLL.insert(PK_sMabonhiem, DateTime.Parse(DateTime.Now.ToShortDateString()), DateTime.Parse(dtpNgayHieuLuc.Value.ToShortDateString()), cmbNhanVien.SelectedValue.ToString(), cmbChucVu.SelectedValue.ToString(),
+                cmbPhongBan.SelectedValue.ToString(), float.Parse(nmrLuongMoi.Value.ToString()),txtNoiDung.Text);
+                MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmBoNhiem_Load(sender, e);
+            }
+            else
+                MessageBox.Show("Vui lòng nhập tất cả các trường dữ liệu ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnSua_Click(object sender, EventArgs e)

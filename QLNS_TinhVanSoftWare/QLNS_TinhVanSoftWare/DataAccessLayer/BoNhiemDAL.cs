@@ -16,12 +16,12 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM vv_HopDong", cnn))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM vv_BoNhiem", cnn))
                 {
                     cmd.CommandType = CommandType.Text;
                     using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
                     {
-                        using (DataTable dt = new DataTable("vv_HopDong"))
+                        using (DataTable dt = new DataTable("vv_BoNhiem"))
                         {
                             ad.Fill(dt);
                             return dt;
@@ -31,75 +31,26 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
-        public bool insert(DateTime dNgaykyhd, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
+        public bool insert(string PK_sMabonhiem, DateTime dNgaylap, DateTime dNgaycohieuluc, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongmoi, string sNoiDung)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_ThemHopDong";
-                    cmd.Parameters.AddWithValue("@dNgaykyhd", dNgaykyhd);
-                    cmd.Parameters.AddWithValue("@dNgayhethan", dNgayhethan);
+                    cmd.CommandText = "sp_ThemBonhiem";
+                    cmd.Parameters.AddWithValue("@PK_sMabonhiem", PK_sMabonhiem);
+                    cmd.Parameters.AddWithValue("@dNgaylap", dNgaylap);
+                    cmd.Parameters.AddWithValue("@dNgaycohieuluc", dNgaycohieuluc);
                     cmd.Parameters.AddWithValue("@FK_sMaNV", FK_sMaNV);
                     cmd.Parameters.AddWithValue("@FK_sMaCV", FK_sMaCV);
                     cmd.Parameters.AddWithValue("@FK_sMaPB", FK_sMaPB);
-                    cmd.Parameters.AddWithValue("@fLuongcb", fLuongcb);
+                    cmd.Parameters.AddWithValue("@fLuongmoi", fLuongmoi);
+                    cmd.Parameters.AddWithValue("@sNoiDung", sNoiDung);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();
                     return i > 0;
-                }
-            }
-        }
-
-        public DataTable getNhanVien()
-        {
-            using (SqlConnection cnn = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM vv_getNhanVien", cnn))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
-                    {
-                        DataTable tb = new DataTable("vv_getNhanVien");
-                        ad.Fill(tb);
-                        return tb;
-                    }
-                }
-            }
-        }
-
-        public DataTable getChucVu()
-        {
-            using (SqlConnection cnn = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_Chucvu", cnn))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
-                    {
-                        DataTable tb = new DataTable("tbl_Chucvu");
-                        ad.Fill(tb);
-                        return tb;
-                    }
-                }
-            }
-        }
-
-        public DataTable getPhongBan()
-        {
-            using (SqlConnection cnn = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_Phongban", cnn))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
-                    {
-                        DataTable tb = new DataTable("tbl_Phongban");
-                        ad.Fill(tb);
-                        return tb;
-                    }
                 }
             }
         }
