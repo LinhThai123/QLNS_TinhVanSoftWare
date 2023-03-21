@@ -50,6 +50,63 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
                 MessageBox.Show("Vui lòng nhập tất cả các trường dữ liệu ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            frmPhongBan_Load(sender, e);
+        }
+
+        private void dgvPhongban_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cmbTenPB.Text = dgvPhongban.CurrentRow.Cells[3].Value.ToString() + " - " + dgvPhongban.CurrentRow.Cells[4].Value.ToString();
+            cmbMota.Text = dgvPhongban.CurrentRow.Cells[5].Value.ToString();
+            
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string b = cmbTenPB.Text;
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (phongBanBLL.deleteById(b))
+                {
+                    btnLamMoi_Click(sender, e);
+                    frmPhongBan_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (cmbTenPB.Text != "" && cmbMota.Text != "")
+            {
+                phongBanBLL.update(cmbTenPB.Text.ToString(), cmbMota.Text.ToString());
+
+                frmPhongBan_Load(sender, e);
+                MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Vui lòng nhập tất cả các trường dữ liệu ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+        private void loadData(DataTable dsTimkiem)
+        {
+            dgvPhongban.DataSource = dsTimkiem;
+        }
+
+        private void btnTimKiem(object sender, EventArgs e)
+        {
+            loadData(phongBanBLL.searchById(cmbTenPB.Text));
+        }
+
+
+
+
+
 
 
 

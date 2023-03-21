@@ -42,5 +42,10 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         {
             throw new NotImplementedException();
         }
+
+        internal void update(string v1, string v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

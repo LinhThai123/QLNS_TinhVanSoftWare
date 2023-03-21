@@ -29,7 +29,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmbMota = new System.Windows.Forms.TextBox();
@@ -132,6 +132,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.btnTimKiem.TabIndex = 11;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem);
             // 
             // btnDelete
             // 
@@ -147,6 +148,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -162,6 +164,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnThem
             // 
@@ -284,8 +287,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             // 
             // dgvPhongban
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPhongban.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPhongban.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPhongban.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPhongban.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvPhongban.ColumnHeadersHeight = 29;
@@ -300,6 +303,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.dgvPhongban.RowTemplate.Height = 24;
             this.dgvPhongban.Size = new System.Drawing.Size(351, 372);
             this.dgvPhongban.TabIndex = 1;
+            this.dgvPhongban.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongban_CellContentClick);
             // 
             // sTenphongban
             // 
