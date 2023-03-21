@@ -145,6 +145,7 @@
             this.dgvBoNhiem.RowHeadersWidth = 51;
             this.dgvBoNhiem.Size = new System.Drawing.Size(1267, 271);
             this.dgvBoNhiem.TabIndex = 43;
+            this.dgvBoNhiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBoNhiem_CellContentClick);
             this.dgvBoNhiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBoNhiem_CellContentClick);
             // 
             // btnSua

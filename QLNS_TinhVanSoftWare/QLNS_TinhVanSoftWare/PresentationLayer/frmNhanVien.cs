@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS_TinhVanSoftWare.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmNhanVien : Form
     {
+        NhanVienBLL nhanVienBLL = new NhanVienBLL();
         public frmNhanVien()
         {
             InitializeComponent();
@@ -19,12 +21,12 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void findAll()
         {
-            DataTable t = boNhiemBLL.findAll();
+            DataTable t = nhanVienBLL.findAll();
             t.Columns.Add("STT");
             for (int i = 0; i < t.Rows.Count; i++)
                 t.Rows[i]["STT"] = i + 1;
-            dgvBoNhiem.DataSource = t;
-            dgvBoNhiem.Columns["STT"].DisplayIndex = 0;
+            dgvNhanVien.DataSource = t;
+            dgvNhanVien.Columns["STT"].DisplayIndex = 0;
         }
         private void btnFind_Click(object sender, EventArgs e)
         {
@@ -38,7 +40,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-
+            findAll();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
