@@ -90,7 +90,43 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             findAll();
             hienTenQuyen();
-            hienTenNhanVien(); 
+            hienTenNhanVien();
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string maTK = txtMaTK.Text;
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (taiKhoanBLL.deleteTaiKhoan(maTK))
+                {
+                    button5_Click(sender, e); 
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            txtMaTK.Text = "";
+            txtMK.Text = "";
+            txtTenTK.Text = "";
+            txtTinhTrang.Text = "";         
+            frmTaiKhoan_Load(sender, e);
+        }
+
+        private void dgvTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaTK.Text = dgvTaiKhoan.CurrentRow.Cells[0].Value.ToString();
+            cbMaNV.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[1].Value.ToString();
+            txtMK.Text = dgvTaiKhoan.CurrentRow.Cells[3].Value.ToString();
+            txtTinhTrang.Text = dgvTaiKhoan.CurrentRow.Cells[5].Value.ToString();
+            cbMaQuyen.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[4].Value.ToString();
+            txtTenTK.Text = dgvTaiKhoan.CurrentRow.Cells[2].Value.ToString(); 
         }
     }
 }

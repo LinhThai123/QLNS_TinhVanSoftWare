@@ -153,6 +153,7 @@
             this.button5.TabIndex = 48;
             this.button5.Text = "Làm mới";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -183,6 +184,7 @@
             this.button3.TabIndex = 46;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -236,13 +238,16 @@
             // 
             // dgvTaiKhoan
             // 
+            this.dgvTaiKhoan.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaiKhoan.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(36, 201);
             this.dgvTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.RowHeadersWidth = 51;
             this.dgvTaiKhoan.Size = new System.Drawing.Size(916, 274);
             this.dgvTaiKhoan.TabIndex = 59;
+            this.dgvTaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellContentClick);
             // 
             // cbMaQuyen
             // 
