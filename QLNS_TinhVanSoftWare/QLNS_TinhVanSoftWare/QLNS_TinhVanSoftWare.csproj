@@ -69,9 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\ChamCongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DonXinNghiDAL.cs" />
+    <Compile Include="BusinessLogicLayer\NghiPhepBBL.cs" />
     <Compile Include="BusinessLogicLayer\NghiPhepThoiViecBLL.cs" />
     <Compile Include="DataAccessLayer\ChamCongDAL.cs" />
+    <Compile Include="DataAccessLayer\NghiPhepDAL.cs" />
     <Compile Include="DataAccessLayer\NghiPhepThoiViecDAL.cs" />
+    <Compile Include="Entity\DonXinNghi.cs" />
     <Compile Include="PresentationLayer\frmBienBanDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
