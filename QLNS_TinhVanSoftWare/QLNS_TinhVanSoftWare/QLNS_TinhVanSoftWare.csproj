@@ -50,8 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
     <Compile Include="BusinessLogicLayer\QuyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\TaiKhoanBLL.cs" />
+    <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
     <Compile Include="DataAccessLayer\QuyenDAL.cs" />
     <Compile Include="DataAccessLayer\TaiKhoanDAL.cs" />
     <Compile Include="PresentationLayer\frmDoiMatKhau.cs">

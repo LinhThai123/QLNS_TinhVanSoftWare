@@ -17,6 +17,7 @@ D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bi
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\stdole.dll
+D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.AssemblyReference.cache
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.frmDoimatkhau.resources
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.frmChucVu.resources
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.PresentationLayer.frmBienBanDanhGia.resources
@@ -39,4 +40,3 @@ D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\ob
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CopyComplete
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
 D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
-D:\Nhập Môn\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.AssemblyReference.cache

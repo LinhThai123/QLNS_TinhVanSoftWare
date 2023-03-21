@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS_TinhVanSoftWare.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
     public partial class frmTaiKhoan : Form
     {
        
-        BusinessLogicLayer.TaiKhoanBLL taiKhoanBLL = new BusinessLogicLayer.TaiKhoanBLL();
+        TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
 
-        BusinessLogicLayer.QuyenBLL quyenBLL = new BusinessLogicLayer.QuyenBLL(); 
+        QuyenBLL quyenBLL = new BusinessLogicLayer.QuyenBLL();
+
+        NhanVienBLL nhanVienBLL = new NhanVienBLL(); 
 
         public frmTaiKhoan()
         {
@@ -34,18 +37,25 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnThemTK_Click(object sender, EventArgs e)
         {
+            string MaNV = cbMaNV.SelectedValue.ToString();
+            string MaTK = txtMaTK.Text;
+            string TenTK = txtTenTK.Text;
+            string MK = txtMK.Text; 
+            string tinhTrang = txtTinhTrang.Text;
+            string maQuyen = cbMaQuyen.SelectedValue.ToString(); 
+
             if (cbMaNV.Text != "" && txtMaTK.Text != "" && txtTenTK.Text != "" 
                 && txtTinhTrang.Text != "" && cbMaQuyen.Text != "" && txtMK.Text != "")
             {
                 if (taiKhoanBLL.Check_MaTaiKhoan( txtMaTK.Text))
                 {
-                    taiKhoanBLL.insert(cbMaNV.Text, txtMaTK.Text, txtTenTK.Text, txtTinhTrang.Text, cbMaQuyen.Text, txtMK.Text);
-                    MessageBox.Show("Thêm tài khoản thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    taiKhoanBLL.insert(MaTK, TenTK, MK, tinhTrang, MaNV, maQuyen);
+                    MessageBox.Show("Thêm tài khoản thành công" ,"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmTaiKhoan_Load(sender, e); 
                 }
                 else
                 {
-                    MessageBox.Show("Tài đã tồn tại! Vui lòng thêm tài khoản khác", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Tài khoản đã tồn tại! Vui lòng thêm tài khoản khác", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -61,7 +71,18 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             view.Sort = "PK_sMaquyen";
             cbMaQuyen.DataSource = view;
             cbMaQuyen.DisplayMember = "sTenquyen";
-            cbMaQuyen.ValueMember = "sTenquyen";
+            cbMaQuyen.ValueMember = "PK_sMaquyen";
+
+        }
+
+        public void hienTenNhanVien()
+        {
+            DataTable t = nhanVienBLL.layDSNhanVien();
+            DataView view = new DataView(t);
+            view.Sort = "PK_sMaNV";
+            cbMaNV.DataSource = view;
+            cbMaNV.DisplayMember = "sTenNV";
+            cbMaNV.ValueMember = "PK_sMaNV";
 
         }
 
@@ -69,6 +90,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
         {
             findAll();
             hienTenQuyen();
+            hienTenNhanVien(); 
         }
     }
 }

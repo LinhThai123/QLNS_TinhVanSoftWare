@@ -32,24 +32,39 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
                 }
             }
         }
-        public bool insert(string maTK, string tenTK, string matKhau, string tinhTrang, string maQuyen , string maNV)
+        public bool insert(string maTK, string tenTK, string matKhau, string tinhTrang,  string maNV , string maQuyen)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "insertAccount";
-                    cmd.Parameters.AddWithValue("@MaTK", maTK);
-                    cmd.Parameters.AddWithValue("@TaiKhoan", tenTK);
-                    cmd.Parameters.AddWithValue("@MatKhau", matKhau);
-                    cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
-                    cmd.Parameters.AddWithValue("@MaNV", maNV);
-                    cmd.Parameters.AddWithValue("@MaQuyen", maQuyen);
+                    cmd.CommandText = "sp_ThemTaiKhoan";
+                    cmd.Parameters.AddWithValue("@PK_sMaTK", maTK);
+                    cmd.Parameters.AddWithValue("@s_Taikhoan", tenTK);
+                    cmd.Parameters.AddWithValue("@s_Matkhau", matKhau);
+                    cmd.Parameters.AddWithValue("@s_Tinhtrang", tinhTrang);
+                    cmd.Parameters.AddWithValue("@FK_sMaNV", maNV);
+                    cmd.Parameters.AddWithValue("@FK_sMaquyen", maQuyen);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();
-
+                    return i > 0;
+                }
+            }
+        }
+        public bool deleteTaiKhoan(string MaTK)
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = cnn.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "sp_XoaTaiKhoan";
+                    cmd.Parameters.AddWithValue("@MaTK", MaTK);
+                    cnn.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    cnn.Close();
                     return i > 0;
                 }
             }
