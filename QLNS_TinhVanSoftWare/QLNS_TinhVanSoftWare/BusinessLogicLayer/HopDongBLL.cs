@@ -36,9 +36,9 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
             return hopDongDAL.insert(dNgaykyhd, dNgayhethan, FK_sMaNV, FK_sMaCV, FK_sMaPB, fLuongcb);
         }
 
-        public bool update(string PK_sMaKH, string sTenKH, string sSDT)
+        public bool update(string PK_sMaHD, DateTime dNgaykyhd, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
         {
-            return hopDongDAL.update(PK_sMaKH, sTenKH, sSDT);
+            return hopDongDAL.update( PK_sMaHD,  dNgaykyhd,  dNgayhethan,  FK_sMaNV,  FK_sMaCV,  FK_sMaPB,  fLuongcb);
         }
 
         public bool deleteById(string PK_sMaKH)

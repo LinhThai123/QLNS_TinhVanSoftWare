@@ -121,6 +121,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             cmbPhongban.Text = "";
             nmrThoiHan.Value = 1;
             nmrLuongCB.Value = 10000;
+            frmHopDong_Load(sender,e);
         }
 
         private void dgvHopDong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -129,8 +130,15 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             cmbChucvu.Text = dgvHopDong.CurrentRow.Cells[5].Value.ToString();
             cmbPhongban.Text = dgvHopDong.CurrentRow.Cells[6].Value.ToString();
             txtMaHD.Text = dgvHopDong.CurrentRow.Cells[0].Value.ToString();
-            int a = DateTime.Parse(dgvHopDong.CurrentRow.Cells[2].Value.ToString()).Year - DateTime.Parse(dgvHopDong.CurrentRow.Cells[1].Value.ToString()).Year;
-            nmrThoiHan.Text = a.ToString();
+            try
+            {
+                int a = DateTime.Parse(dgvHopDong.CurrentRow.Cells[2].Value.ToString()).Year - DateTime.Parse(dgvHopDong.CurrentRow.Cells[1].Value.ToString()).Year;
+                nmrThoiHan.Text = a.ToString();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Không có giá trị, vui lòng chọn vị trí khác");
+            }
             nmrLuongCB.Text = dgvHopDong.CurrentRow.Cells[7].Value.ToString();
         }
 
@@ -149,6 +157,28 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
                     MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+            if (cmbNhanVien.Text != "" && cmbChucvu.Text != "" && cmbPhongban.Text != "")
+            {
+                hopDongBLL.update(txtMaHD.Text,DateTime.Parse(DateTime.Now.ToShortDateString()), DateTime.Parse(DateTime.Now.AddYears(int.Parse(nmrThoiHan.Value.ToString())).ToShortDateString()), cmbNhanVien.SelectedValue.ToString(), cmbChucvu.SelectedValue.ToString(),
+                cmbPhongban.SelectedValue.ToString(), float.Parse(nmrLuongCB.Value.ToString()));
+                frmHopDong_Load(sender, e);
+            }
+            else
+                MessageBox.Show("Vui lòng nhập tất cả các trường dữ liệu ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void loadData(DataTable dsTimkiem)
+        {
+            dgvHopDong.DataSource = dsTimkiem;
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            loadData(hopDongBLL.searchById(txtMaHD.Text));
         }
     }
 }
