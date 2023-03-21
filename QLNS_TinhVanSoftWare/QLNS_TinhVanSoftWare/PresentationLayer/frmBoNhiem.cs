@@ -62,7 +62,13 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void dgvBoNhiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            cmbNhanVien.Text = dgvBoNhiem.CurrentRow.Cells[3].Value.ToString() + " - " + dgvBoNhiem.CurrentRow.Cells[4].Value.ToString();
+            cmbChucVu.Text = dgvBoNhiem.CurrentRow.Cells[5].Value.ToString();
+            cmbPhongBan.Text = dgvBoNhiem.CurrentRow.Cells[6].Value.ToString();
+            dtpNgayHieuLuc.Text = dgvBoNhiem.CurrentRow.Cells[2].Value.ToString();
+            txtMabonhiem.Text = dgvBoNhiem.CurrentRow.Cells[0].Value.ToString();
+            nmrLuongMoi.Text = dgvBoNhiem.CurrentRow.Cells[7].Value.ToString();
+            txtNoiDung.Text = dgvBoNhiem.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -82,7 +88,15 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            if (cmbNhanVien.Text != "" && cmbChucVu.Text != "" && cmbPhongBan.Text != "" && txtNoiDung.Text != "")
+            {
+                boNhiemBLL.update(txtMabonhiem.Text, DateTime.Parse(DateTime.Now.ToShortDateString()), DateTime.Parse(dtpNgayHieuLuc.Value.ToShortDateString()), cmbNhanVien.SelectedValue.ToString(), cmbChucVu.SelectedValue.ToString(),
+                cmbPhongBan.SelectedValue.ToString(), float.Parse(nmrLuongMoi.Value.ToString()), txtNoiDung.Text);
+                MessageBox.Show("Sửa thành công" + nmrLuongMoi.Text, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmBoNhiem_Load(sender, e);
+            }
+            else
+                MessageBox.Show("Vui lòng nhập tất cả các trường dữ liệu ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -97,7 +111,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-
+            frmBoNhiem_Load(sender, e);
         }
 
         private void frmBoNhiem_Load(object sender, EventArgs e)
@@ -110,6 +124,11 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             cmbChucVu.Text = "";
             cmbPhongBan.Text = "";
             nmrLuongMoi.Value = 10000;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

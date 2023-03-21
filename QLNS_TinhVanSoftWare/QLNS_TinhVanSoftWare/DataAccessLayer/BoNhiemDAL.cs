@@ -55,21 +55,22 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
-        public bool update(string PK_sMaHD, DateTime dNgaykyhd, DateTime dNgayhethan, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongcb)
+        public bool update(string PK_sMabonhiem, DateTime dNgaylap, DateTime dNgaycohieuluc, string FK_sMaNV, string FK_sMaCV, string FK_sMaPB, double fLuongmoi, string sNoiDung)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_SuaHopDong";
-                    cmd.Parameters.AddWithValue("@PK_sMaHD", PK_sMaHD);
-                    cmd.Parameters.AddWithValue("@dNgaykyhd", dNgaykyhd);
-                    cmd.Parameters.AddWithValue("@dNgayhethan", dNgayhethan);
+                    cmd.CommandText = "sp_SuaBoNhiem";
+                    cmd.Parameters.AddWithValue("@PK_sMabonhiem", PK_sMabonhiem);
+                    cmd.Parameters.AddWithValue("@dNgaylap", dNgaylap);
+                    cmd.Parameters.AddWithValue("@dNgaycohieuluc", dNgaycohieuluc);
                     cmd.Parameters.AddWithValue("@FK_sMaNV", FK_sMaNV);
                     cmd.Parameters.AddWithValue("@FK_sMaCV", FK_sMaCV);
                     cmd.Parameters.AddWithValue("@FK_sMaPB", FK_sMaPB);
-                    cmd.Parameters.AddWithValue("@fLuongcb", fLuongcb);
+                    cmd.Parameters.AddWithValue("@fLuongmoi", fLuongmoi);
+                    cmd.Parameters.AddWithValue("@sNoiDung", sNoiDung);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();

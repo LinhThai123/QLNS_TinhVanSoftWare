@@ -48,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.nmrLuongMoi = new System.Windows.Forms.NumericUpDown();
+            this.txtMabonhiem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoNhiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrLuongMoi)).BeginInit();
@@ -79,9 +81,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(43, 228);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 24);
+            this.label12.Size = new System.Drawing.Size(198, 24);
             this.label12.TabIndex = 20;
-            this.label12.Text = "Mức lương mới:";
+            this.label12.Text = "Mức lương mới (VND):";
             // 
             // btnThem
             // 
@@ -90,7 +92,7 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.MintCream;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(569, 273);
+            this.btnThem.Location = new System.Drawing.Point(569, 255);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(118, 42);
@@ -102,10 +104,12 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Controls.Add(this.txtMabonhiem);
             this.groupBox2.Controls.Add(this.nmrLuongMoi);
             this.groupBox2.Controls.Add(this.btnLamMoi);
             this.groupBox2.Controls.Add(this.txtNoiDung);
             this.groupBox2.Controls.Add(this.dtpNgayHieuLuc);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.cmbPhongBan);
@@ -150,7 +154,7 @@
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.MintCream;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(728, 273);
+            this.btnSua.Location = new System.Drawing.Point(728, 255);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(110, 42);
@@ -166,7 +170,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.MintCream;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1050, 273);
+            this.btnXoa.Location = new System.Drawing.Point(1209, 165);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(105, 42);
@@ -182,7 +186,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.MintCream;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(886, 273);
+            this.btnTimKiem.Location = new System.Drawing.Point(1052, 162);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(118, 42);
@@ -194,10 +198,10 @@
             // txtNoiDung
             // 
             this.txtNoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiDung.Location = new System.Drawing.Point(569, 151);
+            this.txtNoiDung.Location = new System.Drawing.Point(569, 95);
             this.txtNoiDung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNoiDung.Name = "txtNoiDung";
-            this.txtNoiDung.Size = new System.Drawing.Size(745, 101);
+            this.txtNoiDung.Size = new System.Drawing.Size(443, 109);
             this.txtNoiDung.TabIndex = 0;
             this.txtNoiDung.Text = "";
             // 
@@ -205,17 +209,17 @@
             // 
             this.dtpNgayHieuLuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayHieuLuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayHieuLuc.Location = new System.Drawing.Point(728, 62);
+            this.dtpNgayHieuLuc.Location = new System.Drawing.Point(264, 268);
             this.dtpNgayHieuLuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayHieuLuc.Name = "dtpNgayHieuLuc";
-            this.dtpNgayHieuLuc.Size = new System.Drawing.Size(237, 29);
+            this.dtpNgayHieuLuc.Size = new System.Drawing.Size(240, 29);
             this.dtpNgayHieuLuc.TabIndex = 35;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(565, 67);
+            this.label17.Location = new System.Drawing.Point(43, 273);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(157, 24);
             this.label17.TabIndex = 30;
@@ -262,11 +266,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(565, 120);
+            this.label1.Location = new System.Drawing.Point(1048, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 24);
+            this.label1.Size = new System.Drawing.Size(195, 48);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Nội dung:";
+            this.label1.Text = "Nhập mã bổ nhiệm\r\nđể tìm kiếm hoặc xóa:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLamMoi
             // 
@@ -275,7 +280,7 @@
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.MintCream;
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(1195, 273);
+            this.btnLamMoi.Location = new System.Drawing.Point(893, 255);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(119, 42);
@@ -286,10 +291,10 @@
             // 
             // nmrLuongMoi
             // 
-            this.nmrLuongMoi.Location = new System.Drawing.Point(208, 223);
+            this.nmrLuongMoi.Location = new System.Drawing.Point(264, 223);
             this.nmrLuongMoi.Maximum = new decimal(new int[] {
-            100000000,
-            0,
+            1410065408,
+            2,
             0,
             0});
             this.nmrLuongMoi.Minimum = new decimal(new int[] {
@@ -298,13 +303,30 @@
             0,
             0});
             this.nmrLuongMoi.Name = "nmrLuongMoi";
-            this.nmrLuongMoi.Size = new System.Drawing.Size(296, 29);
+            this.nmrLuongMoi.Size = new System.Drawing.Size(240, 29);
             this.nmrLuongMoi.TabIndex = 54;
             this.nmrLuongMoi.Value = new decimal(new int[] {
             10000,
             0,
             0,
             0});
+            // 
+            // txtMabonhiem
+            // 
+            this.txtMabonhiem.Location = new System.Drawing.Point(1052, 118);
+            this.txtMabonhiem.Name = "txtMabonhiem";
+            this.txtMabonhiem.Size = new System.Drawing.Size(262, 29);
+            this.txtMabonhiem.TabIndex = 55;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(565, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 24);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Nội dung:";
             // 
             // frmBoNhiem
             // 
@@ -347,5 +369,7 @@
         private System.Windows.Forms.ComboBox cmbChucVu;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.NumericUpDown nmrLuongMoi;
+        private System.Windows.Forms.TextBox txtMabonhiem;
+        private System.Windows.Forms.Label label2;
     }
 }
