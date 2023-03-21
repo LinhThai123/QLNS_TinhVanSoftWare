@@ -35,6 +35,13 @@
             this.rtbContent = new System.Windows.Forms.RichTextBox();
             this.cmbIDName = new System.Windows.Forms.ComboBox();
             this.dgvBienbandanhgia = new System.Windows.Forms.DataGridView();
+            this.clNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -46,13 +53,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.clNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienbandanhgia)).BeginInit();
@@ -100,6 +100,7 @@
             this.btnCreate.TabIndex = 51;
             this.btnCreate.Text = "Thêm mới";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox1
             // 
@@ -150,6 +151,55 @@
             this.dgvBienbandanhgia.Size = new System.Drawing.Size(1223, 233);
             this.dgvBienbandanhgia.TabIndex = 46;
             // 
+            // clNo
+            // 
+            this.clNo.HeaderText = "STT";
+            this.clNo.MinimumWidth = 6;
+            this.clNo.Name = "clNo";
+            this.clNo.Width = 60;
+            // 
+            // clDate
+            // 
+            this.clDate.HeaderText = "Ngày lập";
+            this.clDate.MinimumWidth = 6;
+            this.clDate.Name = "clDate";
+            this.clDate.Width = 135;
+            // 
+            // clID
+            // 
+            this.clID.HeaderText = "Mã biên bản";
+            this.clID.MinimumWidth = 6;
+            this.clID.Name = "clID";
+            this.clID.Width = 135;
+            // 
+            // clName
+            // 
+            this.clName.HeaderText = "Họ và tên";
+            this.clName.MinimumWidth = 6;
+            this.clName.Name = "clName";
+            this.clName.Width = 150;
+            // 
+            // clDepartment
+            // 
+            this.clDepartment.HeaderText = "Phòng ban";
+            this.clDepartment.MinimumWidth = 6;
+            this.clDepartment.Name = "clDepartment";
+            this.clDepartment.Width = 130;
+            // 
+            // clPosition
+            // 
+            this.clPosition.HeaderText = "Chức vụ";
+            this.clPosition.MinimumWidth = 6;
+            this.clPosition.Name = "clPosition";
+            this.clPosition.Width = 130;
+            // 
+            // clStatus
+            // 
+            this.clStatus.HeaderText = "Trạng thái";
+            this.clStatus.MinimumWidth = 6;
+            this.clStatus.Name = "clStatus";
+            this.clStatus.Width = 125;
+            // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -164,6 +214,7 @@
             this.btnUpdate.TabIndex = 45;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnReset
             // 
@@ -179,6 +230,7 @@
             this.btnReset.TabIndex = 44;
             this.btnReset.Text = "Làm mới";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnDelete
             // 
@@ -194,6 +246,7 @@
             this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnFind
             // 
@@ -209,6 +262,7 @@
             this.btnFind.TabIndex = 42;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cmbStatus
             // 
@@ -276,55 +330,6 @@
             this.label6.Size = new System.Drawing.Size(173, 24);
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã/Tên nhân viên :";
-            // 
-            // clNo
-            // 
-            this.clNo.HeaderText = "STT";
-            this.clNo.MinimumWidth = 6;
-            this.clNo.Name = "clNo";
-            this.clNo.Width = 60;
-            // 
-            // clDate
-            // 
-            this.clDate.HeaderText = "Ngày lập";
-            this.clDate.MinimumWidth = 6;
-            this.clDate.Name = "clDate";
-            this.clDate.Width = 135;
-            // 
-            // clID
-            // 
-            this.clID.HeaderText = "Mã biên bản";
-            this.clID.MinimumWidth = 6;
-            this.clID.Name = "clID";
-            this.clID.Width = 135;
-            // 
-            // clName
-            // 
-            this.clName.HeaderText = "Họ và tên";
-            this.clName.MinimumWidth = 6;
-            this.clName.Name = "clName";
-            this.clName.Width = 150;
-            // 
-            // clDepartment
-            // 
-            this.clDepartment.HeaderText = "Phòng ban";
-            this.clDepartment.MinimumWidth = 6;
-            this.clDepartment.Name = "clDepartment";
-            this.clDepartment.Width = 130;
-            // 
-            // clPosition
-            // 
-            this.clPosition.HeaderText = "Chức vụ";
-            this.clPosition.MinimumWidth = 6;
-            this.clPosition.Name = "clPosition";
-            this.clPosition.Width = 130;
-            // 
-            // clStatus
-            // 
-            this.clStatus.HeaderText = "Trạng thái";
-            this.clStatus.MinimumWidth = 6;
-            this.clStatus.Name = "clStatus";
-            this.clStatus.Width = 125;
             // 
             // frmBienBanDanhGia
             // 
