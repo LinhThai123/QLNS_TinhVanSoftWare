@@ -1,4 +1,6 @@
-﻿namespace QLNS_TinhVanSoftWare.PresentationLayer
+﻿using System;
+
+namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     partial class frmTrangChu
     {
@@ -28,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangChu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnHethong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnPhongBan = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +54,7 @@
             this.DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.NghiPhepThoiViec = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+     
             // 
             // menuStrip1
             // 

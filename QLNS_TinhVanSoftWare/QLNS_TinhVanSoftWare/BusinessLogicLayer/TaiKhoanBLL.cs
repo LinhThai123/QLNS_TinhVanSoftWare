@@ -33,6 +33,18 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         {
             return taiKhoanDAL.Check_MaTaiKhoan(MaTaiKhoan); 
         }
+        public bool Check_TaiKhoan (string TenTK)
+        {
+            return taiKhoanDAL.Check_TaiKhoan(TenTK);
+        }
+        public int login(string tenTK, string matKhau)
+        {
+            return taiKhoanDAL.login(tenTK, matKhau);
+        }
 
+        public bool changePassword(string maTK, string matKhau)
+        {
+            return taiKhoanDAL.changePassword(maTK, matKhau); 
+        }
     }
 }

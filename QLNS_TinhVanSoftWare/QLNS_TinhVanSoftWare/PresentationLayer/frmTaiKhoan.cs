@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmTaiKhoan : Form
     {
-       
+
         TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
 
         QuyenBLL quyenBLL = new BusinessLogicLayer.QuyenBLL();
@@ -118,7 +119,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             txtTinhTrang.Text = "";         
             frmTaiKhoan_Load(sender, e);
         }
-
+        
         private void dgvTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaTK.Text = dgvTaiKhoan.CurrentRow.Cells[0].Value.ToString();
@@ -127,8 +128,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             txtTinhTrang.Text = dgvTaiKhoan.CurrentRow.Cells[5].Value.ToString();
             cbMaQuyen.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[4].Value.ToString();
             txtTenTK.Text = dgvTaiKhoan.CurrentRow.Cells[2].Value.ToString(); 
-        }
-
+        }     
         private void button2_Click(object sender, EventArgs e)
         {
             string maNV = cbMaNV.SelectedValue.ToString();

@@ -19,7 +19,10 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
-
+            if (!Program.maQuyen.Equals(Program.maQuyenAdmin))
+            {
+                mnHethong.Visible = false;
+            }
         }
 
         private void mnPhongBan_Click(object sender, EventArgs e)
@@ -31,8 +34,8 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void mnDangXuat_Click(object sender, EventArgs e)
         {        
-            frmDangNhap frmDangNhap = new frmDangNhap();
-            frmDangNhap.Show(); 
+            frmDangNhap dangNhap = new frmDangNhap();
+            dangNhap.Show();  
             this.Hide();
         }
 
@@ -87,8 +90,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void mnLuongNhanVien_Click(object sender, EventArgs e)
         {
-            frmLuong frmLuong = new frmLuong();
-            frmLuong.Show();
+            new frmLuong().Show(); 
             this.Hide(); 
         }
 

@@ -245,9 +245,8 @@ namespace QLNS_TinhVanSoftWare
             this.MinimumSize = new System.Drawing.Size(1333, 827);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDangNhao";
+            this.Text = "frmDangNhap";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
