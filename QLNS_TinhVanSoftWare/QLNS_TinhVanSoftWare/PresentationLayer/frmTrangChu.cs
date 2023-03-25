@@ -107,7 +107,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void DoiMatKhau_Click(object sender, EventArgs e)
         {
-            new frmDoimatkhau().Show();
             frmDoimatkhau frmDoimatkhau = new frmDoimatkhau();
             frmDoimatkhau.MdiParent = this;
             frmDoimatkhau.Show();

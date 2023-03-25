@@ -62,7 +62,6 @@
             // 
             this.grbHopDong.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.grbHopDong.Controls.Add(this.txtMaHD);
-            this.grbHopDong.Controls.Add(this.dgvHopDong);
             this.grbHopDong.Controls.Add(this.nmrLuongCB);
             this.grbHopDong.Controls.Add(this.nmrThoiHan);
             this.grbHopDong.Controls.Add(this.btnThem);
@@ -81,13 +80,14 @@
             this.grbHopDong.Controls.Add(this.label13);
             this.grbHopDong.Controls.Add(this.lblLuong);
             this.grbHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbHopDong.Location = new System.Drawing.Point(11, 25);
+            this.grbHopDong.Location = new System.Drawing.Point(13, 25);
             this.grbHopDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbHopDong.Name = "grbHopDong";
             this.grbHopDong.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbHopDong.Size = new System.Drawing.Size(1326, 720);
+            this.grbHopDong.Size = new System.Drawing.Size(1230, 272);
             this.grbHopDong.TabIndex = 27;
             this.grbHopDong.TabStop = false;
+            this.grbHopDong.Text = "Hợp đồng";
             // 
             // txtMaHD
             // 
@@ -99,12 +99,13 @@
             // dgvHopDong
             // 
             this.dgvHopDong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHopDong.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHopDong.Location = new System.Drawing.Point(6, 270);
+            this.dgvHopDong.Location = new System.Drawing.Point(14, 317);
             this.dgvHopDong.Name = "dgvHopDong";
             this.dgvHopDong.RowHeadersWidth = 51;
             this.dgvHopDong.RowTemplate.Height = 24;
-            this.dgvHopDong.Size = new System.Drawing.Size(1314, 445);
+            this.dgvHopDong.Size = new System.Drawing.Size(1229, 310);
             this.dgvHopDong.TabIndex = 54;
             this.dgvHopDong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHopDong_CellContentClick);
             this.dgvHopDong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHopDong_CellContentClick);
@@ -343,8 +344,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1348, 756);
+            this.ClientSize = new System.Drawing.Size(1259, 649);
             this.Controls.Add(this.grbHopDong);
+            this.Controls.Add(this.dgvHopDong);
             this.Name = "frmHopDong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hợp đồng";

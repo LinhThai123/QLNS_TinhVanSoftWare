@@ -44,7 +44,6 @@
             // grbHopDong
             // 
             this.grbHopDong.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.grbHopDong.Controls.Add(this.dgvChamCong);
             this.grbHopDong.Controls.Add(this.label1);
             this.grbHopDong.Controls.Add(this.btnTimKiem);
             this.grbHopDong.Controls.Add(this.cmbMaNv);
@@ -56,7 +55,7 @@
             this.grbHopDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbHopDong.Name = "grbHopDong";
             this.grbHopDong.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbHopDong.Size = new System.Drawing.Size(1018, 510);
+            this.grbHopDong.Size = new System.Drawing.Size(1018, 121);
             this.grbHopDong.TabIndex = 28;
             this.grbHopDong.TabStop = false;
             this.grbHopDong.Text = "CHẤM CÔNG";
@@ -64,15 +63,14 @@
             // dgvChamCong
             // 
             this.dgvChamCong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChamCong.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvChamCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChamCong.Location = new System.Drawing.Point(10, 114);
+            this.dgvChamCong.Location = new System.Drawing.Point(12, 164);
             this.dgvChamCong.Name = "dgvChamCong";
             this.dgvChamCong.RowHeadersWidth = 51;
             this.dgvChamCong.RowTemplate.Height = 24;
-            this.dgvChamCong.Size = new System.Drawing.Size(981, 391);
+            this.dgvChamCong.Size = new System.Drawing.Size(1018, 364);
             this.dgvChamCong.TabIndex = 60;
-            this.dgvChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChamCong_CellContentClick);
-            this.dgvChamCong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChamCong_CellContentClick);
             // 
             // label1
             // 
@@ -98,7 +96,6 @@
             this.btnTimKiem.TabIndex = 50;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cmbMaNv
             // 
@@ -108,7 +105,6 @@
             this.cmbMaNv.Name = "cmbMaNv";
             this.cmbMaNv.Size = new System.Drawing.Size(237, 32);
             this.cmbMaNv.TabIndex = 48;
-            this.cmbMaNv.SelectedIndexChanged += new System.EventHandler(this.cmbMaNv_SelectedIndexChanged);
             // 
             // lblNgayKy
             // 
@@ -130,7 +126,6 @@
             this.dtpNgayChamCong.Size = new System.Drawing.Size(237, 29);
             this.dtpNgayChamCong.TabIndex = 42;
             this.dtpNgayChamCong.Value = new System.DateTime(2023, 3, 20, 0, 0, 0, 0);
-            this.dtpNgayChamCong.ValueChanged += new System.EventHandler(this.dtpNgayChamCong_ValueChanged);
             // 
             // label13
             // 
@@ -148,11 +143,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1048, 543);
+            this.Controls.Add(this.dgvChamCong);
             this.Controls.Add(this.grbHopDong);
             this.Name = "frmChamCong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý chấm công";
-            this.Load += new System.EventHandler(this.frmChamCong_Load);
             this.grbHopDong.ResumeLayout(false);
             this.grbHopDong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).EndInit();

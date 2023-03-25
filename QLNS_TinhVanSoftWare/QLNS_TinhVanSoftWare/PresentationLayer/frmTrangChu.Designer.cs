@@ -68,7 +68,7 @@
             // 
             // mnHethong
             // 
-            this.mnHethong.BackColor = System.Drawing.Color.DarkOrange;
+            this.mnHethong.BackColor = System.Drawing.SystemColors.Control;
             this.mnHethong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnHethong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnPhongBan,
@@ -111,7 +111,7 @@
             // 
             // mnCategory
             // 
-            this.mnCategory.BackColor = System.Drawing.Color.DarkOrange;
+            this.mnCategory.BackColor = System.Drawing.SystemColors.Control;
             this.mnCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnCategory.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnBBDanhGia,
@@ -120,7 +120,7 @@
             this.mnNghiPhepThoiViec});
             this.mnCategory.Image = ((System.Drawing.Image)(resources.GetObject("mnCategory.Image")));
             this.mnCategory.Name = "mnCategory";
-            this.mnCategory.Size = new System.Drawing.Size(155, 26);
+            this.mnCategory.Size = new System.Drawing.Size(155, 24);
             this.mnCategory.Text = "Quản Lý Nhân Sự";
             // 
             // mnBBDanhGia
@@ -153,7 +153,7 @@
             // 
             // mnFunction
             // 
-            this.mnFunction.BackColor = System.Drawing.Color.DarkOrange;
+            this.mnFunction.BackColor = System.Drawing.SystemColors.Control;
             this.mnFunction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnLuongNhanVien,
@@ -194,7 +194,7 @@
             // 
             // mnManager
             // 
-            this.mnManager.BackColor = System.Drawing.Color.DarkOrange;
+            this.mnManager.BackColor = System.Drawing.SystemColors.Control;
             this.mnManager.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnDangXuat,
@@ -208,14 +208,14 @@
             // mnDangXuat
             // 
             this.mnDangXuat.Name = "mnDangXuat";
-            this.mnDangXuat.Size = new System.Drawing.Size(257, 26);
+            this.mnDangXuat.Size = new System.Drawing.Size(268, 26);
             this.mnDangXuat.Text = "Đăng Xuất";
             this.mnDangXuat.Click += new System.EventHandler(this.mnDangXuat_Click);
             // 
             // DoiMatKhau
             // 
             this.DoiMatKhau.Name = "DoiMatKhau";
-            this.DoiMatKhau.Size = new System.Drawing.Size(257, 26);
+            this.DoiMatKhau.Size = new System.Drawing.Size(268, 26);
             this.DoiMatKhau.Text = "Đổi Mật Khẩu";
             this.DoiMatKhau.Click += new System.EventHandler(this.DoiMatKhau_Click);
             // 

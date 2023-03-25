@@ -35,21 +35,10 @@
             this.dNgaylap = new System.Windows.Forms.DateTimePicker();
             this.txtMabienban = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rtbNoiDungDG = new System.Windows.Forms.RichTextBox();
             this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.dgvBienBanDanhGia = new System.Windows.Forms.DataGridView();
-            this.clNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSuaDanhGia = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
             this.cmbTrangThai = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbMaPB = new System.Windows.Forms.ComboBox();
@@ -58,6 +47,11 @@
             this.cmbMaCV = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProviderBienBanDanhGia = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienBanDanhGia)).BeginInit();
@@ -67,17 +61,17 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnThem);
+            this.groupBox2.Controls.Add(this.btnUpdate);
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dNgaylap);
             this.groupBox2.Controls.Add(this.txtMabienban);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnCreate);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.cmbMaNV);
-            this.groupBox2.Controls.Add(this.dgvBienBanDanhGia);
-            this.groupBox2.Controls.Add(this.btnSuaDanhGia);
-            this.groupBox2.Controls.Add(this.btnDelete);
-            this.groupBox2.Controls.Add(this.btnFind);
             this.groupBox2.Controls.Add(this.cmbTrangThai);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cmbMaPB);
@@ -90,7 +84,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1283, 690);
+            this.groupBox2.Size = new System.Drawing.Size(1249, 348);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "BIÊN BẢN ĐÁNH GIÁ";
@@ -109,8 +103,9 @@
             // dNgaylap
             // 
             this.dNgaylap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dNgaylap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dNgaylap.Location = new System.Drawing.Point(181, 134);
-            this.dNgaylap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dNgaylap.Margin = new System.Windows.Forms.Padding(4);
             this.dNgaylap.Name = "dNgaylap";
             this.dNgaylap.Size = new System.Drawing.Size(213, 29);
             this.dNgaylap.TabIndex = 54;
@@ -118,7 +113,7 @@
             // txtMabienban
             // 
             this.txtMabienban.Location = new System.Drawing.Point(181, 71);
-            this.txtMabienban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMabienban.Margin = new System.Windows.Forms.Padding(4);
             this.txtMabienban.Name = "txtMabienban";
             this.txtMabienban.Size = new System.Drawing.Size(213, 29);
             this.txtMabienban.TabIndex = 53;
@@ -133,32 +128,15 @@
             this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 52;
             this.label1.Text = "Mã biên bản:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.Green;
-            this.btnCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.MintCream;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.Location = new System.Drawing.Point(324, 331);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(120, 48);
-            this.btnCreate.TabIndex = 51;
-            this.btnCreate.Text = "Thêm mới";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rtbNoiDungDG);
             this.groupBox1.Location = new System.Drawing.Point(840, 62);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(376, 250);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(376, 173);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nội dung đánh giá";
@@ -167,9 +145,9 @@
             // 
             this.rtbNoiDungDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbNoiDungDG.Location = new System.Drawing.Point(8, 28);
-            this.rtbNoiDungDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbNoiDungDG.Margin = new System.Windows.Forms.Padding(4);
             this.rtbNoiDungDG.Name = "rtbNoiDungDG";
-            this.rtbNoiDungDG.Size = new System.Drawing.Size(353, 197);
+            this.rtbNoiDungDG.Size = new System.Drawing.Size(353, 139);
             this.rtbNoiDungDG.TabIndex = 0;
             this.rtbNoiDungDG.Text = "";
             // 
@@ -185,112 +163,15 @@
             // dgvBienBanDanhGia
             // 
             this.dgvBienBanDanhGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBienBanDanhGia.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBienBanDanhGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBienBanDanhGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clNo,
-            this.clDate,
-            this.clID,
-            this.clName,
-            this.clDepartment,
-            this.clPosition,
-            this.clStatus});
-            this.dgvBienBanDanhGia.Location = new System.Drawing.Point(23, 411);
+            this.dgvBienBanDanhGia.Location = new System.Drawing.Point(27, 396);
             this.dgvBienBanDanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvBienBanDanhGia.Name = "dgvBienBanDanhGia";
             this.dgvBienBanDanhGia.RowHeadersWidth = 51;
             this.dgvBienBanDanhGia.RowTemplate.Height = 24;
-            this.dgvBienBanDanhGia.Size = new System.Drawing.Size(1223, 219);
+            this.dgvBienBanDanhGia.Size = new System.Drawing.Size(1249, 343);
             this.dgvBienBanDanhGia.TabIndex = 46;
-            // 
-            // clNo
-            // 
-            this.clNo.HeaderText = "STT";
-            this.clNo.MinimumWidth = 6;
-            this.clNo.Name = "clNo";
-            // 
-            // clDate
-            // 
-            this.clDate.HeaderText = "Ngày lập";
-            this.clDate.MinimumWidth = 6;
-            this.clDate.Name = "clDate";
-            // 
-            // clID
-            // 
-            this.clID.HeaderText = "Mã biên bản";
-            this.clID.MinimumWidth = 6;
-            this.clID.Name = "clID";
-            // 
-            // clName
-            // 
-            this.clName.HeaderText = "Họ và tên";
-            this.clName.MinimumWidth = 6;
-            this.clName.Name = "clName";
-            // 
-            // clDepartment
-            // 
-            this.clDepartment.HeaderText = "Phòng ban";
-            this.clDepartment.MinimumWidth = 6;
-            this.clDepartment.Name = "clDepartment";
-            // 
-            // clPosition
-            // 
-            this.clPosition.HeaderText = "Chức vụ";
-            this.clPosition.MinimumWidth = 6;
-            this.clPosition.Name = "clPosition";
-            // 
-            // clStatus
-            // 
-            this.clStatus.HeaderText = "Trạng thái";
-            this.clStatus.MinimumWidth = 6;
-            this.clStatus.Name = "clStatus";
-            // 
-            // btnSuaDanhGia
-            // 
-            this.btnSuaDanhGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSuaDanhGia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSuaDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaDanhGia.ForeColor = System.Drawing.Color.MintCream;
-            this.btnSuaDanhGia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuaDanhGia.Location = new System.Drawing.Point(497, 331);
-            this.btnSuaDanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSuaDanhGia.Name = "btnSuaDanhGia";
-            this.btnSuaDanhGia.Size = new System.Drawing.Size(112, 48);
-            this.btnSuaDanhGia.TabIndex = 45;
-            this.btnSuaDanhGia.Text = "Cập nhật";
-            this.btnSuaDanhGia.UseVisualStyleBackColor = false;
-            this.btnSuaDanhGia.Click += new System.EventHandler(this.btnSuaDanhGia_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.MintCream;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(821, 331);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(121, 48);
-            this.btnDelete.TabIndex = 43;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnFind
-            // 
-            this.btnFind.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnFind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.MintCream;
-            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(663, 331);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(111, 48);
-            this.btnFind.TabIndex = 42;
-            this.btnFind.Text = "Tìm kiếm";
-            this.btnFind.UseVisualStyleBackColor = false;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cmbTrangThai
             // 
@@ -363,13 +244,90 @@
             // 
             this.errorProviderBienBanDanhGia.ContainerControl = this;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(1024, 272);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(131, 48);
+            this.btnDelete.TabIndex = 63;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.MintCream;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(803, 272);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 48);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.MintCream;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(128, 272);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(131, 48);
+            this.btnThem.TabIndex = 60;
+            this.btnThem.Text = "Thêm mới";
+            this.btnThem.UseMnemonic = false;
+            this.btnThem.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.MintCream;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(350, 272);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(131, 48);
+            this.btnUpdate.TabIndex = 64;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.MintCream;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(578, 272);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 48);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Làm mới";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // frmBienBanDanhGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1344, 750);
+            this.ClientSize = new System.Drawing.Size(1299, 750);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.dgvBienBanDanhGia);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBienBanDanhGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -386,14 +344,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox rtbNoiDungDG;
         private System.Windows.Forms.ComboBox cmbMaNV;
         private System.Windows.Forms.DataGridView dgvBienBanDanhGia;
-        private System.Windows.Forms.Button btnSuaDanhGia;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.ComboBox cmbTrangThai;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbMaPB;
@@ -401,17 +355,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbMaCV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDepartment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clPosition;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clStatus;
         private System.Windows.Forms.ErrorProvider errorProviderBienBanDanhGia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMabienban;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dNgaylap;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button button2;
     }
 }
