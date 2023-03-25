@@ -50,29 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\BienBanDanhGiaBLL.cs" />
-    <Compile Include="BusinessLogicLayer\BoNhiemBLL.cs" />
-    <Compile Include="BusinessLogicLayer\ChamCongBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChucVuBLL.cs" />
     <Compile Include="BusinessLogicLayer\HopDongBLL.cs" />
-    <Compile Include="BusinessLogicLayer\KhenThuongKyLuatBLL.cs" />
-    <Compile Include="BusinessLogicLayer\NghiPhepThoiViecBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhongBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\QuyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\TaiKhoanBLL.cs" />
-    <Compile Include="DataAccessLayer\BienBanDanhGiaDAL.cs" />
-    <Compile Include="DataAccessLayer\BoNhiemDAL.cs" />
-    <Compile Include="DataAccessLayer\ChamCongDAL.cs" />
     <Compile Include="DataAccessLayer\ChucVuDAL.cs" />
     <Compile Include="DataAccessLayer\HopDong.DAL.cs" />
-    <Compile Include="DataAccessLayer\KhenThuongKyLuatDAL.cs" />
-    <Compile Include="DataAccessLayer\NghiPhepThoiViecDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
     <Compile Include="DataAccessLayer\PhongBanDAL.cs" />
     <Compile Include="DataAccessLayer\QuyenDAL.cs" />
     <Compile Include="DataAccessLayer\TaiKhoanDAL.cs" />
-    <Compile Include="Entity\DonXinNghi.cs" />
     <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>

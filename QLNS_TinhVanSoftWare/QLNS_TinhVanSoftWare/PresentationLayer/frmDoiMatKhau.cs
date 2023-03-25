@@ -124,5 +124,25 @@ namespace QLNS_TinhVanSoftWare
             new frmTrangChu().Show();
             this.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMatKhauMoi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNhapLaiMatKhauMoi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
