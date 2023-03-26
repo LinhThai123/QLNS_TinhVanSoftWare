@@ -40,7 +40,7 @@ namespace QLNS_TinhVanSoftWare
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDoiMatKhau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -73,8 +73,7 @@ namespace QLNS_TinhVanSoftWare
             this.txtNhapLaiMatKhauMoi.Name = "txtNhapLaiMatKhauMoi";
             this.txtNhapLaiMatKhauMoi.PasswordChar = '*';
             this.txtNhapLaiMatKhauMoi.Size = new System.Drawing.Size(427, 43);
-            this.txtNhapLaiMatKhauMoi.TabIndex = 26;
-            this.txtNhapLaiMatKhauMoi.TextChanged += new System.EventHandler(this.txtNhapLaiMatKhauMoi_TextChanged);
+            this.txtNhapLaiMatKhauMoi.TabIndex = 3;
             // 
             // label3
             // 
@@ -87,7 +86,6 @@ namespace QLNS_TinhVanSoftWare
             this.label3.Size = new System.Drawing.Size(204, 25);
             this.label3.TabIndex = 25;
             this.label3.Text = "Nhập lại mật khẩu mới";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox4
             // 
@@ -110,7 +108,7 @@ namespace QLNS_TinhVanSoftWare
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.PasswordChar = '*';
             this.txtMatKhauCu.Size = new System.Drawing.Size(427, 43);
-            this.txtMatKhauCu.TabIndex = 23;
+            this.txtMatKhauCu.TabIndex = 1;
             // 
             // label1
             // 
@@ -145,8 +143,7 @@ namespace QLNS_TinhVanSoftWare
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(426, 43);
-            this.txtMatKhauMoi.TabIndex = 18;
-            this.txtMatKhauMoi.TextChanged += new System.EventHandler(this.txtMatKhauMoi_TextChanged);
+            this.txtMatKhauMoi.TabIndex = 2;
             // 
             // label2
             // 
@@ -159,22 +156,21 @@ namespace QLNS_TinhVanSoftWare
             this.label2.Size = new System.Drawing.Size(129, 25);
             this.label2.TabIndex = 17;
             this.label2.Text = "Mật khẩu mới";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button1
+            // btnDoiMatKhau
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(92, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(428, 48);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Đổi mật khẩu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDoiMatKhau.FlatAppearance.BorderSize = 0;
+            this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(92, 409);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(428, 48);
+            this.btnDoiMatKhau.TabIndex = 4;
+            this.btnDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnDoiMatKhau.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // label4
             // 
@@ -198,7 +194,7 @@ namespace QLNS_TinhVanSoftWare
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(606, 513);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDoiMatKhau);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtNhapLaiMatKhauMoi);
             this.Controls.Add(this.label3);
@@ -216,8 +212,6 @@ namespace QLNS_TinhVanSoftWare
             this.Name = "frmDoimatkhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi mật khẩu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Doimatkhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDoiMatKhau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -238,7 +232,7 @@ namespace QLNS_TinhVanSoftWare
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtMatKhauMoi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Label label4;
     }
 }

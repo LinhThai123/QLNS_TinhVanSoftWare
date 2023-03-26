@@ -50,16 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\ChucVuBLL.cs" />
-    <Compile Include="BusinessLogicLayer\HopDongBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DangNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DoiMatKhauBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhanVienBLL.cs" />
-    <Compile Include="BusinessLogicLayer\PhongBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\QuyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\TaiKhoanBLL.cs" />
-    <Compile Include="DataAccessLayer\ChucVuDAL.cs" />
-    <Compile Include="DataAccessLayer\HopDong.DAL.cs" />
+    <Compile Include="DataAccessLayer\DangNhapDAL.cs" />
+    <Compile Include="DataAccessLayer\DoiMatKhauDAL.cs" />
     <Compile Include="DataAccessLayer\NhanVienDAL.cs" />
-    <Compile Include="DataAccessLayer\PhongBanDAL.cs" />
     <Compile Include="DataAccessLayer\QuyenDAL.cs" />
     <Compile Include="DataAccessLayer\TaiKhoanDAL.cs" />
     <Compile Include="PresentationLayer\frmDoiMatKhau.cs">

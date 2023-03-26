@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.txtTenCV = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvChucvu = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucvu)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,21 @@
             this.groupBox2.TabIndex = 92;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức vụ";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.MintCream;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(643, 133);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 47);
+            this.button1.TabIndex = 102;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -208,21 +223,6 @@
             this.dgvChucvu.Size = new System.Drawing.Size(1019, 233);
             this.dgvChucvu.TabIndex = 91;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.MintCream;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(643, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 47);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,7 +240,6 @@
             this.Name = "frmPhongBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý phòng ban";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucvu)).EndInit();

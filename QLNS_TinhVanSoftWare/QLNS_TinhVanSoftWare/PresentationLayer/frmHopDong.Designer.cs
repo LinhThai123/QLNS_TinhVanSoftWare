@@ -107,8 +107,6 @@
             this.dgvHopDong.RowTemplate.Height = 24;
             this.dgvHopDong.Size = new System.Drawing.Size(1229, 310);
             this.dgvHopDong.TabIndex = 54;
-            this.dgvHopDong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHopDong_CellContentClick);
-            this.dgvHopDong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHopDong_CellContentClick);
             // 
             // nmrLuongCB
             // 
@@ -164,7 +162,6 @@
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseMnemonic = false;
             this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -180,7 +177,6 @@
             this.btnSua.TabIndex = 53;
             this.btnSua.Text = "Cập nhật";
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLamMoi
             // 
@@ -196,7 +192,6 @@
             this.btnLamMoi.TabIndex = 52;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
@@ -212,7 +207,6 @@
             this.btnXoa.TabIndex = 51;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTimKiem
             // 
@@ -228,7 +222,6 @@
             this.btnTimKiem.TabIndex = 50;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cmbPhongban
             // 
@@ -239,7 +232,6 @@
             this.cmbPhongban.Name = "cmbPhongban";
             this.cmbPhongban.Size = new System.Drawing.Size(319, 32);
             this.cmbPhongban.TabIndex = 3;
-            this.cmbPhongban.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPhongban_Validating);
             // 
             // cmbNhanVien
             // 
@@ -252,7 +244,6 @@
             this.cmbNhanVien.Name = "cmbNhanVien";
             this.cmbNhanVien.Size = new System.Drawing.Size(319, 32);
             this.cmbNhanVien.TabIndex = 1;
-            this.cmbNhanVien.Validating += new System.ComponentModel.CancelEventHandler(this.cmbNhanVien_Validating);
             // 
             // cmbChucvu
             // 
@@ -263,7 +254,6 @@
             this.cmbChucvu.Name = "cmbChucvu";
             this.cmbChucvu.Size = new System.Drawing.Size(319, 32);
             this.cmbChucvu.TabIndex = 2;
-            this.cmbChucvu.Validating += new System.ComponentModel.CancelEventHandler(this.cmbChucvu_Validating);
             // 
             // lblTenNv
             // 
@@ -350,7 +340,6 @@
             this.Name = "frmHopDong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hợp đồng";
-            this.Load += new System.EventHandler(this.frmHopDong_Load);
             this.grbHopDong.ResumeLayout(false);
             this.grbHopDong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).EndInit();

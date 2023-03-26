@@ -17,7 +17,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
 
-        QuyenBLL quyenBLL = new BusinessLogicLayer.QuyenBLL();
+        QuyenBLL quyenBLL = new QuyenBLL();
 
         NhanVienBLL nhanVienBLL = new NhanVienBLL();
 
@@ -36,73 +36,75 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             dgvTaiKhoan.Columns["STT"].DisplayIndex = 0;
         }
 
-        private void btnThemTK_Click(object sender, EventArgs e)
-        {
-            string MaNV = cbMaNV.SelectedValue.ToString();
-            string MaTK = txtMaTK.Text;
-            string TenTK = txtTenTK.Text;
-            string MK = txtMK.Text;
-            string tinhTrang = txtTinhTrang.Text;
-            string maQuyen = cbMaQuyen.SelectedValue.ToString();
-
-            if (cbMaNV.Text != "" && txtMaTK.Text != "" && txtTenTK.Text != ""
-                && txtTinhTrang.Text != "" && cbMaQuyen.Text != "" && txtMK.Text != "")
-            {
-                if (taiKhoanBLL.Check_MaTaiKhoan(txtMaTK.Text))
-                {
-                    taiKhoanBLL.insert(MaTK, TenTK, MK, tinhTrang, MaNV, maQuyen);
-                    MessageBox.Show("Thêm tài khoản thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmTaiKhoan_Load(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoản đã tồn tại! Vui lòng thêm tài khoản khác", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ các thông tin ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         public void hienTenQuyen()
         {
             DataTable t = quyenBLL.layDSQuyen();
             DataView view = new DataView(t);
             view.Sort = "PK_sMaquyen";
-            cbMaQuyen.DataSource = view;
-            cbMaQuyen.DisplayMember = "sTenquyen";
-            cbMaQuyen.ValueMember = "PK_sMaquyen";
+            cmbMaQuyen.DataSource = view;
+            cmbMaQuyen.DisplayMember = "sTenquyen";
+            cmbMaQuyen.ValueMember = "PK_sMaquyen";
 
         }
 
-        public void hienTenNhanVien()
+        private void getNhanVien()
         {
-            DataTable t = nhanVienBLL.layDSNhanVien();
+            DataTable t = nhanVienBLL.getNhanVien();
             DataView view = new DataView(t);
             view.Sort = "PK_sMaNV";
-            cbMaNV.DataSource = view;
-            cbMaNV.DisplayMember = "sTenNV";
-            cbMaNV.ValueMember = "PK_sMaNV";
+            cmbMaNV.DataSource = view;
+            cmbMaNV.DisplayMember = "nhanVien";
+            cmbMaNV.ValueMember = "PK_sMaNV";
+        }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string MaNV = cmbMaNV.Text;
+            if (MaNV != "")
+                MaNV = cmbMaNV.SelectedValue.ToString();
+            string TenTK = txtTenTK.Text;
+            string MK = txtMK.Text;
+            string tinhTrang = cmbTinhTrang.Text;
+            string maQuyen = cmbMaQuyen.SelectedValue.ToString();
+
+            DateTimeOffset now = DateTimeOffset.UtcNow;
+            string s_Taikhoan = "TK" + now.ToUnixTimeMilliseconds().ToString();
+
+            switch (taiKhoanBLL.insert(s_Taikhoan, TenTK, MK, tinhTrang, MaNV, maQuyen))
+            {
+                case 1:
+                    MessageBox.Show("Thêm tài khoản thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoi_Click(sender, e);
+                    break;
+                case -1:
+                    MessageBox.Show("Không được để trống !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case -2:
+                    MessageBox.Show("Tên tài khoản không được trùng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case -3:
+                    MessageBox.Show("Mật khẩu phải có từ 6 ký tự trở lên !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+            }
         }
 
         private void frmTaiKhoan_Load(object sender, EventArgs e)
         {
             findAll();
             hienTenQuyen();
-            hienTenNhanVien();
+            getNhanVien();
+            cmbTinhTrang.SelectedIndex = 0;
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            string maTK = txtMaTK.Text;
+            string tenTK = txtTenTK.Text;
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (taiKhoanBLL.deleteTaiKhoan(maTK))
+                if (taiKhoanBLL.delete(tenTK))
                 {
-                    button5_Click(sender, e);
+                    btnLamMoi_Click(sender, e);
                 }
                 else
                 {
@@ -111,63 +113,75 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            txtMaTK.Text = "";
             txtMK.Text = "";
             txtTenTK.Text = "";
-            txtTinhTrang.Text = "";
             frmTaiKhoan_Load(sender, e);
         }
 
         private void dgvTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaTK.Text = dgvTaiKhoan.CurrentRow.Cells[0].Value.ToString();
-            cbMaNV.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[1].Value.ToString();
-            txtMK.Text = dgvTaiKhoan.CurrentRow.Cells[3].Value.ToString();
-            txtTinhTrang.Text = dgvTaiKhoan.CurrentRow.Cells[5].Value.ToString();
-            cbMaQuyen.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[4].Value.ToString();
-            txtTenTK.Text = dgvTaiKhoan.CurrentRow.Cells[2].Value.ToString();
+            cmbMaNV.SelectedValue = dgvTaiKhoan.CurrentRow.Cells[1].Value.ToString();
+            txtMK.Text = dgvTaiKhoan.CurrentRow.Cells[4].Value.ToString();
+            cmbTinhTrang.Text = dgvTaiKhoan.CurrentRow.Cells[6].Value.ToString();
+            cmbMaQuyen.Text = dgvTaiKhoan.CurrentRow.Cells[5].Value.ToString();
+            txtTenTK.Text = dgvTaiKhoan.CurrentRow.Cells[3].Value.ToString();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            string maNV = cbMaNV.SelectedValue.ToString();
             string tenTk = txtTenTK.Text;
-            string maTk = txtMaTK.Text;
-            string tinhTrang = txtTinhTrang.Text;
+            string tinhTrang = cmbTinhTrang.Text;
             string MK = txtMK.Text;
-            string maQuyen = cbMaQuyen.SelectedValue.ToString();
-            if (maNV != "" && tenTk != "" && maTk != "" && tinhTrang != "" && MK != "" && maQuyen != "")
+            string maQuyen = cmbMaQuyen.SelectedValue.ToString();
+
+            switch (taiKhoanBLL.update(tenTk, MK, tinhTrang, maQuyen))
             {
-                if (!taiKhoanBLL.Check_MaTaiKhoan(maTk))
-                {
-                    if (MK.Length >= 6)
-                    {
-                        if (taiKhoanBLL.Check_MaTaiKhoan(maTk))
-                            MessageBox.Show("Không được sửa mã tài khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                        {
-                            taiKhoanBLL.updateTaiKhoan(maTk, tenTk, MK, tinhTrang, maNV, maQuyen);
-                            MessageBox.Show("Cập nhật Thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            button5_Click(sender, e);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Mật khẩu phải nhiều hơn 6 ký tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                case 1:
+                    MessageBox.Show("Cập nhật Thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoi_Click(sender, e);
+                    break;
+                case -1:
+                    MessageBox.Show("Không được để trống !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case -2:
+                    MessageBox.Show("Không thể sửa Tên tài khoản !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case -3:
+                    MessageBox.Show("Mật khẩu phải có từ 6 ký tự trở lên !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+            }
+        }
 
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Không thể sửa Mã tài khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        private void loadData(DataTable dsTimkiem)
+        {
+            dgvTaiKhoan.DataSource = dsTimkiem;
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            loadData(taiKhoanBLL.searchByName(txtTenTK.Text));
+        }
 
-                }
+        private void txtTenTK_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (txtTenTK.Text == "")
+            {
+                errorProvider1.SetError(txtTenTK, "Không được để trống");
             }
             else
+                errorProvider1.SetError(txtTenTK, "");
+        }
+
+        private void txtMK_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (txtMK.Text == "")
             {
-                MessageBox.Show("Không thể bỏ trống dữ liệu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProvider1.SetError(txtMK, "Không được để trống");
             }
+            else
+                errorProvider1.SetError(txtMK, "");
         }
     }
 }

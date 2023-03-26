@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace QLNS_TinhVanSoftWare.DataAccessLayer
 {
-
     class QuyenDAL
     {
         private string constr = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;

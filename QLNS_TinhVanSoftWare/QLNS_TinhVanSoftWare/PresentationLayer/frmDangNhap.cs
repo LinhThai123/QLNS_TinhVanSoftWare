@@ -16,8 +16,7 @@ namespace QLNS_TinhVanSoftWare
 {
     public partial class frmDangNhap : Form
     {
-
-        TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
+        DangNhapBLL dangNhapBLL = new DangNhapBLL();
 
         public frmDangNhap()
         {
@@ -26,50 +25,31 @@ namespace QLNS_TinhVanSoftWare
 
         private void btnDanhNhap_Click(object sender, EventArgs e)
         {
-            string tenTK = txtTenTaiKhoan.Text;
+            string taiKhoan = txtTenTaiKhoan.Text;
             string matKhau = txtMatKhau.Text;
 
-            if (tenTK.Equals(""))
+            if (dangNhapBLL.login(taiKhoan, matKhau) == 0)
             {
-                errorProviderLogin.SetError(txtTenTaiKhoan, "Vui lòng nhập tên tài khoản");
+                MessageBox.Show("Tài khoản không tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (taiKhoan == "" || matKhau == "")
+            {
+                MessageBox.Show("Không được để trống !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                errorProviderLogin.SetError(txtTenTaiKhoan, "");
-
-                if (taiKhoanBLL.login(tenTK, matKhau) == 0)
-                    errorProviderLogin.SetError(txtTenTaiKhoan, "Sai tên tên tài khoản");
-                else
-                    errorProviderLogin.SetError(txtTenTaiKhoan, "");
-            }
-
-            if (matKhau.Equals(""))
-            {
-                errorProviderLogin.SetError(txtMatKhau, "Vui lòng nhập mật khẩu");
-            }
-            else
-            {
-                errorProviderLogin.SetError(txtMatKhau, "");
-
-                if (taiKhoanBLL.login(tenTK, matKhau) == 2)
+                if (dangNhapBLL.login(taiKhoan, matKhau) == 2)
+                    MessageBox.Show("Mật khẩu không chính xác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (dangNhapBLL.login(taiKhoan, matKhau) == -2)
+                    MessageBox.Show("Tài khoản này hiện đang bị khóa !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (dangNhapBLL.login(taiKhoan, matKhau) == 1)
                 {
-                    errorProviderLogin.SetError(txtMatKhau, "Sai mật khẩu");
-                    txtMatKhau.Text = "";
+                    this.Hide();
+                    new frmTrangChu().ShowDialog();
+                    this.Close();
                 }
-                else
-                    errorProviderLogin.SetError(txtMatKhau, "");
             }
-
-            if (taiKhoanBLL.login(tenTK, matKhau) == 1)
-            {
-                new frmTrangChu().Show();
-                this.Hide();
-            }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

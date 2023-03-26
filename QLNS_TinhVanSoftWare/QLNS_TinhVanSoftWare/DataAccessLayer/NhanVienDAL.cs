@@ -32,6 +32,23 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
             }
         }
 
+        public DataTable getNhanVien()
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM vv_getNhanVien", cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tb = new DataTable("vv_getNhanVien");
+                        ad.Fill(tb);
+                        return tb;
+                    }
+                }
+            }
+        }
+
         public bool insert(string PK_sMaNV, string sTenNV, DateTime dNgaysinh, string sGioitinh, string sCCCD, string sDiachi, string sSDT, string sEmail, DateTime dNgayvaolam)
         {
             using (SqlConnection cnn = new SqlConnection(constr))

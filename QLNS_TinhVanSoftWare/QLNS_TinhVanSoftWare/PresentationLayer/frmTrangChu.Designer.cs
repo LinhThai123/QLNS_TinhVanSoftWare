@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangChu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnHethong = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnHeThong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnPhongBan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnChucVu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnNhanSu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBDanhGia = new System.Windows.Forms.ToolStripMenuItem();
             this.mnQDBoNhiem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnHDLaoDong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnNghiPhepThoiViec = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnFunction = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnKeToan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnLuongNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnSupport = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,9 +56,9 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnHethong,
-            this.mnCategory,
-            this.mnFunction,
+            this.mnHeThong,
+            this.mnNhanSu,
+            this.mnKeToan,
             this.mnManager});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -66,20 +66,20 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mnHethong
+            // mnHeThong
             // 
-            this.mnHethong.BackColor = System.Drawing.SystemColors.Control;
-            this.mnHethong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mnHethong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnHeThong.BackColor = System.Drawing.SystemColors.Control;
+            this.mnHeThong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mnHeThong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnPhongBan,
             this.mnChucVu,
             this.mnNhanVien,
             this.mnTaiKhoan});
-            this.mnHethong.ForeColor = System.Drawing.Color.Black;
-            this.mnHethong.Image = ((System.Drawing.Image)(resources.GetObject("mnHethong.Image")));
-            this.mnHethong.Name = "mnHethong";
-            this.mnHethong.Size = new System.Drawing.Size(105, 24);
-            this.mnHethong.Text = "Hệ thống";
+            this.mnHeThong.ForeColor = System.Drawing.Color.Black;
+            this.mnHeThong.Image = ((System.Drawing.Image)(resources.GetObject("mnHeThong.Image")));
+            this.mnHeThong.Name = "mnHeThong";
+            this.mnHeThong.Size = new System.Drawing.Size(105, 24);
+            this.mnHeThong.Text = "Hệ thống";
             // 
             // mnPhongBan
             // 
@@ -109,19 +109,19 @@
             this.mnTaiKhoan.Text = "Quản Lý Tài Khoản";
             this.mnTaiKhoan.Click += new System.EventHandler(this.mnTaiKhoan_Click);
             // 
-            // mnCategory
+            // mnNhanSu
             // 
-            this.mnCategory.BackColor = System.Drawing.SystemColors.Control;
-            this.mnCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mnCategory.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnNhanSu.BackColor = System.Drawing.SystemColors.Control;
+            this.mnNhanSu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mnNhanSu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnBBDanhGia,
             this.mnQDBoNhiem,
             this.mnHDLaoDong,
             this.mnNghiPhepThoiViec});
-            this.mnCategory.Image = ((System.Drawing.Image)(resources.GetObject("mnCategory.Image")));
-            this.mnCategory.Name = "mnCategory";
-            this.mnCategory.Size = new System.Drawing.Size(155, 24);
-            this.mnCategory.Text = "Quản Lý Nhân Sự";
+            this.mnNhanSu.Image = ((System.Drawing.Image)(resources.GetObject("mnNhanSu.Image")));
+            this.mnNhanSu.Name = "mnNhanSu";
+            this.mnNhanSu.Size = new System.Drawing.Size(155, 24);
+            this.mnNhanSu.Text = "Quản Lý Nhân Sự";
             // 
             // mnBBDanhGia
             // 
@@ -151,19 +151,19 @@
             this.mnNghiPhepThoiViec.Text = "Quản Lý Nghỉ Phép,Thôi Việc";
             this.mnNghiPhepThoiViec.Click += new System.EventHandler(this.mnNghiPhepThoiViec_Click);
             // 
-            // mnFunction
+            // mnKeToan
             // 
-            this.mnFunction.BackColor = System.Drawing.SystemColors.Control;
-            this.mnFunction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mnFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnKeToan.BackColor = System.Drawing.SystemColors.Control;
+            this.mnKeToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mnKeToan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnLuongNhanVien,
             this.mnBangChamCong,
             this.mnSupport,
             this.mnKhenThuongKyLuat});
-            this.mnFunction.Image = ((System.Drawing.Image)(resources.GetObject("mnFunction.Image")));
-            this.mnFunction.Name = "mnFunction";
-            this.mnFunction.Size = new System.Drawing.Size(152, 24);
-            this.mnFunction.Text = "Quản Lý Kế Toán";
+            this.mnKeToan.Image = ((System.Drawing.Image)(resources.GetObject("mnKeToan.Image")));
+            this.mnKeToan.Name = "mnKeToan";
+            this.mnKeToan.Size = new System.Drawing.Size(152, 24);
+            this.mnKeToan.Text = "Quản Lý Kế Toán";
             // 
             // mnLuongNhanVien
             // 
@@ -240,6 +240,7 @@
             this.Text = "Phần mềm Quản lý nhân sự công ty Tinh Vân Software";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTrangChu_FormClosing);
+            this.Load += new System.EventHandler(this.frmTrangChu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -250,16 +251,16 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnHethong;
+        private System.Windows.Forms.ToolStripMenuItem mnHeThong;
         private System.Windows.Forms.ToolStripMenuItem mnPhongBan;
         private System.Windows.Forms.ToolStripMenuItem mnChucVu;
         private System.Windows.Forms.ToolStripMenuItem mnNhanVien;
-        private System.Windows.Forms.ToolStripMenuItem mnCategory;
+        private System.Windows.Forms.ToolStripMenuItem mnNhanSu;
         private System.Windows.Forms.ToolStripMenuItem mnBBDanhGia;
         private System.Windows.Forms.ToolStripMenuItem mnQDBoNhiem;
         private System.Windows.Forms.ToolStripMenuItem mnHDLaoDong;
         private System.Windows.Forms.ToolStripMenuItem mnNghiPhepThoiViec;
-        private System.Windows.Forms.ToolStripMenuItem mnFunction;
+        private System.Windows.Forms.ToolStripMenuItem mnKeToan;
         private System.Windows.Forms.ToolStripMenuItem mnLuongNhanVien;
         private System.Windows.Forms.ToolStripMenuItem mnBangChamCong;
         private System.Windows.Forms.ToolStripMenuItem mnSupport;

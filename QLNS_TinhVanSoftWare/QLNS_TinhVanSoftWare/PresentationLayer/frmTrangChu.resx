@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="mnHethong.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mnHeThong.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgEAAAIBCAYAAADQ5mxhAAAABGdBTUEAALGPC/xhBQAAnEdJREFUeF7t
         nQeYHMXRhtHpFE5Zp4RyTiBARBFFEjnnnEGJnMEEYww2tslgMtjkaHLOIAlJ5GScwdkkG5zNj3H/XYta
@@ -793,7 +793,7 @@
         NcwEKAk6YIL+WxIMm4kTJUhW5EJONolzGJM4hzGJcxiTOENbZpn/B3sAvrJAkFzvAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="mnCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mnNhanSu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABxoAAAf8CAYAAACFy59cAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
         3Ql8nHWd+PFfD8p9g4iIgIiIHAIF2rQpTa9kZpI2bWloKb2PhJVdUXdZddWN/nVdBG1nJm2T9ApNS4/0
@@ -5718,7 +5718,7 @@
         nHPOOeecc845f/L8n//z/wEqmkql5dEfcAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="mnFunction.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mnKeToan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlAAAAI9CAYAAAD1iEbBAAAABGdBTUEAALGPC/xhBQAAxmFJREFUeF7s
         nQd4E0fTx5Xee8U2vYUOISGQkEBCSA+pJGAb03vvvffee+9gyw1swMZgsMFFkm1JlNBCCT303j3frbK8

@@ -60,7 +60,6 @@ namespace QLNS_TinhVanSoftWare
             this.label4.Size = new System.Drawing.Size(252, 44);
             this.label4.TabIndex = 18;
             this.label4.Text = "ĐĂNG NHẬP";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnDanhNhap
             // 

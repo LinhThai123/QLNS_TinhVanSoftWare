@@ -44,11 +44,11 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.label13 = new System.Windows.Forms.Label();
             this.lblLuong = new System.Windows.Forms.Label();
             this.grbHopDong = new System.Windows.Forms.GroupBox();
-            this.dgvHopDong = new System.Windows.Forms.DataGridView();
-            this.lblPhongBan = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblPhongBan = new System.Windows.Forms.Label();
+            this.dgvHopDong = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrLuongCB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrThoiHan)).BeginInit();
@@ -260,27 +260,13 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.grbHopDong.TabStop = false;
             this.grbHopDong.Text = "Bảng lương";
             // 
-            // dgvHopDong
+            // dateTimePicker1
             // 
-            this.dgvHopDong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHopDong.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHopDong.Location = new System.Drawing.Point(25, 320);
-            this.dgvHopDong.Name = "dgvHopDong";
-            this.dgvHopDong.RowHeadersWidth = 51;
-            this.dgvHopDong.RowTemplate.Height = 24;
-            this.dgvHopDong.Size = new System.Drawing.Size(1088, 310);
-            this.dgvHopDong.TabIndex = 56;
-            // 
-            // lblPhongBan
-            // 
-            this.lblPhongBan.AutoSize = true;
-            this.lblPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhongBan.Location = new System.Drawing.Point(465, 53);
-            this.lblPhongBan.Name = "lblPhongBan";
-            this.lblPhongBan.Size = new System.Drawing.Size(121, 24);
-            this.lblPhongBan.TabIndex = 18;
-            this.lblPhongBan.Text = "Lương tháng:";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(469, 81);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(319, 29);
+            this.dateTimePicker1.TabIndex = 57;
             // 
             // textBox1
             // 
@@ -299,13 +285,27 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.label2.TabIndex = 47;
             this.label2.Text = "Mã lương:";
             // 
-            // dateTimePicker1
+            // lblPhongBan
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(469, 81);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(319, 29);
-            this.dateTimePicker1.TabIndex = 57;
+            this.lblPhongBan.AutoSize = true;
+            this.lblPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhongBan.Location = new System.Drawing.Point(465, 53);
+            this.lblPhongBan.Name = "lblPhongBan";
+            this.lblPhongBan.Size = new System.Drawing.Size(121, 24);
+            this.lblPhongBan.TabIndex = 18;
+            this.lblPhongBan.Text = "Lương tháng:";
+            // 
+            // dgvHopDong
+            // 
+            this.dgvHopDong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHopDong.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHopDong.Location = new System.Drawing.Point(25, 320);
+            this.dgvHopDong.Name = "dgvHopDong";
+            this.dgvHopDong.RowHeadersWidth = 51;
+            this.dgvHopDong.RowTemplate.Height = 24;
+            this.dgvHopDong.Size = new System.Drawing.Size(1088, 310);
+            this.dgvHopDong.TabIndex = 56;
             // 
             // frmLuong
             // 
@@ -320,7 +320,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
             this.Name = "frmLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý lương";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrLuongCB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrThoiHan)).EndInit();

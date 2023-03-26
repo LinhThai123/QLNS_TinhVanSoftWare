@@ -13,6 +13,9 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmBoNhiem : Form
     {
-
+        public frmBoNhiem()
+        {
+            InitializeComponent();
+        }
     }
 }

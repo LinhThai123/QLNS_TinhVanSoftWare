@@ -14,7 +14,6 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 {
     public partial class frmPhongBan : Form
     {
-        PhongBanBLL phongBanBLL = new PhongBanBLL();
         public frmPhongBan()
         {
             InitializeComponent();

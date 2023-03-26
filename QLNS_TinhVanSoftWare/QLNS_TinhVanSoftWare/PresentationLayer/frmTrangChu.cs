@@ -114,13 +114,35 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
 
         private void NghiPhepThoiViec_Click(object sender, EventArgs e)
         {
-            
+            frmNghiPhepThoiViec frmNghiPhepThoiViec = new frmNghiPhepThoiViec();
+            frmNghiPhepThoiViec.MdiParent = this;
+            frmNghiPhepThoiViec.Show();
         }
 
         private void frmTrangChu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
 
+        }
+
+        private void frmTrangChu_Load(object sender, EventArgs e)
+        {
+            if (Program.maQuyen == "Q00002")
+            {
+                mnKeToan.Visible = false;
+                mnHeThong.Visible = false;
+            }
+            if (Program.maQuyen == "Q00003")
+            {
+                mnNhanSu.Visible = false;
+                mnHeThong.Visible = false;
+                mnKeToan.Visible = false;
+            }
+            if (Program.maQuyen == "Q00004")
+            {
+                mnNhanSu.Visible = false;
+                mnHeThong.Visible = false;
+            }
         }
     }
 }

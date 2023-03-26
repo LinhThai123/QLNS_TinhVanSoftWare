@@ -16,7 +16,7 @@ namespace QLNS_TinhVanSoftWare
 {
     public partial class frmDoimatkhau : Form
     {
-        TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
+        DoiMatKhauBLL doiMatKhauBLL = new DoiMatKhauBLL();
 
         public frmDoimatkhau()
         {
@@ -40,7 +40,7 @@ namespace QLNS_TinhVanSoftWare
             if (Regex.IsMatch(password, @"^(?=.*[a-z]).+$", RegexOptions.ECMAScript)) //lower
                 score++;
 
-            //Chekc xem mật khẩu có chữ hoa không
+            //Check xem mật khẩu có chữ hoa không
             if (Regex.IsMatch(password, @"^(?=.*[A-Z]).+$", RegexOptions.ECMAScript)) //upper case
                 score++;
 
@@ -50,48 +50,20 @@ namespace QLNS_TinhVanSoftWare
 
             return score;
         }
-        private void Doimatkhau_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             bool checkValid = true;
             string matKhauCu = txtMatKhauCu.Text;
             string matKhauMoi = txtMatKhauMoi.Text;
             string nhapLaiMatKhauMoi = txtNhapLaiMatKhauMoi.Text;
 
-            if (matKhauCu.Equals(""))
+            if (matKhauCu.Equals("") || matKhauMoi.Equals("") || nhapLaiMatKhauMoi.Equals(""))
             {
-                errorProviderDoiMatKhau.SetError(txtMatKhauCu, "Vui lòng nhập mật khẩu cũ");
                 checkValid = false;
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                errorProviderDoiMatKhau.SetError(txtMatKhauCu, "");
-            }
-
-            if (matKhauMoi.Equals(""))
-            {
-                errorProviderDoiMatKhau.SetError(txtMatKhauMoi, "Vui lòng nhập mật khẩu mới");
-                checkValid = false;
-            }
-            else
-            {
-                errorProviderDoiMatKhau.SetError(txtMatKhauMoi, "");
-            }
-
-            if (nhapLaiMatKhauMoi.Equals(""))
-            {
-                errorProviderDoiMatKhau.SetError(txtNhapLaiMatKhauMoi, "Vui lòng nhập lại mật khẩu mới");
-                checkValid = false;
-            }
-            else
-            {
-                errorProviderDoiMatKhau.SetError(txtNhapLaiMatKhauMoi, "");
-            }
-
+            
             if (checkValid)
             {
                 if (CheckingPasswordStrength(matKhauMoi) < 4)
@@ -100,15 +72,16 @@ namespace QLNS_TinhVanSoftWare
                 }
                 else
                 {
-                    if (!taiKhoanBLL.changePassword(Program.maTK, matKhauCu))
+                    if (matKhauCu != Program.mK)
                         MessageBox.Show("Mật khẩu cũ không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else if (nhapLaiMatKhauMoi != matKhauMoi)
                         MessageBox.Show("Mật khẩu nhập lại không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
-                        if (taiKhoanBLL.changePassword(Program.maTK, nhapLaiMatKhauMoi))
+                        if (doiMatKhauBLL.changePassword(Program.tenTK, nhapLaiMatKhauMoi))
                         {
                             MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Program.mK = matKhauMoi;
                             txtMatKhauCu.Text = "";
                             txtMatKhauMoi.Text = "";
                             txtNhapLaiMatKhauMoi.Text = "";
@@ -117,32 +90,6 @@ namespace QLNS_TinhVanSoftWare
                 }
 
             }
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            new frmTrangChu().Show();
-            this.Hide();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMatKhauMoi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNhapLaiMatKhauMoi_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

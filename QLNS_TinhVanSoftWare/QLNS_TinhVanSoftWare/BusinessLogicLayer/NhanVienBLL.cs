@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
 {
-    class NhanVienBLL
+    public class NhanVienBLL
     {
         NhanVienDAL nhanVienDAL = new NhanVienDAL();
 
@@ -19,6 +19,11 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
         public bool check_ID(string PK_sMaNV)
         {
             return nhanVienDAL.check_ID(PK_sMaNV);
+        }
+
+        public DataTable getNhanVien()
+        {
+            return nhanVienDAL.getNhanVien();
         }
 
         public bool IsValidVietNamPhoneNumber(string sSDT)

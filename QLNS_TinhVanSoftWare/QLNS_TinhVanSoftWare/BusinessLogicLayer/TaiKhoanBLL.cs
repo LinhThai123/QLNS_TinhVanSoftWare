@@ -16,35 +16,54 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
             return taiKhoanDAL.findAll();
         }
 
-        public bool insert(string maTK, string tenTK, string matKhau, string tinhTrang, string maNV, string maQuyen)
+        public int insert(string maTK, string tenTK, string matKhau, string tinhTrang, string maNV, string maQuyen)
         {
-            return taiKhoanDAL.insert(maTK, tenTK, matKhau, tinhTrang, maNV, maQuyen);
+            if (tenTK != "" && matKhau != "" && maNV != "")
+            {
+                if (Check_TenTaiKhoan(tenTK))
+                {
+                    if (matKhau.Length >= 6)
+                    {
+                        taiKhoanDAL.insert(maTK, tenTK, matKhau, tinhTrang, maNV, maQuyen);
+                        return 1;
+                    }
+                    else return -3;
+                }
+                else return -2;
+            }
+            else return -1;
         }
-        public bool updateTaiKhoan(string maTK, string tenTK, string matKhau, string tinhTrang, string maNV, string maQuyen)
+        public int update(string tenTK, string matKhau, string tinhTrang, string maQuyen)
         {
-            return taiKhoanDAL.updateTaiKhoan(maTK, tenTK, matKhau, tinhTrang, maNV, maQuyen);
+            if (tenTK != "" && matKhau != "")
+            {
+                if (!Check_TenTaiKhoan(tenTK))
+                {
+                    if (matKhau.Length >= 6)
+                    {
+                        taiKhoanDAL.update(tenTK, matKhau, tinhTrang, maQuyen);
+                        return 1;
+                    }
+                    else return -3;
+                }
+                else return -2;
+            }
+            else return -1;
         }
-        public bool deleteTaiKhoan(string MaTK)
+        public bool delete(string tenTK)
         {
-            return taiKhoanDAL.deleteTaiKhoan(MaTK);
+            return taiKhoanDAL.delete(tenTK);
         }
 
-        public bool Check_MaTaiKhoan(string MaTaiKhoan)
+        public bool Check_TenTaiKhoan(string TenTK)
         {
-            return taiKhoanDAL.Check_MaTaiKhoan(MaTaiKhoan);
-        }
-        public bool Check_TaiKhoan(string TenTK)
-        {
-            return taiKhoanDAL.Check_TaiKhoan(TenTK);
-        }
-        public int login(string tenTK, string matKhau)
-        {
-            return taiKhoanDAL.login(tenTK, matKhau);
+            return taiKhoanDAL.check_TenTaiKhoan(TenTK);
         }
 
-        public bool changePassword(string maTK, string matKhau)
+        public DataTable searchByName(string s_Taikhoan)
         {
-            return taiKhoanDAL.changePassword(maTK, matKhau);
+            return taiKhoanDAL.searchByName(s_Taikhoan);
         }
+
     }
 }

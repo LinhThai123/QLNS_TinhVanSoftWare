@@ -10,12 +10,7 @@ namespace QLNS_TinhVanSoftWare
 
     static class Program
     {
-        public static string maQuyenAdmin = "Q00001";
-        public static string maQuyenNhanSu = "Q00002";
-        public static string maQuyenNhanVien = "Q00003";
-        public static string maQuyenKeToan = "Q00004";
-
-        public static string tenNV, maTK, maQuyen, tenTK;
+        public static string maQuyen, tenTK, mK;
 
         [STAThread]
         static void Main()
