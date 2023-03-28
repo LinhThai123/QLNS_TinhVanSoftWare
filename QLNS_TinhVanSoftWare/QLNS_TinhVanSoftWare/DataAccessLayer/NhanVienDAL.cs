@@ -13,6 +13,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
     public class NhanVienDAL
     {
         private string constr = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
+
         public DataTable findAll()
         {
             using (SqlConnection cnn = new SqlConnection(constr))

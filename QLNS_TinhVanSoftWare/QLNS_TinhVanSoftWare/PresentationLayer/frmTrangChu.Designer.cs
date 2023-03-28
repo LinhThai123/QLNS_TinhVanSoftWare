@@ -45,10 +45,11 @@
             this.mnBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnSupport = new System.Windows.Forms.ToolStripMenuItem();
             this.mnKhenThuongKyLuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnTaiKhoann = new System.Windows.Forms.ToolStripMenuItem();
             this.mnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.NghiPhepThoiViec = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtTenNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,12 +60,13 @@
             this.mnHeThong,
             this.mnNhanSu,
             this.mnKeToan,
-            this.mnManager});
+            this.mnTaiKhoann,
+            this.txtTenNhanVien});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(895, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(895, 30);
             this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Text = "txtTenNhanVien";
             // 
             // mnHeThong
             // 
@@ -78,7 +80,7 @@
             this.mnHeThong.ForeColor = System.Drawing.Color.Black;
             this.mnHeThong.Image = ((System.Drawing.Image)(resources.GetObject("mnHeThong.Image")));
             this.mnHeThong.Name = "mnHeThong";
-            this.mnHeThong.Size = new System.Drawing.Size(105, 24);
+            this.mnHeThong.Size = new System.Drawing.Size(105, 26);
             this.mnHeThong.Text = "Hệ thống";
             // 
             // mnPhongBan
@@ -120,7 +122,7 @@
             this.mnNghiPhepThoiViec});
             this.mnNhanSu.Image = ((System.Drawing.Image)(resources.GetObject("mnNhanSu.Image")));
             this.mnNhanSu.Name = "mnNhanSu";
-            this.mnNhanSu.Size = new System.Drawing.Size(155, 24);
+            this.mnNhanSu.Size = new System.Drawing.Size(155, 26);
             this.mnNhanSu.Text = "Quản Lý Nhân Sự";
             // 
             // mnBBDanhGia
@@ -162,7 +164,7 @@
             this.mnKhenThuongKyLuat});
             this.mnKeToan.Image = ((System.Drawing.Image)(resources.GetObject("mnKeToan.Image")));
             this.mnKeToan.Name = "mnKeToan";
-            this.mnKeToan.Size = new System.Drawing.Size(152, 24);
+            this.mnKeToan.Size = new System.Drawing.Size(152, 26);
             this.mnKeToan.Text = "Quản Lý Kế Toán";
             // 
             // mnLuongNhanVien
@@ -192,39 +194,46 @@
             this.mnKhenThuongKyLuat.Text = "Quản Lý Khen Thưởng, Kỷ Luật";
             this.mnKhenThuongKyLuat.Click += new System.EventHandler(this.mnKhenThuongKyLuat_Click);
             // 
-            // mnManager
+            // mnTaiKhoann
             // 
-            this.mnManager.BackColor = System.Drawing.SystemColors.Control;
-            this.mnManager.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mnManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnTaiKhoann.BackColor = System.Drawing.SystemColors.Control;
+            this.mnTaiKhoann.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mnTaiKhoann.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnDangXuat,
             this.DoiMatKhau,
             this.NghiPhepThoiViec});
-            this.mnManager.Image = ((System.Drawing.Image)(resources.GetObject("mnManager.Image")));
-            this.mnManager.Name = "mnManager";
-            this.mnManager.Size = new System.Drawing.Size(107, 24);
-            this.mnManager.Text = "Tài Khoản";
+            this.mnTaiKhoann.Image = ((System.Drawing.Image)(resources.GetObject("mnTaiKhoann.Image")));
+            this.mnTaiKhoann.Name = "mnTaiKhoann";
+            this.mnTaiKhoann.Size = new System.Drawing.Size(107, 26);
+            this.mnTaiKhoann.Text = "Tài Khoản";
             // 
             // mnDangXuat
             // 
             this.mnDangXuat.Name = "mnDangXuat";
-            this.mnDangXuat.Size = new System.Drawing.Size(268, 26);
+            this.mnDangXuat.Size = new System.Drawing.Size(295, 26);
             this.mnDangXuat.Text = "Đăng Xuất";
             this.mnDangXuat.Click += new System.EventHandler(this.mnDangXuat_Click);
             // 
             // DoiMatKhau
             // 
             this.DoiMatKhau.Name = "DoiMatKhau";
-            this.DoiMatKhau.Size = new System.Drawing.Size(268, 26);
+            this.DoiMatKhau.Size = new System.Drawing.Size(295, 26);
             this.DoiMatKhau.Text = "Đổi Mật Khẩu";
             this.DoiMatKhau.Click += new System.EventHandler(this.DoiMatKhau_Click);
             // 
             // NghiPhepThoiViec
             // 
             this.NghiPhepThoiViec.Name = "NghiPhepThoiViec";
-            this.NghiPhepThoiViec.Size = new System.Drawing.Size(268, 26);
-            this.NghiPhepThoiViec.Text = "Đơn Nghỉ Phép - Thôi Việc";
+            this.NghiPhepThoiViec.Size = new System.Drawing.Size(295, 26);
+            this.NghiPhepThoiViec.Text = "Tạo đơn Nghỉ Phép - Thôi Việc";
             this.NghiPhepThoiViec.Click += new System.EventHandler(this.NghiPhepThoiViec_Click);
+            // 
+            // txtTenNhanVien
+            // 
+            this.txtTenNhanVien.Enabled = false;
+            this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.Size = new System.Drawing.Size(103, 26);
+            this.txtTenNhanVien.Text = "Người dùng";
             // 
             // frmTrangChu
             // 
@@ -264,11 +273,12 @@
         private System.Windows.Forms.ToolStripMenuItem mnLuongNhanVien;
         private System.Windows.Forms.ToolStripMenuItem mnBangChamCong;
         private System.Windows.Forms.ToolStripMenuItem mnSupport;
-        private System.Windows.Forms.ToolStripMenuItem mnManager;
         private System.Windows.Forms.ToolStripMenuItem mnDangXuat;
         private System.Windows.Forms.ToolStripMenuItem DoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem mnKhenThuongKyLuat;
         private System.Windows.Forms.ToolStripMenuItem NghiPhepThoiViec;
         private System.Windows.Forms.ToolStripMenuItem mnTaiKhoan;
+        private System.Windows.Forms.ToolStripMenuItem mnTaiKhoann;
+        private System.Windows.Forms.ToolStripMenuItem txtTenNhanVien;
     }
 }

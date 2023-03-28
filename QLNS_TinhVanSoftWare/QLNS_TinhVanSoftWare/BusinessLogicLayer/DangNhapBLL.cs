@@ -30,6 +30,7 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
                                 Program.maQuyen = dr["FK_sMaquyen"].ToString();
                                 Program.tenTK = dr["s_Taikhoan"].ToString();
                                 Program.mK = dr["s_Matkhau"].ToString();
+                                Program.nhanVien = dr["sTenNV"].ToString();
                                 return 1; //Đúng mật khẩu và tên đăng nhập
                             }
                             else

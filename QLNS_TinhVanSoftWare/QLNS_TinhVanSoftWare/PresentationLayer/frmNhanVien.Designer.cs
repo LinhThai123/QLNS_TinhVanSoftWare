@@ -373,6 +373,7 @@
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Location = new System.Drawing.Point(21, 443);
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.RowHeadersVisible = false;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.Size = new System.Drawing.Size(1084, 354);

@@ -25,13 +25,13 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
                     if (matKhau.Length >= 6)
                     {
                         taiKhoanDAL.insert(maTK, tenTK, matKhau, tinhTrang, maNV, maQuyen);
-                        return 1;
+                        return 1; // chạy đúng
                     }
-                    else return -3;
+                    else return -3; //Mật khẩu phải có 6 ký tự trở lên
                 }
-                else return -2;
+                else return -2; // Tên tài khoản không được trùng
             }
-            else return -1;
+            else return -1; // Không được để trống mật khẩu , tên tài khoản, mã nhân viên
         }
         public int update(string tenTK, string matKhau, string tinhTrang, string maQuyen)
         {
@@ -42,13 +42,13 @@ namespace QLNS_TinhVanSoftWare.BusinessLogicLayer
                     if (matKhau.Length >= 6)
                     {
                         taiKhoanDAL.update(tenTK, matKhau, tinhTrang, maQuyen);
-                        return 1;
+                        return 1; // chạy đúng
                     }
-                    else return -3;
+                    else return -3; //Mật khẩu phải có 6 ký tự trở lên
                 }
-                else return -2;
+                else return -2; // Tên tài khoản không được trùng
             }
-            else return -1;
+            else return -1; // Không được để trống mật khẩu , tên tài khoản, mã nhân viên
         }
         public bool delete(string tenTK)
         {

@@ -143,6 +143,7 @@ namespace QLNS_TinhVanSoftWare.PresentationLayer
                 mnNhanSu.Visible = false;
                 mnHeThong.Visible = false;
             }
+            txtTenNhanVien.Text = "Người dùng: " + Program.nhanVien;
         }
     }
 }

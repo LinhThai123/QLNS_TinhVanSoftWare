@@ -38,3 +38,4 @@ D:\ChuyenNganhSE\NhapMonSE\BTL\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_Ti
 D:\ChuyenNganhSE\NhapMonSE\BTL\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.csproj.CopyComplete
 D:\ChuyenNganhSE\NhapMonSE\BTL\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.exe
 D:\ChuyenNganhSE\NhapMonSE\BTL\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\obj\Debug\QLNS_TinhVanSoftWare.pdb
+D:\ChuyenNganhSE\NhapMonSE\BTL\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare\bin\Debug\App.config

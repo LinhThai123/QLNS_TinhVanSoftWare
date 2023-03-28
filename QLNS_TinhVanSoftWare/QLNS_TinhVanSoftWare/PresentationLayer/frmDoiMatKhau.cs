@@ -29,11 +29,8 @@ namespace QLNS_TinhVanSoftWare
             if (password.Length >= 8)
                 score++;
 
-            //if (password.Length >= 12)
-            //    score++;
-
             //Check xem mật khẩu có số hay không
-            if (Regex.IsMatch(password, @"[0-9]+(\.[0-9][0-9]?)?", RegexOptions.ECMAScript))   //number only //"^\d+$" if you need to match more than one digit.
+            if (Regex.IsMatch(password, @"[0-9]+(\.[0-9][0-9]?)?", RegexOptions.ECMAScript))
                 score++;
 
             //Chekc xem mật khẩu có chữ thường không

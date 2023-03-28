@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNS_TinhVanSoftWare", "QLNS_TinhVanSoftWare\QLNS_TinhVanSoftWare.csproj", "{86A603D6-CC0D-4042-A3D9-44949B379363}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_QLNS_TinhVanSoftware", "UnitTest_QLNS_TinhVanSoftware\UnitTest_QLNS_TinhVanSoftware.csproj", "{39EE0B95-A941-40C4-A8E4-14E7C1C316A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{86A603D6-CC0D-4042-A3D9-44949B379363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86A603D6-CC0D-4042-A3D9-44949B379363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86A603D6-CC0D-4042-A3D9-44949B379363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39EE0B95-A941-40C4-A8E4-14E7C1C316A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EE0B95-A941-40C4-A8E4-14E7C1C316A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EE0B95-A941-40C4-A8E4-14E7C1C316A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EE0B95-A941-40C4-A8E4-14E7C1C316A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

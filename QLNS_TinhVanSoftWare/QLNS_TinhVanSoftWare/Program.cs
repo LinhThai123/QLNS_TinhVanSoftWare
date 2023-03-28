@@ -10,7 +10,7 @@ namespace QLNS_TinhVanSoftWare
 
     static class Program
     {
-        public static string maQuyen, tenTK, mK;
+        public static string maQuyen, tenTK, mK, nhanVien;
 
         [STAThread]
         static void Main()

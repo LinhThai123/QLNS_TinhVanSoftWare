@@ -17,7 +17,7 @@ namespace QLNS_TinhVanSoftWare.DataAccessLayer
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                String sql = "SELECT * FROM tbl_Taikhoan WHERE s_Taikhoan = '" + taiKhoan + "'";
+                String sql = "SELECT * FROM tbl_Taikhoan, tbl_Nhanvien WHERE tbl_Taikhoan.FK_sMaNV = tbl_Nhanvien.PK_sMaNV and tbl_Taikhoan.s_Taikhoan = '" + taiKhoan + "'";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.CommandType = CommandType.Text;
